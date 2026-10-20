@@ -1,3 +1,5 @@
+> **候选版 [v0.6.12-rc1](https://github.com/yakoye/Shazao-markdown/releases/tag/v0.6.12-rc1) 已可下载**。新增多标签、拖动排序、源码行号及写作增强，修复慢网络阻塞本地图片。完整回归与原生验收尚未完成；稳定版仍为 [v0.6.10](https://github.com/yakoye/Shazao-markdown/releases/tag/v0.6.10)。候选包内含验证范围和待办说明。
+
 # Shazao（沙枣）
 
 Windows 上的所见即所得 Markdown 编辑器：只有一个 exe，无需安装，不依赖浏览器内核，打开大文档也很快。
