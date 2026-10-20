@@ -1,4 +1,4 @@
-> **候选版 [v0.6.12-rc1](https://github.com/yakoye/Shazao-markdown/releases/tag/v0.6.12-rc1) 已可下载**。新增多标签、拖动排序、源码行号及写作增强，修复慢网络阻塞本地图片。完整回归与原生验收尚未完成；稳定版仍为 [v0.6.10](https://github.com/yakoye/Shazao-markdown/releases/tag/v0.6.10)。候选包内含验证范围和待办说明。
+> **[v0.6.12-rc1 候选版](https://github.com/yakoye/Shazao-markdown/releases/tag/v0.6.12-rc1)**：整版311/311、解压包43组4389项通过；Shazao生命周期完整重测20/20、固定33份文档复核通过，原始OCR误判保留在发布说明。原生验收仍有待办，候选附件未变，稳定版保持v0.6.10。
 
 # Shazao（沙枣）
 
