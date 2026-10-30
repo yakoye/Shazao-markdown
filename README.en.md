@@ -107,9 +107,8 @@ Stability and data safety come first. Feedback is addressed and verified one ite
 
 - Add cumulative selection and simultaneous editing with Ctrl+D, and improve autosave controls.
 - Continue refining movement between tabs and windows, table editing, and diagram text layout.
-- Add more convenient keyboard access to files, outline, recent files, and favorites.
-- Improve Wiki link usability and explore custom relative paths for image storage.
-- Improve update checking and help, and explore an English interface.
+- Improve Wiki link usability.
+- Improve update checking and help, and keep reviewing the English and Traditional Chinese interfaces.
 - Continue improving support for large images and more Mermaid/SVG features, and validating IMEs, multiple DPI settings, and export pagination.
 
 ## Version history
