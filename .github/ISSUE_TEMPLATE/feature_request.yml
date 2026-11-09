@@ -1,0 +1,16 @@
+name: 需求建议
+description: 建议新增功能，或告诉我们哪些地方可以改得更好。
+labels: [enhancement]
+body:
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 你希望 Shazao 增加或改进什么？
+      placeholder: 简单说说你希望它怎么做，可以附上截图或参考示例。
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: 使用场景
+      placeholder: 你在什么情况下会用到它？

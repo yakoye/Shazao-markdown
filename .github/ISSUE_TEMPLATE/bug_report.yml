@@ -1,31 +1,40 @@
 name: 问题反馈
-description: 报告使用中遇到的问题，请填写版本、系统和问题描述。
+description: 报告使用中遇到的问题，选一个版本并简单描述发生了什么。
+labels: [bug]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        请填写以下三项必填信息，便于复现和排查。可在问题描述中附上截图或最小示例。
-  - type: input
+  - type: dropdown
     id: version
     attributes:
       label: 当前版本号
-      description: 在“帮助 → 关于 Shazao”中查看，请保留候选版本后缀。
-      placeholder: 例如 v0.6.15 或 v0.6.15-rc3
+      description: 在「帮助 → 关于 Shazao」中查看。打不开程序或记不清时，可以选「不确定」。
+      options:
+        # BEGIN RELEASE OPTIONS
+        - v0.6.19
+        - v0.6.18
+        - v0.6.17
+        # END RELEASE OPTIONS
+        - 旧版或其他版本
+        - 不确定
     validations:
       required: true
-  - type: input
-    id: windows
+  - type: dropdown
+    id: os
     attributes:
-      label: 当前 Windows 系统
-      description: 请填写 Windows 10/11、版本和操作系统内部版本，可在系统“设置 → 系统 → 关于”中查看。
-      placeholder: 例如 Windows 11 24H2，内部版本 26100.x
+      label: 操作系统
+      options:
+        - Windows 11
+        - Windows 10
+        - macOS
+        - Ubuntu
+        - 其他 Linux
+        - 其他
     validations:
-      required: true
+      required: false
   - type: textarea
     id: description
     attributes:
       label: 问题描述
-      description: 请说明操作步骤、实际结果和期望结果；功能建议请说明使用场景。
-      placeholder: 我进行了哪些操作？实际发生了什么？希望如何表现？
+      description: 可以附截图。知道具体旧版版本号、系统版本或下载渠道的话，也可以写在这里。
+      placeholder: 你做了什么？发生了什么？你希望怎样？
     validations:
       required: true
