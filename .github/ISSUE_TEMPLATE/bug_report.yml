@@ -6,15 +6,15 @@ body:
     id: version
     attributes:
       label: 当前版本号
-      description: 在「帮助 → 关于 Shazao」中查看。打不开程序或记不清时，可以选「不确定」。
+      description: 在「帮助 → 关于 Shazao」中查看。知道版本时请选对应项，查不到时保留「不确定」。
       options:
+        - 不确定
         # BEGIN RELEASE OPTIONS
         - v0.6.19
         - v0.6.18
         - v0.6.17
         # END RELEASE OPTIONS
         - 旧版或其他版本
-        - 不确定
     validations:
       required: true
   - type: dropdown
