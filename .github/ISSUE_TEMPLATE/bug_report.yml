@@ -1,6 +1,5 @@
 name: 问题反馈
 description: 报告使用中遇到的问题，选一个版本并简单描述发生了什么。
-labels: [bug]
 body:
   - type: dropdown
     id: version

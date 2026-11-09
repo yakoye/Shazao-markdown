@@ -1,6 +1,5 @@
 name: 需求建议
 description: 建议新增功能，或告诉我们哪些地方可以改得更好。
-labels: [enhancement]
 body:
   - type: textarea
     id: suggestion
