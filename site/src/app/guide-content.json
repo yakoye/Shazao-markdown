@@ -81,6 +81,18 @@
       ],
       [
        {
+        "zh": "程序图标",
+        "tw": "程式圖示",
+        "en": "App icon"
+       },
+       {
+        "zh": "在标题栏左上角的程序图标上按住即可拖动窗口——标签开满、标题栏没有空白可抓时也能移动。",
+        "tw": "在標題欄左上角的程式圖示上按住即可拖動視窗——標籤開滿、標題欄沒有空白可抓時也能移動。",
+        "en": "Press and hold the app icon at the top-left to drag the window — handy when tabs fill the title bar and there is no empty space left to grab."
+       }
+      ],
+      [
+       {
         "zh": "˅ 与标签栏",
         "tw": "˅ 與標籤欄",
         "en": "˅ and tabs"
@@ -194,6 +206,13 @@
      ]
     },
     {
+     "p": {
+      "zh": "在编辑视图和源码视图之间切换时，光标所在位置会短暂高亮一下，一眼就能找到刚才写到哪里。",
+      "tw": "在編輯檢視和原始碼檢視之間切換時，游標所在位置會短暫高亮一下，一眼就能找到剛才寫到哪裡。",
+      "en": "When you switch between the edit and source views, the caret position flashes briefly, so you can spot where you were writing at a glance."
+     }
+    },
+    {
      "shot": "v0620-source.png",
      "caption": {
       "zh": "编辑源码：行号、Markdown 标记与状态栏的“退出”按钮",
@@ -239,9 +258,9 @@
        "en": "Move a block with Alt+↑ / Alt+↓; 0.6.20 duplicate it up / down with Alt+Shift+↑ / ↓ (inside code blocks this stays column selection)."
       },
       {
-       "zh": "0.6.20 插入线：表格、代码块、图片等块之间无法放光标的位置显示“+ ────”，点“+”插入空行。",
-       "tw": "0.6.20 插入線：表格、程式碼塊、圖片等塊之間無法放游標的位置顯示“+ ────”，點“+”插入空行。",
-       "en": "0.6.20 Insertion line: between tables, code blocks and images a “+ ────” line appears — click + to insert an empty line."
+       "zh": "0.6.20 插入线：代码块、表格、引用、图片等块的上方和下方都能点击插入空行：无法放光标的位置显示“+ ────”，点“+”即可。",
+       "tw": "0.6.20 插入線：程式碼塊、表格、引用、圖片等塊的上方和下方都能點選插入空行：無法放游標的位置顯示“+ ────”，點“+”即可。",
+       "en": "0.6.20 Insertion line: above and below code blocks, tables, quotes and images you can click to insert an empty line — where the caret can’t go, a “+ ────” line appears; click +."
       },
       {
        "zh": "粘贴：从 Word、网页、Excel 复制的富文本尽量转换成 Markdown（标题、格式、链接、列表、表格、图片）；Ctrl+Shift+V 粘贴为纯文本。复制时可用 Ctrl+Shift+C 复制 Markdown 源码、Ctrl+Alt+C 复制为无格式文本。",
@@ -345,9 +364,9 @@
        "en": "Shift+Space selects a row, Ctrl+Space a column, Ctrl+Shift+Space the whole table; Alt+Shift+M merges and Alt+Shift+U splits cells."
       },
       {
-       "zh": "拖动列宽；放得下时单元格不换行，放不下时只让最长的列换行。超出页面滚动的表格单列上限可设 40% / 60% / 80% / 不限，横向滚动条固定在窗口底部，Shift+滚轮横移。",
-       "tw": "拖動列寬；放得下時單元格不換行，放不下時只讓最長的列換行。超出頁面滾動的表格單列上限可設 40% / 60% / 80% / 不限，橫向捲軸固定在視窗底部，Shift+滾輪橫移。",
-       "en": "Drag column widths. Cells stay on one line when they fit; otherwise only the longest column wraps. For scrolling tables, cap a column at 40 / 60 / 80% or unlimited; the horizontal scrollbar sticks to the window bottom and Shift+wheel scrolls sideways."
+       "zh": "按住列之间的边线即可拖动调整列宽；放得下时单元格不换行，放不下时只让最长的列换行。超出页面滚动的表格单列上限可设 40% / 60% / 80% / 不限，横向滚动条固定在窗口底部，Shift+滚轮横移。",
+       "tw": "按住列之間的邊線即可拖動調整列寬；放得下時單元格不換行，放不下時只讓最長的列換行。超出頁面滾動的表格單列上限可設 40% / 60% / 80% / 不限，橫向捲軸固定在視窗底部，Shift+滾輪橫移。",
+       "en": "Drag the border between columns to resize them. Cells stay on one line when they fit; otherwise only the longest column wraps. For scrolling tables, cap a column at 40 / 60 / 80% or unlimited; the horizontal scrollbar sticks to the window bottom and Shift+wheel scrolls sideways."
       },
       {
        "zh": "从 Excel 粘贴单元格超出表格时自动补足行列；表格字号、默认横向与竖向对齐可单独设置，导出与复制都跟随。",
@@ -551,9 +570,9 @@
        "en": "Outline: left (stacked with files), its own right column, or toggled with files; width, font size and spacing are adjustable, and long outlines fold automatically. F8 or Ctrl+Shift+1 toggles it — even 120,000 headings are ready in 0.6 s."
       },
       {
-       "zh": "正文标题可折叠；每份文件记住阅读位置；后退 / 前进 Alt+← / Alt+→。",
-       "tw": "正文標題可摺疊；每份檔案記住閱讀位置；後退 / 前進 Alt+← / Alt+→。",
-       "en": "Headings fold in the text; every file remembers where you were; Alt+← / Alt+→ go back and forward."
+       "zh": "大纲自动跟随：滚动或移动光标时，大纲自动展开到当前标题并高亮。正文标题可折叠；每份文件记住阅读位置；后退 / 前进 Alt+← / Alt+→。",
+       "tw": "大綱自動跟隨：滾動或移動游標時，大綱自動展開到當前標題並高亮。正文標題可摺疊；每份檔案記住閱讀位置；後退 / 前進 Alt+← / Alt+→。",
+       "en": "The outline follows you: as you scroll or move the caret it expands to the current heading and highlights it. Headings fold in the text; every file remembers where you were; Alt+← / Alt+→ go back and forward."
       },
       {
        "zh": "文档标签：front matter 中 tags: [a, b] 显示在正文上方；侧栏“标签”面板列出文件夹中全部标签及对应文档。",

@@ -1284,6 +1284,41 @@ header nav a.active {
   stroke: currentColor;
   stroke-width: 1.8;
 }
+.care-heading span {
+  color: var(--muted);
+  font-size: 13px;
+}
+.care-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-top: 40px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+.care-grid article {
+  padding: 26px 22px 30px;
+}
+.care-grid article + article {
+  border-left: 1px solid var(--line);
+}
+.care-grid small {
+  color: var(--green);
+  font:
+    10px "JetBrains Mono",
+    monospace;
+}
+.care-grid h4 {
+  margin: 12px 0 10px;
+  font:
+    600 17px/1.45 "Noto Serif SC",
+    serif;
+}
+.care-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
 .detail-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -1760,6 +1795,18 @@ footer small {
 }
 
 @media (max-width: 1100px) {
+  .care-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .care-grid article {
+    border-top: 1px solid var(--line);
+  }
+  .care-grid article:nth-child(-n + 2) {
+    border-top: 0;
+  }
+  .care-grid article:nth-child(odd) {
+    border-left: 0;
+  }
   header nav {
     justify-content: flex-end;
     gap: 18px;
@@ -2022,6 +2069,13 @@ footer small {
   .detail-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+  .care-grid {
+    grid-template-columns: 1fr;
+  }
+  .care-grid article + article {
+    border-left: 0;
+    border-top: 1px solid var(--line);
   }
   .detail-grid figure,
   .detail-grid figure:nth-child(n + 4) {

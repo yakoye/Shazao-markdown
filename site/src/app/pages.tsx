@@ -209,6 +209,18 @@ const translations: Record<string, { tw: string; en: string }> = {
   "源码视图，随时切换": { tw: "原始碼檢視，隨時切換", en: "Source view, one keystroke away" },
   "插入 ▸ 图表：8 个 Mermaid 模板": { tw: "插入 ▸ 圖表：8 個 Mermaid 範本", en: "Insert › Diagram: eight Mermaid templates" },
   "设置：配色方案即点即预览": { tw: "設定：配色方案即點即預覽", en: "Settings: preview a theme in one click" },
+  "切换视图，光标闪一下": { tw: "切換檢視，游標閃一下", en: "The caret flashes on switch" },
+  "在编辑与源码之间切换时，光标处短暂高亮，马上找到刚才写到哪里。": { tw: "在編輯與原始碼之間切換時，游標處短暫高亮，馬上找到剛才寫到哪裡。", en: "Switching between edit and source briefly highlights the caret, so you instantly see where you were." },
+  "按住图标拖动窗口": { tw: "按住圖示拖動視窗", en: "Drag the window by its icon" },
+  "标签开满、标题栏没有空白时，按住左上角的程序图标也能移动窗口。": { tw: "標籤開滿、標題列沒有空白時，按住左上角的程式圖示也能移動視窗。", en: "When tabs fill the title bar, hold the app icon at the top-left to move the window." },
+  "块的上下，都能插入空行": { tw: "區塊的上下，都能插入空行", en: "Room above and below every block" },
+  "代码块、表格、引用的上方和下方点一下“+”，就能插入空行继续写。": { tw: "程式碼區塊、表格、引用的上方和下方點一下「+」，就能插入空行繼續寫。", en: "Click + above or below a code block, table or quote to add an empty line and keep writing." },
+  "表格列宽，拖一下就好": { tw: "表格欄寬，拖一下就好", en: "Resize columns by dragging" },
+  "按住列之间的边线左右拖动，直接调整列宽。": { tw: "按住欄之間的邊線左右拖動，直接調整欄寬。", en: "Drag the border between table columns to set their width." },
+  "大纲自动跟随展开": { tw: "大綱自動跟隨展開", en: "The outline follows along" },
+  "滚动或移动光标时，大纲自动展开到当前标题并高亮。": { tw: "捲動或移動游標時，大綱自動展開到目前標題並高亮。", en: "As you scroll or move the caret, the outline expands to the current heading and highlights it." },
+  贴心细节: { tw: "貼心細節", en: "Thoughtful touches" },
+  "那些用久了才会发现的小事。": { tw: "那些用久了才會發現的小事。", en: "Small things you notice the longer you use it." },
   沙米: { tw: "沙米", en: "Sand" },
   枝绿: { tw: "枝綠", en: "Branch green" },
   枣红: { tw: "棗紅", en: "Shazao red" },
@@ -591,6 +603,14 @@ const gallery = [
   ["v0620-dark-gallery.png", "用不同的图，讲不同的事", "SHAZAO DARK"],
 ];
 
+const cares = [
+  ["切换视图，光标闪一下", "在编辑与源码之间切换时，光标处短暂高亮，马上找到刚才写到哪里。"],
+  ["按住图标拖动窗口", "标签开满、标题栏没有空白时，按住左上角的程序图标也能移动窗口。"],
+  ["块的上下，都能插入空行", "代码块、表格、引用的上方和下方点一下“+”，就能插入空行继续写。"],
+  ["表格列宽，拖一下就好", "按住列之间的边线左右拖动，直接调整列宽。"],
+  ["大纲自动跟随展开", "滚动或移动光标时，大纲自动展开到当前标题并高亮。"],
+];
+
 const details = [
   ["v0620-table.png", "段落抓手与表格工具条", "0.6.20"],
   ["v0620-tabs.png", "Chrome 式标签，一起变窄", "0.6.20"],
@@ -642,6 +662,22 @@ function Gallery() {
               <span>{tag}</span>
             </figcaption>
           </figure>
+        ))}
+      </div>
+      <div className="detail-heading care-heading">
+        <h3>
+          {t("贴心细节")}
+          <Berry />
+        </h3>
+        <span>{t("那些用久了才会发现的小事。")}</span>
+      </div>
+      <div className="care-grid">
+        {cares.map(([title, desc], index) => (
+          <article key={title}>
+            <small>{String(index + 1).padStart(2, "0")}</small>
+            <h4>{t(title)}</h4>
+            <p>{t(desc)}</p>
+          </article>
         ))}
       </div>
     </section>
