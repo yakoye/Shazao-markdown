@@ -1,0 +1,26 @@
+name: Transfer validated v0.6.20 assets
+on:
+  push:
+    branches: [codex/v0620-release-transfer]
+permissions:
+  contents: write
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify draft and upload validated artifacts
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          test "$(gh release view v0.6.20 --json isDraft --jq .isDraft)" = true
+          cd .release-transfer-v0620
+          sha256sum -c SHA256SUMS-v0.6.20.txt
+          for file in Shazao-markdown-UPX.exe Shazao-markdown.exe Shazao-v0.6.20-win64.zip; do
+            if ! gh release view v0.6.20 --json assets --jq '.assets[] | select(.state=="uploaded") | .name' | grep -Fxq "$file"; then
+              gh release upload v0.6.20 "$file"
+            fi
+          done
