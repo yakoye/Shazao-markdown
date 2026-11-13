@@ -1,0 +1,287 @@
+{
+  "hero": {
+    "zh": "从下载到导出，一页看完 Shazao 的全部功能。截图来自 v0.6.20 实际界面；标有「0.6.20」的功能随 v0.6.20 正式版提供。",
+    "en": "Everything Shazao can do, from download to export, on one page. Screenshots are from the real v0.6.20 app; items marked “0.6.20” arrive with the v0.6.20 release."
+  },
+  "sections": [
+    {
+      "id": "start",
+      "title": { "zh": "快速开始", "en": "Quick start" },
+      "blocks": [
+        { "p": { "zh": "Shazao 是一个 Windows 原生 Markdown 阅读与编辑器：单个 EXE，无需安装、无需账号，默认不联网，不基于 Electron，也不需要 WebView2。", "en": "Shazao is a native Windows Markdown reader and editor: one EXE, no installer, no account, offline by default — no Electron and no WebView2." } },
+        { "steps": [
+          { "zh": "从 Microsoft Store 安装（自动更新），或在 GitHub Releases 下载 EXE / win64 ZIP。支持 Windows 10 / 11 64 位。", "en": "Install from the Microsoft Store (automatic updates), or download the EXE / win64 ZIP from GitHub Releases. Windows 10 / 11, 64-bit." },
+          { "zh": "运行 Shazao-markdown.exe。发布包里另有 UPX 压缩版 Shazao-markdown-UPX.exe，体积约四成、功能相同，启动约慢 0.1 秒；个别杀毒软件可能误报，推荐用原版。", "en": "Run Shazao-markdown.exe. The package also has Shazao-markdown-UPX.exe — about 40% of the size, same features, ~0.1 s slower to start; some antivirus tools flag UPX, so the plain EXE is recommended." },
+          { "zh": "按 Ctrl+O 打开文件，或用 文件 ▸ 打开文件夹…；也可以把 .md 文件或文件夹拖进窗口，或在命令行直接给出文件 / 文件夹路径。", "en": "Press Ctrl+O, or File › Open folder…; you can also drag .md files or folders onto the window, or pass a file or folder on the command line." },
+          { "zh": "直接在排版后的正文里修改，Ctrl+S 保存。想先熟悉一下？打开仓库里的 demo 文件夹，从「你好，沙枣」开始。", "en": "Edit right in the rendered text and press Ctrl+S. To warm up, open the demo folder in the repository and start with “Hello, Shazao”." }
+        ] },
+        { "actions": "start" }
+      ]
+    },
+    {
+      "id": "interface",
+      "title": { "zh": "界面一览", "en": "The window" },
+      "blocks": [
+        { "shot": "v0620-main.png", "caption": { "zh": "Shazao 浅色：标签栏、文件与大纲侧栏、正文、状态栏", "en": "Shazao Light: tabs, file and outline sidebar, document, status bar" } },
+        { "defs": [
+          [ { "zh": "≡ 主菜单", "en": "≡ Main menu" }, { "zh": "文件、编辑、段落、插入、格式、视图、主题、帮助八组命令；F10 打开。", "en": "Eight groups — File, Edit, Paragraph, Insert, Format, View, Theme, Help. F10 opens it." } ],
+          [ { "zh": "˅ 与标签栏", "en": "˅ and tabs" }, { "zh": "˅ 列出并搜索全部标签；当前标签用主题的“当前行”颜色；+ 新建标签（Ctrl+N）。", "en": "˅ lists and searches all tabs; the current tab uses the theme’s current-line color; + opens a new tab (Ctrl+N)." } ],
+          [ { "zh": "侧栏", "en": "Sidebar" }, { "zh": "上方是文件夹 / 最近打开 / 收藏 / 标签，下方是大纲；底部按钮依次为：收起侧栏、文件夹、最近打开、收藏、标签。", "en": "Folder, recent, favorites or tags on top, outline below. The bottom buttons: collapse, folder, recent, favorites, tags." } ],
+          [ { "zh": "标签栏（正文上方）", "en": "Tag bar (above text)" }, { "zh": "显示 front matter 中的文档标签，“＋ 添加标签”从本文件夹已有的标签中选择或输入新标签。", "en": "Shows the document’s front matter tags; “+ Add tag” picks an existing tag from the folder or creates one." } ],
+          [ { "zh": "状态栏", "en": "Status bar" }, { "zh": "后退 / 前进（Alt+← / Alt+→）、字数、锁定按钮、源码切换按钮 </>。", "en": "Back / forward (Alt+← / Alt+→), word count, lock button and the source toggle </>." } ]
+        ] },
+        { "p": { "zh": "没有打开文档时显示首页：最近打开的文件可直接打开；右键可打开所在文件夹、复制路径或从列表中移除，选中后按 Del 也能移除。", "en": "With no document open you get the home page: open a recent file directly, or right-click to open its folder, copy its path or remove it (Del works too)." } }
+      ]
+    },
+    {
+      "id": "modes",
+      "title": { "zh": "三种视图", "en": "Three views" },
+      "blocks": [
+        { "p": { "zh": "同一份文档有三种视图，在 视图 菜单、状态栏右下角，或用 Ctrl+/ 切换。撤销记录在三种视图间统一。", "en": "Each document has three views — switch from the View menu, the status bar, or Ctrl+/. Undo history is shared by all three." } },
+        { "cards": [
+          [ { "zh": "编辑（所见即所得）", "en": "Edit (WYSIWYG)" }, { "zh": "在排版好的内容里直接写：标题、列表、表格、图片、公式都就地编辑。", "en": "Write in the rendered page: headings, lists, tables, images and math are edited in place." } ],
+          [ { "zh": "编辑源码", "en": "Source" }, { "zh": "带行号的 Markdown 源码，适合精确控制；大文件也只处理改动的部分。", "en": "Markdown with line numbers for exact control; even huge files only process what changed." } ],
+          [ { "zh": "锁定", "en": "Locked" }, { "zh": "Esc 锁定，只读防误改；F2 回到就地编辑。可设为打开文档后默认锁定。", "en": "Esc locks the document read-only; F2 returns to editing. Documents can open locked by default." } ]
+        ] },
+        { "shot": "v0620-source.png", "caption": { "zh": "编辑源码：行号、Markdown 标记与状态栏的“退出”按钮", "en": "Source view: line numbers, Markdown markup and the Exit button" } }
+      ]
+    },
+    {
+      "id": "editing",
+      "title": { "zh": "写作与格式", "en": "Writing & formatting" },
+      "blocks": [
+        { "list": [
+          { "zh": "段落：一至六级标题（Ctrl+Alt+1～6）、正文（Ctrl+Alt+0）、提升 / 降低标题级别（Ctrl+= / Ctrl+-）、引用（Ctrl+Shift+Q）、有序 / 无序 / 任务列表（Ctrl+Shift+[ / ] / X）、增加 / 减少缩进。", "en": "Paragraph: headings 1–6 (Ctrl+Alt+1–6), body text (Ctrl+Alt+0), promote / demote heading (Ctrl+= / Ctrl+-), quote (Ctrl+Shift+Q), ordered / bulleted / task lists (Ctrl+Shift+[ / ] / X), indent and outdent." },
+          { "zh": "格式：加粗 Ctrl+B、斜体 Ctrl+I、下划线 Ctrl+U、删除线 Alt+Shift+S、高亮 Ctrl+Shift+H、行内代码 Ctrl+Shift+`、链接 Ctrl+K、清除格式 Ctrl+\\，以及“中英文之间加空格”。", "en": "Format: bold Ctrl+B, italic Ctrl+I, underline Ctrl+U, strikethrough Alt+Shift+S, highlight Ctrl+Shift+H, inline code Ctrl+Shift+`, link Ctrl+K, clear formatting Ctrl+\\, plus “add spaces between CJK and Latin”." },
+          { "zh": "0.6.20 段落抓手 ⋮⋮：悬停或光标所在的块左侧出现抓手，按住拖动整块移动（列表项连同子项），撤销一次还原；单击抓手把光标移到块开头。", "en": "0.6.20 Block handle ⋮⋮: hover a block (or put the caret in it) and drag the handle to move the whole block — list items bring their children. One undo restores it; clicking the handle jumps to the block start." },
+          { "zh": "0.6.20 选中内容拖放：在选区上按住拖动，松开即移动过去，格式标记自动补全。", "en": "0.6.20 Drag selected text to move it; formatting marks are repaired automatically." },
+          { "zh": "上移 / 下移块 Alt+↑ / Alt+↓；0.6.20 向上 / 向下复制块 Alt+Shift+↑ / Alt+Shift+↓（代码块中仍为列选择）。", "en": "Move a block with Alt+↑ / Alt+↓; 0.6.20 duplicate it up / down with Alt+Shift+↑ / ↓ (inside code blocks this stays column selection)." },
+          { "zh": "0.6.20 插入线：表格、代码块、图片等块之间无法放光标的位置显示“+ ────”，点“+”插入空行。", "en": "0.6.20 Insertion line: between tables, code blocks and images a “+ ────” line appears — click + to insert an empty line." },
+          { "zh": "粘贴：从 Word、网页、Excel 复制的富文本尽量转换成 Markdown（标题、格式、链接、列表、表格、图片）；Ctrl+Shift+V 粘贴为纯文本。复制时可用 Ctrl+Shift+C 复制 Markdown 源码、Ctrl+Alt+C 复制为无格式文本。", "en": "Paste: rich text from Word, browsers and Excel becomes Markdown (headings, formatting, links, lists, tables, images); Ctrl+Shift+V pastes plain text. Copy Markdown source with Ctrl+Shift+C, or plain text with Ctrl+Alt+C." },
+          { "zh": "编辑 ▸ 复制 / 粘贴为… 提供更多格式；Ctrl+A 全选，Ctrl+Z / Ctrl+Y 撤销重做，可开启持久撤销（关闭后再打开仍能撤销）。", "en": "Edit › Copy / Paste as… offers more formats; Ctrl+A selects all, Ctrl+Z / Ctrl+Y undo and redo, and persistent undo survives closing the file." },
+          { "zh": "HTML 颜色：<font color> 与 <span style=\"color\"> 显示颜色，深色主题里会自动提亮。", "en": "HTML color: <font color> and <span style=\"color\"> render in color, brightened automatically in dark themes." }
+        ] },
+        { "shot": "v0620-table.png", "caption": { "zh": "段落抓手 ⋮⋮ 与表格工具条", "en": "Block handle ⋮⋮ and the table toolbar" } }
+      ]
+    },
+    {
+      "id": "insert",
+      "title": { "zh": "插入", "en": "Insert" },
+      "blocks": [
+        { "p": { "zh": "≡ ▸ 插入 汇集了所有可插入的内容：", "en": "≡ › Insert gathers everything you can add:" } },
+        { "list": [
+          { "zh": "图片…（Ctrl+Shift+I）、脚注、链接引用、水平分割线、日期和时间、序列。", "en": "Image… (Ctrl+Shift+I), footnote, link reference, horizontal rule, date & time, sequence." },
+          { "zh": "表格（Ctrl+T）、表格（从 CSV 文件）…、代码块（Ctrl+Shift+K）。", "en": "Table (Ctrl+T), Table from CSV…, code block (Ctrl+Shift+K)." },
+          { "zh": "图表：空白图表，以及流程图、时序图、甘特图、类图、状态图、饼图、思维导图、实体关系图 8 个 Mermaid 模板，一步撤销。", "en": "Diagram: an empty diagram plus eight Mermaid templates — flowchart, sequence, Gantt, class, state, pie, mindmap and entity-relationship — each one undo step." },
+          { "zh": "公式块（Ctrl+Shift+M）、行内公式…。", "en": "Math block (Ctrl+Shift+M), inline math…." },
+          { "zh": "内容目录（TOC）、YAML Front Matter、在当前块上方 / 下方插入段落。", "en": "Table of contents, YAML front matter, and a new paragraph above / below the current block." }
+        ] },
+        { "shot": "v0620-menu-insert.png", "caption": { "zh": "插入 ▸ 图表：空白图表与 8 个 Mermaid 模板", "en": "Insert › Diagram: blank diagram and eight Mermaid templates" } }
+      ]
+    },
+    {
+      "id": "tables",
+      "title": { "zh": "表格", "en": "Tables" },
+      "blocks": [
+        { "list": [
+          { "zh": "点进表格出现工具条：表格菜单（插入、删除、移动行列，合并 / 拆分，按列排序，调整大小）、左 / 中 / 右对齐、适合页面 / 超出页面滚动、复制。", "en": "Click into a table for its toolbar: the table menu (insert, delete and move rows / columns, merge / split, sort by column, resize), left / center / right alignment, fit-to-page or scroll, and copy." },
+          { "zh": "Shift+Space 选整行，Ctrl+Space 选整列，Ctrl+Shift+Space 选整个表格；Alt+Shift+M 合并、Alt+Shift+U 拆分单元格。", "en": "Shift+Space selects a row, Ctrl+Space a column, Ctrl+Shift+Space the whole table; Alt+Shift+M merges and Alt+Shift+U splits cells." },
+          { "zh": "拖动列宽；放得下时单元格不换行，放不下时只让最长的列换行。超出页面滚动的表格单列上限可设 40% / 60% / 80% / 不限，横向滚动条固定在窗口底部，Shift+滚轮横移。", "en": "Drag column widths. Cells stay on one line when they fit; otherwise only the longest column wraps. For scrolling tables, cap a column at 40 / 60 / 80% or unlimited; the horizontal scrollbar sticks to the window bottom and Shift+wheel scrolls sideways." },
+          { "zh": "从 Excel 粘贴单元格超出表格时自动补足行列；表格字号、默认横向与竖向对齐可单独设置，导出与复制都跟随。", "en": "Pasting more cells than fit extends the table automatically. Table font size and default horizontal / vertical alignment are configurable and carry into export and copy." },
+          { "zh": "工具条显示方式（设置 ▸ 阅读）：悬停时（默认）/ 始终 / 只在编辑时。也支持静态 HTML 表格。", "en": "Toolbar display (Settings › Reading): on hover (default), always, or only while editing. Static HTML tables are supported too." }
+        ] },
+        { "shot": "v0620-code.png", "caption": { "zh": "多列表格与 Python 语法高亮", "en": "A multi-column table with Python highlighting" } }
+      ]
+    },
+    {
+      "id": "code",
+      "title": { "zh": "代码、公式与图表", "en": "Code, math & diagrams" },
+      "blocks": [
+        { "list": [
+          { "zh": "代码块：语法高亮、语言标签、复制；可设长行自动换行、显示行号、Tab 插入空格及制表位宽度。Alt+拖动或 Alt+Shift+方向键做列选择。", "en": "Code blocks: syntax highlighting, language tag and copy; optional wrapping, line numbers, Tab-as-spaces and tab width. Alt+drag or Alt+Shift+arrows for column selection." },
+          { "zh": "数学公式：行内与独立公式，支持常用 LaTeX 与 amssymb 符号（如 \\because、\\therefore）。", "en": "Math: inline and display formulas with common LaTeX and amssymb symbols (\\because, \\therefore…)." },
+          { "zh": "Mermaid：流程图、时序图、状态图、类图、ER 图、甘特图、饼图、思维导图、Git 图、C4、时间线、象限图、XY 图等直接显示；双击图表查看细节。", "en": "Mermaid: flowchart, sequence, state, class, ER, Gantt, pie, mindmap, Git graph, C4, timeline, quadrant, XY and more render inline; double-click to inspect." },
+          { "zh": "图中文字可拖选复制；右键“复制图中文字”一次复制全部。", "en": "Select and copy text inside diagrams; right-click › Copy diagram text copies all of it." }
+        ] },
+        { "shot": "v0620-diagram.png", "caption": { "zh": "Mermaid 流程图、行内与独立公式、Note 提示块", "en": "Mermaid flowchart, inline and display math, a Note callout" } },
+        { "shot": "v0620-gallery.png", "caption": { "zh": "图表画廊：时序图与思维导图", "en": "Diagram gallery: sequence diagram and mindmap" } }
+      ]
+    },
+    {
+      "id": "images",
+      "title": { "zh": "图片", "en": "Images" },
+      "blocks": [
+        { "list": [
+          { "zh": "粘贴截图或拖入图片即插入；截图保存为 image-日期.png。文档文件夹以外的图片可复制到图片目录；相同内容的图片只保存一份。", "en": "Paste a screenshot or drop an image to insert it; screenshots are saved as image-<date>.png. Images outside the document folder can be copied in, and identical images are stored once." },
+          { "zh": "图片目录可选 images/<文档名>/ 等预设，或用 ${filename}、${date}、${year}、${month}、${day} 自定义；写入相对路径。", "en": "Choose an image folder such as images/<document>/ or build your own with ${filename}, ${date}, ${year}, ${month}, ${day}; paths are written relative." },
+          { "zh": "单击图片显示源码条，可就地编辑源码、按大小 / 像素 / 百分比缩放；右键“替换图片 ▸ 从剪贴板 / 从文件…”。", "en": "Click an image to show its source bar: edit the source, resize by size, pixels or percent; right-click › Replace image › From clipboard / From file…." },
+          { "zh": "支持 Base64 内嵌图片；删除图片时按引用计数，最后一处引用删除后才移到回收站。文件 ▸ 文档中的图片 列出全部图片。", "en": "Base64 images are supported. Deleted images move to the Recycle Bin only when their last reference is gone. File › Images in document lists them all." },
+          { "zh": "网络图片可关闭加载，或启用磁盘缓存。", "en": "Web images can be turned off, or cached on disk." }
+        ] },
+        { "shot": "v0620-settings-image.png", "caption": { "zh": "设置 ▸ 图片", "en": "Settings › Images" }, "narrow": true }
+      ]
+    },
+    {
+      "id": "files",
+      "title": { "zh": "文件、标签与窗口", "en": "Files, tabs & windows" },
+      "blocks": [
+        { "list": [
+          { "zh": "文件：新建、打开、打开文件夹、快速打开（Ctrl+P）、最近打开、选择编码重新打开、保存 / 另存为（Ctrl+Shift+S）/ 保存全部、重命名、移动到…、属性、打开所在文件夹（Alt+Shift+R）、删除、导入、外部编辑（F4）。", "en": "File: new, open, open folder, quick open (Ctrl+P), recent, reopen with encoding, save / save as (Ctrl+Shift+S) / save all, rename, move to…, properties, open containing folder (Alt+Shift+R), delete, import, external editor (F4)." },
+          { "zh": "在文件树里把文件拖到文件夹上，或右键“移动到…”：文档里的图片路径和其他文档指向它的链接一起更新。", "en": "Drag a file onto a folder in the tree, or right-click › Move to…: image paths inside it and links to it from other documents are updated." },
+          { "zh": "最近打开按今天 / 昨天 / 最近 7 天 / 更早分组；常用文件加入收藏。复制文件路径 Alt+Shift+C。", "en": "Recent files are grouped by today, yesterday, last 7 days and earlier; keep favorites. Copy the file path with Alt+Shift+C." },
+          { "zh": "0.6.20 Chrome 式标签：放不下时一起变窄，再放不下时出现 ◂ ▸ 箭头（滚轮也可）；标签可搜索、固定、拖动排序；Ctrl+Tab / Ctrl+Shift+Tab 切换。", "en": "0.6.20 Chrome-style tabs shrink together, then show ◂ ▸ arrows (or use the wheel). Search, pin and reorder tabs; Ctrl+Tab / Ctrl+Shift+Tab to switch." },
+          { "zh": "把标签拖出标签栏开新窗口；拖到另一个 Shazao 窗口即合并，未保存的输入、撤销步骤、光标一起带走。", "en": "Drag a tab out for a new window, or onto another Shazao window to merge — unsaved typing, undo steps and the caret come along." },
+          { "zh": "可选：Ctrl+N 新建标签页或新窗口、关闭最后一个标签时关闭窗口、只运行一个 Shazao、启动时恢复上次的文件与文件夹。", "en": "Options: Ctrl+N opens a tab or a window, closing the last tab closes the window, run a single instance, restore last session on start." },
+          { "zh": "0.6.20 系统托盘：用全局快捷键隐藏时只留托盘图标；关闭窗口时隐藏到托盘（设置 ▸ 编辑，默认关闭）。显示 / 隐藏 Shazao 的全局快捷键在 设置 ▸ 快捷键 设置。", "en": "0.6.20 System tray: hide to the tray icon with the global hotkey, or when closing the window (Settings › Editing, off by default). Set the show / hide global hotkey in Settings › Shortcuts." }
+        ] },
+        { "shot": "v0620-tabs.png", "caption": { "zh": "Chrome 式标签：6 个标签一起变窄；README 中的链接悬停即可预览", "en": "Chrome-style tabs shrinking together; hover links in the README to preview" } },
+        { "shot": "v0620-settings-edit.png", "caption": { "zh": "设置 ▸ 编辑：打开文档、标签页、启动与托盘", "en": "Settings › Editing: opening, tabs, startup and tray" }, "narrow": true }
+      ]
+    },
+    {
+      "id": "navigation",
+      "title": { "zh": "长文、链接与查找", "en": "Long docs, links & search" },
+      "blocks": [
+        { "list": [
+          { "zh": "大纲：显示在左侧（与文件上下排列）、右侧单独一栏，或与文件切换显示；可设宽度、字号、行间距；标题较多时自动折叠。F8 或 Ctrl+Shift+1 开合，12 万个标题也能 0.6 秒内可用。", "en": "Outline: left (stacked with files), its own right column, or toggled with files; width, font size and spacing are adjustable, and long outlines fold automatically. F8 or Ctrl+Shift+1 toggles it — even 120,000 headings are ready in 0.6 s." },
+          { "zh": "正文标题可折叠；每份文件记住阅读位置；后退 / 前进 Alt+← / Alt+→。", "en": "Headings fold in the text; every file remembers where you were; Alt+← / Alt+→ go back and forward." },
+          { "zh": "文档标签：front matter 中 tags: [a, b] 显示在正文上方；侧栏“标签”面板列出文件夹中全部标签及对应文档。", "en": "Tags: tags: [a, b] in front matter appear above the text; the Tags panel lists every tag in the folder and its documents." },
+          { "zh": "链接卡片：悬停预览网页、图片、文件夹、标题或邮件；0.6.20 起文本与 Markdown 文件显示开头 14 行，可滚动、选择和复制，点一下固定。", "en": "Link cards preview web pages, images, folders, headings and email; 0.6.20 shows the first 14 lines of text and Markdown files, scrollable, selectable and pinnable." },
+          { "zh": "Wiki 链接，视图 ▸ 引用此文档的 Wiki 笔记…；文件 ▸ 检查链接… 找出失效链接；es: 等自定义协议交给系统打开。", "en": "Wiki links, View › Wiki notes referencing this document…, and File › Check links… for broken links; custom protocols like es: open through Windows." },
+          { "zh": "查找 Ctrl+F、替换 Ctrl+H：区分大小写、全字匹配、正则表达式；选中较长内容时自动只在选区内查找。在文件夹中搜索 Ctrl+Shift+F。", "en": "Find (Ctrl+F) and replace (Ctrl+H) with match case, whole word and regex; a long selection limits the search to it. Search the folder with Ctrl+Shift+F." },
+          { "zh": "大文件：1 GB 约 2 秒显示正文，编辑、撤销、保存都只处理改动部分，64 MB 以上在后台保存。", "en": "Huge files: 1 GB shows text in about 2 s; edits, undo and save touch only what changed, and files over 64 MB save in the background." }
+        ] },
+        { "shot": "v0620-findbar.png", "caption": { "zh": "查找：区分大小写、全字、正则与仅在选区", "en": "Find: match case, whole word, regex and in-selection" }, "narrow": true },
+        { "shot": "v0620-settings-outline.png", "caption": { "zh": "设置 ▸ 大纲：位置、尺寸与自动折叠", "en": "Settings › Outline: position, size and auto-folding" }, "narrow": true }
+      ]
+    },
+    {
+      "id": "appearance",
+      "title": { "zh": "外观与阅读", "en": "Appearance & reading" },
+      "blocks": [
+        { "p": { "zh": "主题 菜单或 设置 ▸ 外观：跟随系统 / 浅色 / 深色，浅色与深色各选一套配色；点选配色立即预览整个窗口，「取消」恢复原样，也可以自定义颜色。", "en": "Theme menu or Settings › Appearance: follow system, light or dark, with one color scheme for each. Clicking a scheme previews the whole window, Cancel restores it, and colors can be customised." } },
+        { "shot": "v0620-settings-dark.png", "caption": { "zh": "深色配色：Shazao 深色、Dracula、One Dark、Tokyo Night、Tokyo Night Storm、Nord 等", "en": "Dark schemes: Shazao Dark, Dracula, One Dark, Tokyo Night, Tokyo Night Storm, Nord and more" }, "narrow": true },
+        { "list": [
+          { "zh": "浅色配色：Shazao 浅色、One Light、Tokyo Night Day、Solarized Light、GitHub Light、Catppuccin Latte 等。", "en": "Light schemes: Shazao Light, One Light, Tokyo Night Day, Solarized Light, GitHub Light, Catppuccin Latte and more." },
+          { "zh": "界面语言：跟随系统 / 简体中文 / 繁體中文 / English；语言包是 languages 目录下的 .lang 文件，可以自己添加。", "en": "Interface language: follow system, Simplified Chinese, Traditional Chinese or English; language packs are .lang files in the languages folder — add your own." },
+          { "zh": "字体与版面：正文与代码字体、字号、表格字号、视觉行距、正文宽度（可随窗口宽度）与位置（居中 / 靠左 / 靠右）。中西文之间自动显示细小空隙（源码不变）。", "en": "Fonts & layout: body and code fonts, sizes, table size, line spacing, text width (up to the window) and position (center, left, right). A thin gap is shown between CJK and Latin text without changing the source." },
+          { "zh": "视图：专注模式 F9、打字机模式 Shift+F9、全屏 F11、拼写检查（F7 / Shift+F7 跳到下一个 / 上一个错误）、当前文件夹独立外观。", "en": "View: focus mode F9, typewriter mode Shift+F9, full screen F11, spell check (F7 / Shift+F7 next / previous error), and per-folder appearance." },
+          { "zh": "阅读：记住阅读位置、文件被外部修改后自动刷新、保留单换行；细滚动条悬停加宽，Shift+单击空白处直接跳到该位置。", "en": "Reading: remember position, auto-reload when a file changes outside, keep single line breaks; thin scrollbars widen on hover and Shift+click jumps to a spot." },
+          { "zh": "设置窗口左上角可以搜索选项（三种语言与常用别名）；只有点「确定」才保存。", "en": "Search any option from the top-left of Settings, in all three languages; nothing is saved until you press OK." }
+        ] },
+        { "shot": "v0620-dark-code.png", "caption": { "zh": "Shazao 深色：表格与代码", "en": "Shazao Dark: tables and code" } }
+      ]
+    },
+    {
+      "id": "export",
+      "title": { "zh": "导出、打印与历史版本", "en": "Export, print & history" },
+      "blocks": [
+        { "list": [
+          { "zh": "文件 ▸ 导出：HTML 网页、HTML 网页（单个文件）、PDF 文档、Word 文档、EPUB 电子书、压缩包（文档与图片）、Markdown（单个文件，图片内嵌）。", "en": "File › Export: HTML, single-file HTML, PDF, Word, EPUB, a ZIP of document plus images, and single-file Markdown with images embedded." },
+          { "zh": "选择 CSS 导出模板，按模板批量导出 HTML / PDF。", "en": "Pick a CSS template and batch-export HTML / PDF with it." },
+          { "zh": "PDF 带书签（需 Edge / Chrome 123 及以上），长代码块与长表格跨页接排。", "en": "PDFs include bookmarks (Edge / Chrome 123+), and long code blocks and tables continue across pages." },
+          { "zh": "打印 Alt+Shift+P；导入… 把其他格式转成 Markdown。", "en": "Print with Alt+Shift+P; Import… converts other formats to Markdown." },
+          { "zh": "历史版本：自动按间隔保留快照（默认 10 分钟、每文档最多 50 份），文件 ▸ 历史版本… 中查看、比较并恢复。", "en": "History: snapshots are kept automatically (every 10 minutes, up to 50 per document by default); File › History… lets you view, compare and restore." }
+        ] },
+        { "shot": "v0620-menu-export.png", "caption": { "zh": "文件 ▸ 导出", "en": "File › Export" } }
+      ]
+    },
+    {
+      "id": "data",
+      "title": { "zh": "数据、便携与更新", "en": "Data, portable & updates" },
+      "blocks": [
+        { "list": [
+          { "zh": "历史、草稿、恢复副本、图片缓存、持久撤销和阅读状态默认保存在 %LOCALAPPDATA%\\Shazao；在 设置 ▸ 数据与存储 管理，帮助 ▸ 打开数据文件夹 直接打开。", "en": "History, drafts, recovery copies, image cache, persistent undo and reading state live in %LOCALAPPDATA%\\Shazao; manage them in Settings › Data & storage, or open them via Help › Open data folder." },
+          { "zh": "便携模式：在 EXE 旁边新建 Shazao-data 文件夹，所有数据都保存在里面，适合放进 U 盘。", "en": "Portable mode: create a Shazao-data folder next to the EXE and everything is stored there — ready for a USB stick." },
+          { "zh": "只有获取网络图片和检查更新时才会联网。帮助 ▸ 检查更新… 下载后按 SHA256SUMS 校验；也可设为每周检查一次（默认关闭）。", "en": "Shazao only goes online for web images and update checks. Help › Check for updates… verifies downloads against SHA256SUMS; weekly checks are optional (off by default)." },
+          { "zh": "Shazao.ini、Shazao-shortcuts.ini 与用户词典都可直接编辑；升级不会直接删除旧数据。网络共享上的文档断网时也不会卡死。", "en": "Shazao.ini, Shazao-shortcuts.ini and the user dictionary stay editable; upgrades never silently delete old data, and documents on a dropped network share won’t freeze the app." }
+        ] },
+        { "shot": "v0620-settings-data.png", "caption": { "zh": "设置 ▸ 数据与存储：历史版本、本地数据与更新", "en": "Settings › Data & storage: history, local data and updates" }, "narrow": true }
+      ]
+    },
+    {
+      "id": "shortcuts",
+      "title": { "zh": "快捷键", "en": "Keyboard shortcuts" },
+      "blocks": [
+        { "p": { "zh": "以下为默认快捷键。在 设置 ▸ 快捷键 中修改（“清除”禁用、“默认”恢复），或按 Ctrl+Alt+, 打开 Shazao-shortcuts.ini，保存后立即生效。", "en": "These are the defaults. Change them in Settings › Shortcuts (Clear disables, Default restores) or press Ctrl+Alt+, to edit Shazao-shortcuts.ini — changes apply on save." } },
+        { "keygroups": [
+          [ { "zh": "文件与窗口", "en": "Files & windows" }, [
+            [ "Ctrl+N", { "zh": "新建标签页", "en": "New tab" } ],
+            [ "Ctrl+O", { "zh": "打开 Markdown", "en": "Open Markdown" } ],
+            [ "Ctrl+P", { "zh": "快速打开", "en": "Quick open" } ],
+            [ "Ctrl+S", { "zh": "保存", "en": "Save" } ],
+            [ "Ctrl+Shift+S", { "zh": "另存为", "en": "Save as" } ],
+            [ "Alt+Shift+P", { "zh": "打印", "en": "Print" } ],
+            [ "Ctrl+W", { "zh": "关闭", "en": "Close" } ],
+            [ "F10", { "zh": "打开主菜单", "en": "Open main menu" } ],
+            [ "Ctrl+Tab", { "zh": "下一个标签页", "en": "Next tab" } ],
+            [ "Ctrl+Shift+Tab", { "zh": "上一个标签页", "en": "Previous tab" } ],
+            [ "Alt+Shift+R", { "zh": "打开所在文件夹", "en": "Open containing folder" } ],
+            [ "Alt+Shift+C", { "zh": "复制文件路径", "en": "Copy file path" } ],
+            [ "F4", { "zh": "外部编辑", "en": "External editor" } ],
+            [ "Ctrl+,", { "zh": "设置", "en": "Settings" } ]
+          ] ],
+          [ { "zh": "视图与导航", "en": "View & navigation" }, [
+            [ "Ctrl+/", { "zh": "切换编辑 / 源码", "en": "Toggle edit / source" } ],
+            [ "F2", { "zh": "就地编辑", "en": "Edit in place" } ],
+            [ "Esc", { "zh": "锁定", "en": "Lock" } ],
+            [ "F8", { "zh": "显示 / 隐藏大纲", "en": "Show / hide outline" } ],
+            [ "Ctrl+Shift+1", { "zh": "大纲（2 文件夹 · 3 最近 · 4 收藏）", "en": "Outline (2 folder · 3 recent · 4 favorites)" } ],
+            [ "F9", { "zh": "专注模式", "en": "Focus mode" } ],
+            [ "Shift+F9", { "zh": "打字机模式", "en": "Typewriter mode" } ],
+            [ "F11", { "zh": "全屏", "en": "Full screen" } ],
+            [ "F7", { "zh": "下一个拼写错误", "en": "Next spelling error" } ],
+            [ "Alt+Left", { "zh": "后退（Alt+Right 前进）", "en": "Back (Alt+Right forward)" } ],
+            [ "Ctrl+F", { "zh": "查找", "en": "Find" } ],
+            [ "Ctrl+H", { "zh": "替换", "en": "Replace" } ],
+            [ "F3", { "zh": "查找下一个（Shift+F3 上一个）", "en": "Find next (Shift+F3 previous)" } ],
+            [ "Ctrl+Shift+F", { "zh": "在文件夹中搜索", "en": "Search in folder" } ]
+          ] ],
+          [ { "zh": "段落与块", "en": "Paragraphs & blocks" }, [
+            [ "Ctrl+Alt+1", { "zh": "一级标题（2–6 同理，0 正文）", "en": "Heading 1 (2–6 likewise, 0 body)" } ],
+            [ "Ctrl+=", { "zh": "提升标题级别（Ctrl+- 降低）", "en": "Promote heading (Ctrl+- demote)" } ],
+            [ "Ctrl+Shift+Q", { "zh": "引用", "en": "Quote" } ],
+            [ "Ctrl+Shift+[", { "zh": "有序列表（] 无序）", "en": "Ordered list (] bulleted)" } ],
+            [ "Ctrl+Shift+X", { "zh": "任务列表", "en": "Task list" } ],
+            [ "Alt+Up", { "zh": "上移块（Alt+Down 下移）", "en": "Move block up (Alt+Down down)" } ],
+            [ "Alt+Shift+Down", { "zh": "向下复制块（↑ 向上）", "en": "Duplicate block down (↑ up)" } ]
+          ] ],
+          [ { "zh": "格式与插入", "en": "Format & insert" }, [
+            [ "Ctrl+B", { "zh": "加粗", "en": "Bold" } ],
+            [ "Ctrl+I", { "zh": "斜体", "en": "Italic" } ],
+            [ "Ctrl+U", { "zh": "下划线", "en": "Underline" } ],
+            [ "Alt+Shift+S", { "zh": "删除线", "en": "Strikethrough" } ],
+            [ "Ctrl+Shift+H", { "zh": "高亮", "en": "Highlight" } ],
+            [ "Ctrl+Shift+`", { "zh": "行内代码", "en": "Inline code" } ],
+            [ "Ctrl+K", { "zh": "链接", "en": "Link" } ],
+            [ "Ctrl+\\", { "zh": "清除格式", "en": "Clear formatting" } ],
+            [ "Ctrl+T", { "zh": "插入表格", "en": "Insert table" } ],
+            [ "Ctrl+Shift+K", { "zh": "插入代码块", "en": "Insert code block" } ],
+            [ "Ctrl+Shift+M", { "zh": "插入公式块", "en": "Insert math block" } ],
+            [ "Ctrl+Shift+I", { "zh": "插入图片", "en": "Insert image" } ]
+          ] ],
+          [ { "zh": "编辑与表格", "en": "Editing & tables" }, [
+            [ "Ctrl+Shift+V", { "zh": "粘贴为纯文本", "en": "Paste as plain text" } ],
+            [ "Ctrl+Shift+C", { "zh": "复制 Markdown 源码", "en": "Copy Markdown source" } ],
+            [ "Ctrl+Alt+C", { "zh": "复制为无格式文本", "en": "Copy as plain text" } ],
+            [ "Ctrl+Z", { "zh": "撤销（Ctrl+Y 重做）", "en": "Undo (Ctrl+Y redo)" } ],
+            [ "Shift+Space", { "zh": "表格：选择整行", "en": "Table: select row" } ],
+            [ "Ctrl+Space", { "zh": "表格：选择整列", "en": "Table: select column" } ],
+            [ "Ctrl+Shift+Space", { "zh": "选择整个表格", "en": "Select whole table" } ],
+            [ "Alt+Shift+M", { "zh": "合并单元格（Alt+Shift+U 拆分）", "en": "Merge cells (Alt+Shift+U split)" } ],
+            [ "Ctrl+Alt+,", { "zh": "打开快捷键配置", "en": "Open shortcut config" } ]
+          ] ]
+        ] },
+        { "shot": "v0620-settings-keys.png", "caption": { "zh": "设置 ▸ 快捷键：点击后按下新组合键即可修改", "en": "Settings › Shortcuts: click and press a new combination" }, "narrow": true }
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": { "zh": "帮助与反馈", "en": "Help & feedback" },
+      "blocks": [
+        { "p": { "zh": "帮助 ▸ 示例与语法 打开内置的 Markdown 示例；帮助 ▸ 快捷键… 查看全部快捷键。遇到显示错误、编辑问题或有功能建议，欢迎在 GitHub Issues 或小众软件论坛反馈；每个版本的更新与已知问题都在更新日志里。", "en": "Help › Examples & syntax opens a built-in Markdown sample, and Help › Shortcuts… lists every shortcut. Found a glitch or have an idea? Tell us on GitHub Issues or the Appinn forum; every release’s changes and known issues are in the changelog." } },
+        { "actions": "feedback" }
+      ]
+    }
+  ]
+}

@@ -1131,12 +1131,17 @@ header nav a.active {
   text-align: center;
 }
 .doc-legend {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 12px 24px;
   margin: 32px 0 0;
+  border-top: 1px solid var(--line);
   font-size: 14px;
   line-height: 1.8;
+}
+.doc-legend > div {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 24px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
 }
 .doc-legend dt {
   font-weight: 600;
@@ -1144,6 +1149,45 @@ header nav a.active {
 .doc-legend dd {
   margin: 0;
   color: var(--muted);
+}
+.doc-shot.narrow {
+  max-width: 640px;
+  margin-inline: auto;
+}
+.new-badge {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: var(--green);
+  color: #fff;
+  font:
+    600 10px/18px "JetBrains Mono",
+    monospace;
+  vertical-align: 2px;
+}
+.docs-nav a small {
+  display: inline-block;
+  width: 26px;
+  color: var(--green);
+  font:
+    10px "JetBrains Mono",
+    monospace;
+}
+.docs-nav a {
+  padding-block: 11px;
+}
+.shortcut-groups section + section {
+  margin-top: 36px;
+}
+.shortcut-groups h3 {
+  margin: 0;
+  font:
+    600 17px "Noto Serif SC",
+    serif;
+}
+.shortcut-groups .shortcut-table {
+  margin-top: 14px;
 }
 .doc-actions {
   display: flex;
@@ -2001,12 +2045,9 @@ footer small {
   .keys {
     min-width: 110px;
   }
-  .doc-legend {
+  .doc-legend > div {
     grid-template-columns: 1fr;
-    gap: 4px;
-  }
-  .doc-legend dd {
-    margin-bottom: 12px;
+    gap: 2px;
   }
   .gallery figcaption {
     align-items: flex-start;
