@@ -22,7 +22,7 @@ Notes:
 
 ## Download and run
 
-- [Download the latest stable release](https://github.com/yakoye/Shazao-markdown/releases/latest): run the EXE directly, or download and extract the win64 ZIP, which includes release notes and third-party notices. Requires 64-bit Windows 10 or 11.
+- [Download the latest stable release](https://github.com/yakoye/Shazao-markdown/releases/latest): run the EXE directly, or download and extract the win64 ZIP, which includes release notes and third-party notices (and a UPX-compressed copy about 40% of the size, with the same features). Requires 64-bit Windows 10 or 11.
 - History, drafts, recovery copies, image cache, persistent undo, and reading state are stored in `%LOCALAPPDATA%\Shazao` by default and can be managed under Data and Storage in Settings. INI files, shortcuts, and the user dictionary remain editable. Legacy folders such as `Shazao-history` remain readable and are not automatically deleted during upgrades.
 - To carry the app and its data together, for example on a USB drive, create a `Shazao-data` folder next to the EXE; all data is then kept there (portable mode).
 - New versions can be downloaded from Help ▸ Check for updates…, and are verified against the published SHA256SUMS. You can also choose a weekly check in Settings (off by default).
@@ -30,12 +30,12 @@ Notes:
 
 ## Main features
 
-- **Read comfortably, edit directly.** Write in the formatted document, switch to source or locked reading, and use shared undo history and regular-expression find and replace.
-- **Find your way through long documents.** File tree, outline, heading folding, recent files grouped by date, favorites, and remembered reading positions; the outline can sit on the left or the right. Search, pin, and reorder tabs; drag a tab out to open it in a new window, or onto another window to move it there.
+- **Read comfortably, edit directly.** Write in the formatted document, switch to source or locked reading, drag a block by its handle or drag selected text to move it (hold Ctrl to copy), and use shared undo history and regular-expression find and replace.
+- **Find your way through long documents.** File tree, outline, heading folding, recent files grouped by date, favorites, and remembered reading positions; the outline can sit on the left or the right. Search, pin, and reorder tabs, which narrow together and scroll when space runs out; drag a tab out to open it in a new window, or onto another window to move it there.
 - **Open large files too.** A 1 GB file shows its text in about 2 seconds. Edits, undo, and saving work only on the changed part, and files over 64 MB are saved in the background.
 - **Connect your documents.** Hover over a link to preview a web page, file, image, folder, or heading. Tags in the front matter appear above the text, and the Tags pane in the sidebar lists every tag in the folder with its documents.
 - **Explain an idea with a few lines.** View a range of Mermaid diagrams and math directly alongside your text, keeping flows, structures, and explanations together.
-- **Keep tables and code in context.** GFM tables, task lists, syntax highlighting, footnotes, reference links, and callouts. Pasting from browsers, Word, or Excel preserves supported structure where possible.
+- **Keep tables and code in context.** GFM tables, task lists, syntax highlighting, footnotes, reference links, and callouts; color values such as `#DDB46A` show a swatch beside them. Pasting from browsers, Word, or Excel preserves supported structure where possible.
 - **Keep images with your document.** Edit image source in place, resize and view images, use Base64 images, and export a single Markdown file with images embedded. Common content such as static HTML tables is also supported.
 - **Make reading feel like your own.** Light, dark, and preset color schemes, adjustable fonts, line spacing, and reading width. Includes focus and typewriter modes, folder-specific appearance, and Wiki links. The interface is available in Simplified Chinese, Traditional Chinese, and English, and Settings can be searched directly.
 - **Take your work where it needs to go.** Export to HTML, PDF, Word, and EPUB, or reuse CSS templates for batch HTML/PDF export. View, compare, and restore local document history.
@@ -77,7 +77,7 @@ I care about **opening speed, scrolling, input responsiveness, and large-documen
 
 ### Screenshots
 
-These are actual screenshots of `v0.6.17`, using the same set of [demo documents](demo/README.md).
+These are actual screenshots of `v0.6.20`, using the same set of [demo documents](demo/README.md).
 
 **Open, read, write · Shazao Light**
 
