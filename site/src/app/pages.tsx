@@ -203,10 +203,11 @@ const translations: Record<string, { tw: string; en: string }> = {
   "Windows 10 / 11 · 64 位": { tw: "Windows 10 / 11 · 64 位元", en: "Windows 10 / 11 · 64-bit" },
   更多细节: { tw: "更多細節", en: "A closer look" },
   查看使用指南: { tw: "查看使用指南", en: "Read the guide" },
-  "大纲、提示块与任务清单": { tw: "大綱、提示區塊與工作清單", en: "Outline, callouts and task lists" },
-  代码块语法高亮: { tw: "程式碼區塊語法高亮", en: "Syntax-highlighted code blocks" },
-  "表格工具条，点进就能改": { tw: "表格工具列，點進就能改", en: "Table toolbar — click in and edit" },
-  长篇文档的多级大纲: { tw: "長篇文件的多級大綱", en: "Nested outline for long documents" },
+  "用不同的图，讲不同的事": { tw: "用不同的圖，講不同的事", en: "A different diagram for each story" },
+  段落抓手与表格工具条: { tw: "段落抓手與表格工具列", en: "Block handles and the table toolbar" },
+  "Chrome 式标签，一起变窄": { tw: "Chrome 式標籤，一起變窄", en: "Chrome-style tabs that shrink together" },
+  "源码视图，随时切换": { tw: "原始碼檢視，隨時切換", en: "Source view, one keystroke away" },
+  "插入 ▸ 图表：8 个 Mermaid 模板": { tw: "插入 ▸ 圖表：8 個 Mermaid 範本", en: "Insert › Diagram: eight Mermaid templates" },
   "设置：配色方案即点即预览": { tw: "設定：配色方案即點即預覽", en: "Settings: preview a theme in one click" },
   沙米: { tw: "沙米", en: "Sand" },
   枝绿: { tw: "枝綠", en: "Branch green" },
@@ -584,18 +585,18 @@ function FeatureGrid() {
 }
 
 const gallery = [
-  ["shazao-light.png", "打开就读，落笔就写", "SHAZAO LIGHT"],
-  ["shazao-dark.png", "把想法画出来", "SHAZAO DARK"],
-  ["shazao-tokyo-night.png", "给想法一张表，给实现一段代码", "TOKYO NIGHT"],
-  ["shazao-solarized-light.png", "为喜欢的文字，选一种颜色", "SOLARIZED LIGHT"],
+  ["v0620-main.png", "打开就读，落笔就写", "SHAZAO LIGHT"],
+  ["v0620-dark-diagram.png", "把想法画出来", "SHAZAO DARK"],
+  ["v0620-code.png", "给想法一张表，给实现一段代码", "SHAZAO LIGHT"],
+  ["v0620-dark-gallery.png", "用不同的图，讲不同的事", "SHAZAO DARK"],
 ];
 
 const details = [
-  ["shazao-ui-outline.png", "大纲、提示块与任务清单", "OUTLINE"],
-  ["shazao-ui-code.png", "代码块语法高亮", "CODE"],
-  ["shazao-ui-table.png", "表格工具条，点进就能改", "TABLES"],
-  ["shazao-ui-long-doc.png", "长篇文档的多级大纲", "LONG DOCS"],
-  ["shazao-ui-settings.png", "设置：配色方案即点即预览", "SETTINGS"],
+  ["v0620-table.png", "段落抓手与表格工具条", "0.6.20"],
+  ["v0620-tabs.png", "Chrome 式标签，一起变窄", "0.6.20"],
+  ["v0620-source.png", "源码视图，随时切换", "SOURCE"],
+  ["v0620-menu-insert.png", "插入 ▸ 图表：8 个 Mermaid 模板", "INSERT"],
+  ["v0620-settings-dark.png", "设置：配色方案即点即预览", "SETTINGS"],
 ];
 
 function Gallery() {
@@ -832,7 +833,7 @@ export function HomePage() {
         <div className="hero-product">
           <div className="product-window">
             <img
-              src={`${import.meta.env.BASE_URL}screens/shazao-light.png`}
+              src={`${import.meta.env.BASE_URL}screens/v0620-main.png`}
               alt="Shazao 浅色主题产品界面"
             />
           </div>
