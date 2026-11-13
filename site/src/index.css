@@ -1807,6 +1807,9 @@ footer small {
   .care-grid article:nth-child(odd) {
     border-left: 0;
   }
+  .care-grid article:last-child:nth-child(odd) {
+    grid-column: span 2;
+  }
   header nav {
     justify-content: flex-end;
     gap: 18px;
@@ -2072,6 +2075,9 @@ footer small {
   }
   .care-grid {
     grid-template-columns: 1fr;
+  }
+  .care-grid article:last-child:nth-child(odd) {
+    grid-column: auto;
   }
   .care-grid article + article {
     border-left: 0;
