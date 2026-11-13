@@ -25,6 +25,7 @@
         { "shot": "v0620-main.png", "caption": { "zh": "Shazao 浅色：标签栏、文件与大纲侧栏、正文、状态栏", "en": "Shazao Light: tabs, file and outline sidebar, document, status bar" } },
         { "defs": [
           [ { "zh": "≡ 主菜单", "en": "≡ Main menu" }, { "zh": "文件、编辑、段落、插入、格式、视图、主题、帮助八组命令；F10 打开。", "en": "Eight groups — File, Edit, Paragraph, Insert, Format, View, Theme, Help. F10 opens it." } ],
+          [ { "zh": "程序图标", "en": "App icon" }, { "zh": "在标题栏左上角的程序图标上按住即可拖动窗口——标签开满、标题栏没有空白可抓时也能移动。", "en": "Press and hold the app icon at the top-left to drag the window — handy when tabs fill the title bar and there is no empty space left to grab." } ],
           [ { "zh": "˅ 与标签栏", "en": "˅ and tabs" }, { "zh": "˅ 列出并搜索全部标签；当前标签用主题的“当前行”颜色；+ 新建标签（Ctrl+N）。", "en": "˅ lists and searches all tabs; the current tab uses the theme’s current-line color; + opens a new tab (Ctrl+N)." } ],
           [ { "zh": "侧栏", "en": "Sidebar" }, { "zh": "上方是文件夹 / 最近打开 / 收藏 / 标签，下方是大纲；底部按钮依次为：收起侧栏、文件夹、最近打开、收藏、标签。", "en": "Folder, recent, favorites or tags on top, outline below. The bottom buttons: collapse, folder, recent, favorites, tags." } ],
           [ { "zh": "标签栏（正文上方）", "en": "Tag bar (above text)" }, { "zh": "显示 front matter 中的文档标签，“＋ 添加标签”从本文件夹已有的标签中选择或输入新标签。", "en": "Shows the document’s front matter tags; “+ Add tag” picks an existing tag from the folder or creates one." } ],
@@ -43,6 +44,7 @@
           [ { "zh": "编辑源码", "en": "Source" }, { "zh": "带行号的 Markdown 源码，适合精确控制；大文件也只处理改动的部分。", "en": "Markdown with line numbers for exact control; even huge files only process what changed." } ],
           [ { "zh": "锁定", "en": "Locked" }, { "zh": "Esc 锁定，只读防误改；F2 回到就地编辑。可设为打开文档后默认锁定。", "en": "Esc locks the document read-only; F2 returns to editing. Documents can open locked by default." } ]
         ] },
+        { "p": { "zh": "在编辑视图和源码视图之间切换时，光标所在位置会短暂高亮一下，一眼就能找到刚才写到哪里。", "en": "When you switch between the edit and source views, the caret position flashes briefly, so you can spot where you were writing at a glance." } },
         { "shot": "v0620-source.png", "caption": { "zh": "编辑源码：行号、Markdown 标记与状态栏的“退出”按钮", "en": "Source view: line numbers, Markdown markup and the Exit button" } }
       ]
     },
@@ -56,7 +58,7 @@
           { "zh": "0.6.20 段落抓手 ⋮⋮：悬停或光标所在的块左侧出现抓手，按住拖动整块移动（列表项连同子项），撤销一次还原；单击抓手把光标移到块开头。", "en": "0.6.20 Block handle ⋮⋮: hover a block (or put the caret in it) and drag the handle to move the whole block — list items bring their children. One undo restores it; clicking the handle jumps to the block start." },
           { "zh": "0.6.20 选中内容拖放：在选区上按住拖动，松开即移动过去，格式标记自动补全。", "en": "0.6.20 Drag selected text to move it; formatting marks are repaired automatically." },
           { "zh": "上移 / 下移块 Alt+↑ / Alt+↓；0.6.20 向上 / 向下复制块 Alt+Shift+↑ / Alt+Shift+↓（代码块中仍为列选择）。", "en": "Move a block with Alt+↑ / Alt+↓; 0.6.20 duplicate it up / down with Alt+Shift+↑ / ↓ (inside code blocks this stays column selection)." },
-          { "zh": "0.6.20 插入线：表格、代码块、图片等块之间无法放光标的位置显示“+ ────”，点“+”插入空行。", "en": "0.6.20 Insertion line: between tables, code blocks and images a “+ ────” line appears — click + to insert an empty line." },
+          { "zh": "0.6.20 插入线：代码块、表格、引用、图片等块的上方和下方都能点击插入空行：无法放光标的位置显示“+ ────”，点“+”即可。", "en": "0.6.20 Insertion line: above and below code blocks, tables, quotes and images you can click to insert an empty line — where the caret can’t go, a “+ ────” line appears; click +." },
           { "zh": "粘贴：从 Word、网页、Excel 复制的富文本尽量转换成 Markdown（标题、格式、链接、列表、表格、图片）；Ctrl+Shift+V 粘贴为纯文本。复制时可用 Ctrl+Shift+C 复制 Markdown 源码、Ctrl+Alt+C 复制为无格式文本。", "en": "Paste: rich text from Word, browsers and Excel becomes Markdown (headings, formatting, links, lists, tables, images); Ctrl+Shift+V pastes plain text. Copy Markdown source with Ctrl+Shift+C, or plain text with Ctrl+Alt+C." },
           { "zh": "编辑 ▸ 复制 / 粘贴为… 提供更多格式；Ctrl+A 全选，Ctrl+Z / Ctrl+Y 撤销重做，可开启持久撤销（关闭后再打开仍能撤销）。", "en": "Edit › Copy / Paste as… offers more formats; Ctrl+A selects all, Ctrl+Z / Ctrl+Y undo and redo, and persistent undo survives closing the file." },
           { "zh": "HTML 颜色：<font color> 与 <span style=\"color\"> 显示颜色，深色主题里会自动提亮。", "en": "HTML color: <font color> and <span style=\"color\"> render in color, brightened automatically in dark themes." }
@@ -86,7 +88,7 @@
         { "list": [
           { "zh": "点进表格出现工具条：表格菜单（插入、删除、移动行列，合并 / 拆分，按列排序，调整大小）、左 / 中 / 右对齐、适合页面 / 超出页面滚动、复制。", "en": "Click into a table for its toolbar: the table menu (insert, delete and move rows / columns, merge / split, sort by column, resize), left / center / right alignment, fit-to-page or scroll, and copy." },
           { "zh": "Shift+Space 选整行，Ctrl+Space 选整列，Ctrl+Shift+Space 选整个表格；Alt+Shift+M 合并、Alt+Shift+U 拆分单元格。", "en": "Shift+Space selects a row, Ctrl+Space a column, Ctrl+Shift+Space the whole table; Alt+Shift+M merges and Alt+Shift+U splits cells." },
-          { "zh": "拖动列宽；放得下时单元格不换行，放不下时只让最长的列换行。超出页面滚动的表格单列上限可设 40% / 60% / 80% / 不限，横向滚动条固定在窗口底部，Shift+滚轮横移。", "en": "Drag column widths. Cells stay on one line when they fit; otherwise only the longest column wraps. For scrolling tables, cap a column at 40 / 60 / 80% or unlimited; the horizontal scrollbar sticks to the window bottom and Shift+wheel scrolls sideways." },
+          { "zh": "按住列之间的边线即可拖动调整列宽；放得下时单元格不换行，放不下时只让最长的列换行。超出页面滚动的表格单列上限可设 40% / 60% / 80% / 不限，横向滚动条固定在窗口底部，Shift+滚轮横移。", "en": "Drag the border between columns to resize them. Cells stay on one line when they fit; otherwise only the longest column wraps. For scrolling tables, cap a column at 40 / 60 / 80% or unlimited; the horizontal scrollbar sticks to the window bottom and Shift+wheel scrolls sideways." },
           { "zh": "从 Excel 粘贴单元格超出表格时自动补足行列；表格字号、默认横向与竖向对齐可单独设置，导出与复制都跟随。", "en": "Pasting more cells than fit extends the table automatically. Table font size and default horizontal / vertical alignment are configurable and carry into export and copy." },
           { "zh": "工具条显示方式（设置 ▸ 阅读）：悬停时（默认）/ 始终 / 只在编辑时。也支持静态 HTML 表格。", "en": "Toolbar display (Settings › Reading): on hover (default), always, or only while editing. Static HTML tables are supported too." }
         ] },
@@ -144,7 +146,7 @@
       "blocks": [
         { "list": [
           { "zh": "大纲：显示在左侧（与文件上下排列）、右侧单独一栏，或与文件切换显示；可设宽度、字号、行间距；标题较多时自动折叠。F8 或 Ctrl+Shift+1 开合，12 万个标题也能 0.6 秒内可用。", "en": "Outline: left (stacked with files), its own right column, or toggled with files; width, font size and spacing are adjustable, and long outlines fold automatically. F8 or Ctrl+Shift+1 toggles it — even 120,000 headings are ready in 0.6 s." },
-          { "zh": "正文标题可折叠；每份文件记住阅读位置；后退 / 前进 Alt+← / Alt+→。", "en": "Headings fold in the text; every file remembers where you were; Alt+← / Alt+→ go back and forward." },
+          { "zh": "大纲自动跟随：滚动或移动光标时，大纲自动展开到当前标题并高亮。正文标题可折叠；每份文件记住阅读位置；后退 / 前进 Alt+← / Alt+→。", "en": "The outline follows you: as you scroll or move the caret it expands to the current heading and highlights it. Headings fold in the text; every file remembers where you were; Alt+← / Alt+→ go back and forward." },
           { "zh": "文档标签：front matter 中 tags: [a, b] 显示在正文上方；侧栏“标签”面板列出文件夹中全部标签及对应文档。", "en": "Tags: tags: [a, b] in front matter appear above the text; the Tags panel lists every tag in the folder and its documents." },
           { "zh": "链接卡片：悬停预览网页、图片、文件夹、标题或邮件；0.6.20 起文本与 Markdown 文件显示开头 14 行，可滚动、选择和复制，点一下固定。", "en": "Link cards preview web pages, images, folders, headings and email; 0.6.20 shows the first 14 lines of text and Markdown files, scrollable, selectable and pinnable." },
           { "zh": "Wiki 链接，视图 ▸ 引用此文档的 Wiki 笔记…；文件 ▸ 检查链接… 找出失效链接；es: 等自定义协议交给系统打开。", "en": "Wiki links, View › Wiki notes referencing this document…, and File › Check links… for broken links; custom protocols like es: open through Windows." },
