@@ -9,9 +9,9 @@ body:
       options:
         - 不确定
         # BEGIN RELEASE OPTIONS
+        - v0.6.20
         - v0.6.19
         - v0.6.18
-        - v0.6.17
         # END RELEASE OPTIONS
         - 旧版或其他版本
     validations:
