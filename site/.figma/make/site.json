@@ -1,0 +1,14 @@
+{
+  "title": "Shazao 沙枣 · 原生 Markdown 阅读与编辑器",
+  "description": "从一行文字，到一份作品。Shazao 是快速、原生的 Markdown 阅读与编辑器，Windows 现已推出，macOS 开发中。",
+  "icons": {
+    "icon": "/brand/shazao-app-icon.png"
+  },
+  "robots": {
+    "index": true
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
