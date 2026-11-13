@@ -1,8 +1,8 @@
 {
  "hero": {
-  "zh": "从下载到导出，一页看完 Shazao 的全部功能。截图来自 v0.6.20 实际界面；标有「0.6.20」的功能随 v0.6.20 正式版提供。",
-  "tw": "從下載到匯出，一頁看完 Shazao 的全部功能。截圖來自 v0.6.20 實際介面；標有「0.6.20」的功能隨 v0.6.20 正式版提供。",
-  "en": "Everything Shazao can do, from download to export, on one page. Screenshots are from the real v0.6.20 app; items marked “0.6.20” arrive with the v0.6.20 release."
+  "zh": "从下载到导出，一页看完 Shazao 的全部功能。内容与截图均对应最新版 v0.6.20；标有「0.6.20」的是本版新增功能。",
+  "tw": "從下載到匯出，一頁看完 Shazao 的全部功能。內容與截圖均對應最新版 v0.6.20；標有「0.6.20」的是本版新增功能。",
+  "en": "Everything Shazao can do, from download to export, on one page. Text and screenshots match the latest release, v0.6.20; items marked “0.6.20” are new in this version."
  },
  "sections": [
   {

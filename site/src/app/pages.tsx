@@ -303,7 +303,7 @@ function Header({
         <span>
           Shazao <b>沙枣</b>
         </span>
-        <small>v0.6.19</small>
+        <small>v0.6.20</small>
       </Link>
       <nav className="nav-primary">
         <NavLink to="/" end>
