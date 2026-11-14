@@ -36,8 +36,8 @@ jobs:
             exit 0
           fi
 
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git config user.name 'Shazao version sync'
+          git config user.email 'shazao-version-sync@automation.invalid'
           git add -- "$form"
           git commit -m '同步问题反馈的发布版本选项'
           git push origin "HEAD:refs/heads/$DEFAULT_BRANCH"
