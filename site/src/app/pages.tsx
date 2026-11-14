@@ -243,7 +243,7 @@ const translations: Record<string, { tw: string; en: string }> = {
   "每版都整版回归": { tw: "每版都整版迴歸", en: "Full regression every release" },
   "62 项核心测试，近 400 步界面自动化回归，三种语言的界面文字逐条校验；公式按 KaTeX 支持表 997 例与 MathJax 2635 个官方测例对照。发布说明如实写出没通过的项和已知问题。": { tw: "62 項核心測試，近 400 步介面自動化迴歸，三種語言的介面文字逐條校驗；公式按 KaTeX 支援表 997 例與 MathJax 2635 個官方測例對照。釋出說明如實寫出沒透過的項和已知問題。", en: "62 core tests, a UI regression of nearly 400 steps, and every interface string checked in three languages; math is checked against KaTeX’s 997 examples and MathJax’s 2,635 official tests. Release notes list what failed and what is still known to be broken." },
   "跟着反馈改": { tw: "跟著反饋改", en: "Built from feedback" },
-  "v0.6.20 一版处理了小众软件论坛 154～176 楼和 GitHub #22～#32；v0.6.21 起因是论坛 180、184、185 楼的公式问题。提问题，下一版就能看到结果。": { tw: "v0.6.20 一版處理了小眾軟體論壇 154～176 樓和 GitHub #22～#32；v0.6.21 起因是論壇 180、184、185 樓的公式問題。提問題，下一版就能看到結果。", en: "v0.6.20 answered Appinn forum posts 154–176 and GitHub issues #22–#32; v0.6.21 started from formula reports in posts 180, 184 and 185. Report a problem and you’ll usually see it in the next release." },
+  "论坛和 GitHub 上的反馈逐条处理：拖入几十个文件变慢、设置窗口乱码、公式显示不对，修好后写进下一版的发布说明，并注明来自哪一楼、哪个 issue。": { tw: "論壇和 GitHub 上的反饋逐條處理：拖入幾十個檔案變慢、設定視窗亂碼、公式顯示不對，修好後寫進下一版的釋出說明，並註明來自哪一樓、哪個 issue。", en: "Reports from the forum and GitHub are handled one by one — slow multi-file drops, garbled settings text, wrong formulas — and the fix goes into the next release notes with the post or issue it came from." },
   "图表和公式，直接显示": { tw: "圖表和公式，直接顯示", en: "Diagrams and math, rendered inline" },
   "流程图、时序图、甘特图、思维导图、ER 图等 Mermaid 图表；KaTeX 支持表 997 个示例全部能读，physics、mhchem 化学式也行；图里的文字能选中复制。": { tw: "流程圖、時序圖、甘特圖、思維導圖、ER 圖等 Mermaid 圖表；KaTeX 支援表 997 個示例全部能讀，physics、mhchem 化學式也行；圖裡的文字能選中複製。", en: "Mermaid flowcharts, sequence, Gantt, mindmap, ER and more; all 997 KaTeX examples render, plus physics and mhchem chemistry; text inside diagrams can be selected and copied." },
   "几百页也不迷路": { tw: "幾百頁也不迷路", en: "Hundreds of pages, still oriented" },
@@ -266,7 +266,6 @@ const translations: Record<string, { tw: string; en: string }> = {
   "落笔就写": { tw: "落筆就寫", en: "type to write" },
   "Windows 原生 Markdown 阅读与编辑器。": { tw: "Windows 原生 Markdown 閱讀與編輯器。", en: "A native Markdown reader and editor for Windows." },
   "一个约 9 MB 的 EXE，0.46 秒启动；直接在排版好的页面里编辑，1 GB 的文件约 2 秒显示正文。": { tw: "一個約 9 MB 的 EXE，0.46 秒啟動；直接在排版好的頁面裡編輯，1 GB 的檔案約 2 秒顯示正文。", en: "One ≈ 9 MB EXE that starts in 0.46 s. Edit right in the rendered page; a 1 GB file shows its text in about 2 seconds." },
-  "v0.6.21 · Windows 10 / 11 64 位 · 免安装 · 免账号 · 默认不联网 · 免费": { tw: "v0.6.21 · Windows 10 / 11 64 位 · 免安裝 · 免賬號 · 預設不聯網 · 免費", en: "v0.6.21 · Windows 10 / 11 64-bit · No install · No account · Offline by default · Free" },
   "本机实测数据，来自各版本发布说明。": { tw: "本機實測資料，來自各版本釋出說明。", en: "Measured on the developer’s machine; figures come from each release’s notes." },
   "实测": { tw: "實測", en: "Measured" },
   "同一份文档，三种视图": { tw: "同一份文件，三種檢視", en: "One document, three views" },
@@ -280,16 +279,14 @@ const translations: Record<string, { tw: string; en: string }> = {
   "用户怎么说": { tw: "使用者怎麼說", en: "What users say" },
   "来自小众软件论坛的真实反馈": { tw: "來自小眾軟體論壇的真實反饋", en: "Real feedback from the Appinn forum" },
   "查看全部讨论": { tw: "檢視全部討論", en: "Read the whole thread" },
-  "免费下载 v0.6.21": { tw: "免費下載 v0.6.21", en: "Free download v0.6.21" },
-  "v0.6.21 · Windows 10 / 11 · 64 位": { tw: "v0.6.21 · Windows 10 / 11 · 64 位", en: "v0.6.21 · Windows 10 / 11 · 64-bit" },
   "还在开发，暂无预计时间": { tw: "還在開發，暫無預計時間", en: "In development, no date yet" },
   "Shazao-markdown.exe 约 9.5 MB，下载后双击运行，不需要安装向导。": { tw: "Shazao-markdown.exe 約 9.5 MB，下載後雙擊執行，不需要安裝嚮導。", en: "Shazao-markdown.exe is about 9.5 MB: download, double-click, done — no installer." },
   "商店版自动更新；新版本在商店审核通过后上架。": { tw: "商店版自動更新；新版本在商店稽核透過後上架。", en: "The Store version updates itself; new releases appear after Store review." },
   "在 EXE 旁边新建 Shazao-data 文件夹，设置、历史版本和缓存都存在里面，整个文件夹放进 U 盘就能带走。": { tw: "在 EXE 旁邊新建 Shazao-data 資料夾，設定、歷史版本和快取都存在裡面，整個資料夾放進 U 盤就能帶走。", en: "Create a Shazao-data folder next to the EXE and settings, history and caches live there — copy the folder to a USB stick and go." },
   "每个版本附 SHA256SUMS；ZIP 约 8 MB，含版本说明、第三方声明和约 3.7 MB 的 UPX 压缩版。": { tw: "每個版本附 SHA256SUMS；ZIP 約 8 MB，含版本說明、第三方宣告和約 3.7 MB 的 UPX 壓縮版。", en: "Every release ships SHA256SUMS. The ≈ 8 MB ZIP adds release notes, third-party notices and a ≈ 3.7 MB UPX build." },
   "只在加载网络图片和检查更新时联网；检查更新默认关闭。": { tw: "只在載入網路圖片和檢查更新時聯網；檢查更新預設關閉。", en: "Online only for web images and update checks; update checks are off by default." },
-  "最新版 v0.6.21 · Windows 10 / 11 64 位 · 免安装 · 免账号 · 免费": { tw: "最新版 v0.6.21 · Windows 10 / 11 64 位 · 免安裝 · 免賬號 · 免費", en: "Latest v0.6.21 · Windows 10 / 11 64-bit · No install · No account · Free" },
   "便携模式": { tw: "便攜模式", en: "Portable mode" },
+  "Windows 10 / 11 64 位 · 免安装 · 免账号 · 默认不联网 · 免费": { tw: "Windows 10 / 11 64 位 · 免安裝 · 免賬號 · 預設不聯網 · 免費", en: "Windows 10 / 11 64-bit · No install · No account · Offline by default · Free" },
   沙米: { tw: "沙米", en: "Sand" },
   枝绿: { tw: "枝綠", en: "Branch green" },
   枣红: { tw: "棗紅", en: "Shazao red" },
@@ -384,7 +381,6 @@ function Header({
         <span>
           Shazao <b>沙枣</b>
         </span>
-        <small>v0.6.21</small>
       </Link>
       <nav className="nav-primary">
         <NavLink to="/" end>
@@ -564,7 +560,7 @@ const designPoints = [
   ["默认不联网", "只在加载网络图片和检查更新时联网，检查更新默认关闭；下载的新版本按 SHA256SUMS 校验。没有账号，没有统计。"],
   ["界面自己画", "C++20、Win32、DirectWrite、Direct2D、WIC，不用 Electron，也不需要 WebView2。标题栏、标签、细滚动条、图标都自己绘制，直线落在整像素上，高缩放下不发虚。"],
   ["每版都整版回归", "62 项核心测试，近 400 步界面自动化回归，三种语言的界面文字逐条校验；公式按 KaTeX 支持表 997 例与 MathJax 2635 个官方测例对照。发布说明如实写出没通过的项和已知问题。"],
-  ["跟着反馈改", "v0.6.20 一版处理了小众软件论坛 154～176 楼和 GitHub #22～#32；v0.6.21 起因是论坛 180、184、185 楼的公式问题。提问题，下一版就能看到结果。"],
+  ["跟着反馈改", "论坛和 GitHub 上的反馈逐条处理：拖入几十个文件变慢、设置窗口乱码、公式显示不对，修好后写进下一版的发布说明，并注明来自哪一楼、哪个 issue。"],
 ];
 
 const voices = [
@@ -771,8 +767,8 @@ const cares = [
 ];
 
 const details = [
-  ["v0620-table.png", "段落抓手与表格工具条", "0.6.20"],
-  ["v0620-tabs.png", "Chrome 式标签，一起变窄", "0.6.20"],
+  ["v0620-table.png", "段落抓手与表格工具条", "BLOCKS"],
+  ["v0620-tabs.png", "Chrome 式标签，一起变窄", "TABS"],
   ["v0620-source.png", "源码视图，随时切换", "SOURCE"],
   ["v0620-menu-insert.png", "插入 ▸ 图表：8 个 Mermaid 模板", "INSERT"],
   ["v0620-settings-dark.png", "设置：配色方案即点即预览", "SETTINGS"],
@@ -1024,14 +1020,14 @@ export function HomePage() {
           </p>
           <div className="hero-buttons">
             <Link className="button" to="/download">
-              {t("免费下载 v0.6.21")} <ArrowIcon />
+              {t("免费下载")} <ArrowIcon />
             </Link>
             <a className="button ghost" href="#features">
               {t("查看功能")}
             </a>
           </div>
           <small className="platform-line">
-            {t("v0.6.21 · Windows 10 / 11 64 位 · 免安装 · 免账号 · 默认不联网 · 免费")}
+            {t("Windows 10 / 11 64 位 · 免安装 · 免账号 · 默认不联网 · 免费")}
           </small>
         </div>
         <div className="hero-product">
@@ -1060,7 +1056,7 @@ export function HomePage() {
       <section className="home-end section-wrap">
         <h2>{t("从一行文字，到一份作品。")}</h2>
         <Link className="button" to="/download">
-          {t("免费下载 v0.6.21")} <ArrowIcon />
+          {t("免费下载")} <ArrowIcon />
         </Link>
       </section>
     </main>
@@ -1148,14 +1144,14 @@ export function DownloadPage() {
       <PageHero
         eyebrow="DOWNLOAD"
         title={t("下载")}
-        description={t("最新版 v0.6.21 · Windows 10 / 11 64 位 · 免安装 · 免账号 · 免费")}
+        description={t("Windows 10 / 11 64 位 · 免安装 · 免账号 · 默认不联网 · 免费")}
       />
       <section className="download download-page section-wrap">
         <div className="download-grid">
           <article className="available">
             <small>WINDOWS</small>
             <h3>{t("现已推出")}</h3>
-            <p>{t("v0.6.21 · Windows 10 / 11 · 64 位")}</p>
+            <p>{t("Windows 10 / 11 · 64 位")}</p>
             <div className="store-buttons">
               <a className="button" href={storeUrl}>
                 {t("微软应用商店")} <ArrowIcon />

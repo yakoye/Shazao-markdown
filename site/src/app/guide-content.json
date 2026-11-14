@@ -1,8 +1,8 @@
 {
  "hero": {
-  "zh": "从下载到导出，一页看完 Shazao 的全部功能。内容对应最新版 v0.6.21，截图来自实际界面；标有「0.6.20」「0.6.21」的是这两版新增的功能。",
-  "tw": "從下載到匯出，一頁看完 Shazao 的全部功能。內容對應最新版 v0.6.21，截圖來自實際介面；標有「0.6.20」「0.6.21」的是這兩版新增的功能。",
-  "en": "Everything Shazao can do, from download to export, on one page. Written for the latest release, v0.6.21, with screenshots of the real app; items marked “0.6.20” or “0.6.21” are new in those versions."
+  "zh": "从下载到导出，一页看完 Shazao 的全部功能。截图均来自实际界面。",
+  "tw": "從下載到匯出，一頁看完 Shazao 的全部功能。截圖均來自實際介面。",
+  "en": "Everything Shazao can do, from download to export, on one page. Every screenshot is the real app."
  },
  "sections": [
   {
@@ -243,24 +243,24 @@
        "en": "Format: bold Ctrl+B, italic Ctrl+I, underline Ctrl+U, strikethrough Alt+Shift+S, highlight Ctrl+Shift+H, inline code Ctrl+Shift+`, link Ctrl+K, clear formatting Ctrl+\\, plus “add spaces between CJK and Latin”."
       },
       {
-       "zh": "0.6.20 段落抓手 ⋮⋮：悬停或光标所在的块左侧出现抓手，按住拖动整块移动（列表项连同子项），撤销一次还原；单击抓手把光标移到块开头。",
-       "tw": "0.6.20 段落抓手 ⋮⋮：懸停或游標所在的塊左側出現抓手，按住拖動整塊移動（列表項連同子項），撤銷一次還原；單擊抓手把游標移到塊開頭。",
-       "en": "0.6.20 Block handle ⋮⋮: hover a block (or put the caret in it) and drag the handle to move the whole block — list items bring their children. One undo restores it; clicking the handle jumps to the block start."
+       "zh": "段落抓手 ⋮⋮：悬停或光标所在的块左侧出现抓手，按住拖动整块移动（列表项连同子项），撤销一次还原；单击抓手把光标移到块开头。",
+       "tw": "段落抓手 ⋮⋮：懸停或游標所在的塊左側出現抓手，按住拖動整塊移動（列表項連同子項），撤銷一次還原；單擊抓手把游標移到塊開頭。",
+       "en": "Block handle ⋮⋮: hover a block (or put the caret in it) and drag the handle to move the whole block — list items bring their children. One undo restores it; clicking the handle jumps to the block start."
       },
       {
-       "zh": "0.6.20 选中内容拖放：在选区上按住拖动，松开即移动过去，格式标记自动补全；按住 Ctrl 拖动为复制。",
-       "tw": "0.6.20 選中內容拖放：在選區上按住拖動，鬆開即移動過去，格式標記自動補全；按住 Ctrl 拖動為複製。",
-       "en": "0.6.20 Drag selected text to move it — hold Ctrl to copy instead; formatting marks are repaired automatically."
+       "zh": "选中内容拖放：在选区上按住拖动，松开即移动过去，格式标记自动补全；按住 Ctrl 拖动为复制。",
+       "tw": "選中內容拖放：在選區上按住拖動，鬆開即移動過去，格式標記自動補全；按住 Ctrl 拖動為複製。",
+       "en": "Drag selected text to move it — hold Ctrl to copy instead; formatting marks are repaired automatically."
       },
       {
-       "zh": "上移 / 下移块 Alt+↑ / Alt+↓；0.6.20 向上 / 向下复制块 Alt+Shift+↑ / Alt+Shift+↓（代码块中仍为列选择）。",
-       "tw": "上移 / 下移塊 Alt+↑ / Alt+↓；0.6.20 向上 / 向下複製塊 Alt+Shift+↑ / Alt+Shift+↓（程式碼塊中仍為列選擇）。",
-       "en": "Move a block with Alt+↑ / Alt+↓; 0.6.20 duplicate it up / down with Alt+Shift+↑ / ↓ (inside code blocks this stays column selection)."
+       "zh": "上移 / 下移块 Alt+↑ / Alt+↓；向上 / 向下复制块 Alt+Shift+↑ / Alt+Shift+↓（代码块中仍为列选择）。",
+       "tw": "上移 / 下移塊 Alt+↑ / Alt+↓；向上 / 向下複製塊 Alt+Shift+↑ / Alt+Shift+↓（程式碼塊中仍為列選擇）。",
+       "en": "Move a block with Alt+↑ / Alt+↓; duplicate it up / down with Alt+Shift+↑ / ↓ (inside code blocks this stays column selection)."
       },
       {
-       "zh": "0.6.20 插入线：代码块、表格、引用、图片等块的上方和下方都能点击插入空行：无法放光标的位置显示“+ ────”，点“+”即可。",
-       "tw": "0.6.20 插入線：程式碼塊、表格、引用、圖片等塊的上方和下方都能點選插入空行：無法放游標的位置顯示“+ ────”，點“+”即可。",
-       "en": "0.6.20 Insertion line: above and below code blocks, tables, quotes and images you can click to insert an empty line — where the caret can’t go, a “+ ────” line appears; click +."
+       "zh": "插入线：代码块、表格、引用、图片等块的上方和下方都能点击插入空行：无法放光标的位置显示“+ ────”，点“+”即可。",
+       "tw": "插入線：程式碼塊、表格、引用、圖片等塊的上方和下方都能點選插入空行：無法放游標的位置顯示“+ ────”，點“+”即可。",
+       "en": "Insertion line: above and below code blocks, tables, quotes and images you can click to insert an empty line — where the caret can’t go, a “+ ────” line appears; click +."
       },
       {
        "zh": "粘贴：从 Word、网页、Excel 复制的富文本尽量转换成 Markdown（标题、格式、链接、列表、表格、图片）；Ctrl+Shift+V 粘贴为纯文本。复制时可用 Ctrl+Shift+C 复制 Markdown 源码、Ctrl+Alt+C 复制为无格式文本。",
@@ -273,9 +273,9 @@
        "en": "Edit › Copy / Paste as… offers more formats; Ctrl+A selects all, Ctrl+Z / Ctrl+Y undo and redo, and persistent undo survives closing the file."
       },
       {
-       "zh": "0.6.20 颜色色块：正文、表格里的 #DDB46A 这类颜色值后面显示一个该颜色的小方块（代码块和链接里不显示，可在设置 ▸ 阅读关闭）。",
-       "tw": "0.6.20 顏色色塊：正文、表格裡的 #DDB46A 這類顏色值後面顯示一個該顏色的小方塊（程式碼塊和連結裡不顯示，可在設定 ▸ 閱讀關閉）。",
-       "en": "0.6.20 Color swatches: color values like #DDB46A in text and tables get a small swatch of that color (not in code blocks or links; can be turned off in Settings › Reading)."
+       "zh": "颜色色块：正文、表格里的 #DDB46A 这类颜色值后面显示一个该颜色的小方块（代码块和链接里不显示，可在设置 ▸ 阅读关闭）。",
+       "tw": "顏色色塊：正文、表格裡的 #DDB46A 這類顏色值後面顯示一個該顏色的小方塊（程式碼塊和連結裡不顯示，可在設定 ▸ 閱讀關閉）。",
+       "en": "Color swatches: color values like #DDB46A in text and tables get a small swatch of that color (not in code blocks or links; can be turned off in Settings › Reading)."
       },
       {
        "zh": "HTML 颜色：<font color> 与 <span style=\"color\"> 显示颜色，深色主题里会自动提亮。",
@@ -411,24 +411,24 @@
        "en": "Code blocks: syntax highlighting, language tag and copy; optional wrapping, line numbers, Tab-as-spaces and tab width. Alt+drag or Alt+Shift+arrows for column selection."
       },
       {
-       "zh": "数学公式：$…$ 行内、$$…$$ 独立公式；0.6.21 起也支持 \\( … \\) 与 \\[ … \\] 写法。",
-       "tw": "數學公式：$…$ 行內、$$…$$ 獨立公式；0.6.21 起也支援 \\( … \\) 與 \\[ … \\] 寫法。",
-       "en": "Math: $…$ inline and $$…$$ display; from 0.6.21 also \\( … \\) and \\[ … \\]."
+       "zh": "数学公式：$…$ 行内、$$…$$ 独立公式；也支持 \\( … \\) 与 \\[ … \\] 写法。",
+       "tw": "數學公式：$…$ 行內、$$…$$ 獨立公式；也支援 \\( … \\) 與 \\[ … \\] 寫法。",
+       "en": "Math: $…$ inline and $$…$$ display; also \\( … \\) and \\[ … \\]."
       },
       {
-       "zh": "0.6.21 公式命令全面补齐：KaTeX 支持表 997 个示例全部能读，MathJax 官方 TeX 测例通过 2498/2635；\\tag 编号与 \\eqref 引用，\\newcommand、\\def 等宏，29 种可伸缩箭头，CD 交换图。",
-       "tw": "0.6.21 公式命令全面補齊：KaTeX 支援表 997 個示例全部能讀，MathJax 官方 TeX 測例透過 2498/2635；\\tag 編號與 \\eqref 引用，\\newcommand、\\def 等宏，29 種可伸縮箭頭，CD 交換圖。",
-       "en": "0.6.21 Complete math coverage: all 997 KaTeX examples render and 2,498 of MathJax’s 2,635 TeX tests pass; \\tag numbering and \\eqref, \\newcommand and \\def macros, 29 stretchy arrows, CD diagrams."
+       "zh": "公式命令全面补齐：KaTeX 支持表 997 个示例全部能读，MathJax 官方 TeX 测例通过 2498/2635；\\tag 编号与 \\eqref 引用，\\newcommand、\\def 等宏，29 种可伸缩箭头，CD 交换图。",
+       "tw": "公式命令全面補齊：KaTeX 支援表 997 個示例全部能讀，MathJax 官方 TeX 測例透過 2498/2635；\\tag 編號與 \\eqref 引用，\\newcommand、\\def 等宏，29 種可伸縮箭頭，CD 交換圖。",
+       "en": "Complete math coverage: all 997 KaTeX examples render and 2,498 of MathJax’s 2,635 TeX tests pass; \\tag numbering and \\eqref, \\newcommand and \\def macros, 29 stretchy arrows, CD diagrams."
       },
       {
-       "zh": "0.6.21 physics 宏包（\\dv、\\pdv、\\ket、\\abs…）与 mhchem 化学式（\\ce{2H2 + O2 -> 2H2O}、\\pu{1.2e3 kJ/mol}）。",
-       "tw": "0.6.21 physics 宏包（\\dv、\\pdv、\\ket、\\abs…）與 mhchem 化學式（\\ce{2H2 + O2 -> 2H2O}、\\pu{1.2e3 kJ/mol}）。",
-       "en": "0.6.21 The physics package (\\dv, \\pdv, \\ket, \\abs…) and mhchem chemistry (\\ce{2H2 + O2 -> 2H2O}, \\pu{1.2e3 kJ/mol})."
+       "zh": "physics 宏包（\\dv、\\pdv、\\ket、\\abs…）与 mhchem 化学式（\\ce{2H2 + O2 -> 2H2O}、\\pu{1.2e3 kJ/mol}）。",
+       "tw": "physics 宏包（\\dv、\\pdv、\\ket、\\abs…）與 mhchem 化學式（\\ce{2H2 + O2 -> 2H2O}、\\pu{1.2e3 kJ/mol}）。",
+       "en": "The physics package (\\dv, \\pdv, \\ket, \\abs…) and mhchem chemistry (\\ce{2H2 + O2 -> 2H2O}, \\pu{1.2e3 kJ/mol})."
       },
       {
-       "zh": "0.6.21 上千层嵌套的公式不会闪退，停在安全深度并提示；100 万个公式（45 MB）的文档 0.67 秒打开，滚动每帧 3 毫秒以内。",
-       "tw": "0.6.21 上千層巢狀的公式不會閃退，停在安全深度並提示；100 萬個公式（45 MB）的文件 0.67 秒開啟，滾動每幀 3 毫秒以內。",
-       "en": "0.6.21 Formulas nested thousands deep no longer crash — they stop at a safe depth with a message; a document with 1,000,000 formulas (45 MB) opens in 0.67 s and scrolls at under 3 ms per frame."
+       "zh": "上千层嵌套的公式不会闪退，停在安全深度并提示；100 万个公式（45 MB）的文档 0.67 秒打开，滚动每帧 3 毫秒以内。",
+       "tw": "上千層巢狀的公式不會閃退，停在安全深度並提示；100 萬個公式（45 MB）的文件 0.67 秒開啟，滾動每幀 3 毫秒以內。",
+       "en": "Formulas nested thousands deep no longer crash — they stop at a safe depth with a message; a document with 1,000,000 formulas (45 MB) opens in 0.67 s and scrolls at under 3 ms per frame."
       },
       {
        "zh": "Mermaid：流程图、时序图、状态图、类图、ER 图、甘特图、饼图、思维导图、Git 图、C4、时间线、象限图、XY 图等直接显示；双击图表查看细节。",
@@ -534,9 +534,9 @@
        "en": "Recent files are grouped by today, yesterday, last 7 days and earlier; keep favorites. Copy the file path with Alt+Shift+C."
       },
       {
-       "zh": "0.6.20 Chrome 式标签：放不下时一起变窄，再放不下时出现 ◂ ▸ 箭头（滚轮也可）；标签可搜索、固定、拖动排序；Ctrl+Tab / Ctrl+Shift+Tab 切换。",
-       "tw": "0.6.20 Chrome 式標籤：放不下時一起變窄，再放不下時出現 ◂ ▸ 箭頭（滾輪也可）；標籤可搜尋、固定、拖動排序；Ctrl+Tab / Ctrl+Shift+Tab 切換。",
-       "en": "0.6.20 Chrome-style tabs shrink together, then show ◂ ▸ arrows (or use the wheel). Search, pin and reorder tabs; Ctrl+Tab / Ctrl+Shift+Tab to switch."
+       "zh": "Chrome 式标签：放不下时一起变窄，再放不下时出现 ◂ ▸ 箭头（滚轮也可）；标签可搜索、固定、拖动排序；Ctrl+Tab / Ctrl+Shift+Tab 切换。",
+       "tw": "Chrome 式標籤：放不下時一起變窄，再放不下時出現 ◂ ▸ 箭頭（滾輪也可）；標籤可搜尋、固定、拖動排序；Ctrl+Tab / Ctrl+Shift+Tab 切換。",
+       "en": "Chrome-style tabs shrink together, then show ◂ ▸ arrows (or use the wheel). Search, pin and reorder tabs; Ctrl+Tab / Ctrl+Shift+Tab to switch."
       },
       {
        "zh": "把标签拖出标签栏开新窗口；拖到另一个 Shazao 窗口即合并，未保存的输入、撤销步骤、光标一起带走。",
@@ -549,9 +549,9 @@
        "en": "Options: Ctrl+N opens a tab or a window, closing the last tab closes the window, run a single instance, restore last session on start."
       },
       {
-       "zh": "0.6.20 系统托盘：用全局快捷键隐藏时只留托盘图标；关闭窗口时隐藏到托盘（设置 ▸ 编辑，默认关闭）。显示 / 隐藏 Shazao 的全局快捷键在 设置 ▸ 快捷键 设置。",
-       "tw": "0.6.20 系統托盤：用全域性快捷鍵隱藏時只留托盤圖示；關閉視窗時隱藏到托盤（設定 ▸ 編輯，預設關閉）。顯示 / 隱藏 Shazao 的全域性快捷鍵在 設定 ▸ 快捷鍵 設定。",
-       "en": "0.6.20 System tray: hide to the tray icon with the global hotkey, or when closing the window (Settings › Editing, off by default). Set the show / hide global hotkey in Settings › Shortcuts."
+       "zh": "系统托盘：用全局快捷键隐藏时只留托盘图标；关闭窗口时隐藏到托盘（设置 ▸ 编辑，默认关闭）。显示 / 隐藏 Shazao 的全局快捷键在 设置 ▸ 快捷键 设置。",
+       "tw": "系統托盤：用全域性快捷鍵隱藏時只留托盤圖示；關閉視窗時隱藏到托盤（設定 ▸ 編輯，預設關閉）。顯示 / 隱藏 Shazao 的全域性快捷鍵在 設定 ▸ 快捷鍵 設定。",
+       "en": "System tray: hide to the tray icon with the global hotkey, or when closing the window (Settings › Editing, off by default). Set the show / hide global hotkey in Settings › Shortcuts."
       }
      ]
     },
@@ -600,9 +600,9 @@
        "en": "Tags: tags: [a, b] in front matter appear above the text; the Tags panel lists every tag in the folder and its documents."
       },
       {
-       "zh": "链接卡片：悬停预览网页、图片、文件夹、标题或邮件；0.6.20 起文本与 Markdown 文件显示开头 14 行，可滚动、选择和复制，点一下固定。",
-       "tw": "連結卡片：懸停預覽網頁、圖片、資料夾、標題或郵件；0.6.20 起文字與 Markdown 檔案顯示開頭 14 行，可滾動、選擇和複製，點一下固定。",
-       "en": "Link cards preview web pages, images, folders, headings and email; 0.6.20 shows the first 14 lines of text and Markdown files, scrollable, selectable and pinnable."
+       "zh": "链接卡片：悬停预览网页、图片、文件夹、标题或邮件；文本与 Markdown 文件显示开头 14 行，可滚动、选择和复制，点一下固定。",
+       "tw": "連結卡片：懸停預覽網頁、圖片、資料夾、標題或郵件；文字與 Markdown 檔案顯示開頭 14 行，可滾動、選擇和複製，點一下固定。",
+       "en": "Link cards preview web pages, images, folders, headings and email; text and Markdown files show their first 14 lines, scrollable, selectable and pinnable."
       },
       {
        "zh": "Wiki 链接，视图 ▸ 引用此文档的 Wiki 笔记…；文件 ▸ 检查链接… 找出失效链接；es: 等自定义协议交给系统打开。",
@@ -610,9 +610,9 @@
        "en": "Wiki links, View › Wiki notes referencing this document…, and File › Check links… for broken links; custom protocols like es: open through Windows."
       },
       {
-       "zh": "0.6.20 新的查找窗口：查找 Ctrl+F、替换 Ctrl+H，区分大小写 / 全字匹配 / 正则 / 仅在选区为方形图标（Alt+C / W / R / L），拖动空白处移动；选中较长内容时自动只在选区内查找。在文件夹中搜索 Ctrl+Shift+F。",
-       "tw": "0.6.20 新的查詢視窗：查詢 Ctrl+F、替換 Ctrl+H，區分大小寫 / 全字匹配 / 正則 / 僅在選區為方形圖示（Alt+C / W / R / L），拖動空白處移動；選中較長內容時自動只在選區內查詢。在資料夾中搜尋 Ctrl+Shift+F。",
-       "en": "0.6.20 New find window: find (Ctrl+F) and replace (Ctrl+H) with square toggles for match case, whole word, regex and in-selection (Alt+C / W / R / L); drag its empty area to move it; a long selection limits the search to it. Search the folder with Ctrl+Shift+F."
+       "zh": "新的查找窗口：查找 Ctrl+F、替换 Ctrl+H，区分大小写 / 全字匹配 / 正则 / 仅在选区为方形图标（Alt+C / W / R / L），拖动空白处移动；选中较长内容时自动只在选区内查找。在文件夹中搜索 Ctrl+Shift+F。",
+       "tw": "新的查詢視窗：查詢 Ctrl+F、替換 Ctrl+H，區分大小寫 / 全字匹配 / 正則 / 僅在選區為方形圖示（Alt+C / W / R / L），拖動空白處移動；選中較長內容時自動只在選區內查詢。在資料夾中搜尋 Ctrl+Shift+F。",
+       "en": "New find window: find (Ctrl+F) and replace (Ctrl+H) with square toggles for match case, whole word, regex and in-selection (Alt+C / W / R / L); drag its empty area to move it; a long selection limits the search to it. Search the folder with Ctrl+Shift+F."
       },
       {
        "zh": "大文件：1 GB 约 2 秒显示正文，编辑、撤销、保存都只处理改动部分，64 MB 以上在后台保存。",
