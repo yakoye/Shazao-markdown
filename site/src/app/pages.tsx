@@ -763,11 +763,11 @@ const gallery = [
 ];
 
 const cares = [
-  ["切换视图，光标闪一下", "在编辑与源码之间切换时，光标处短暂高亮，马上找到刚才写到哪里。"],
-  ["按住图标拖动窗口", "标签开满、标题栏没有空白时，按住左上角的程序图标也能移动窗口。"],
-  ["块的上下，都能插入空行", "代码块、表格、引用的上方和下方点一下“+”，就能插入空行继续写。"],
-  ["表格列宽，拖一下就好", "按住列之间的边线左右拖动，直接调整列宽。"],
-  ["大纲自动跟随展开", "滚动或移动光标时，大纲自动展开到当前标题并高亮。"],
+  ["切换视图，光标闪一下", "在编辑与源码之间切换时，光标处短暂高亮，马上找到刚才写到哪里。", "care-caret-flash.gif"],
+  ["按住图标拖动窗口", "标签开满、标题栏没有空白时，按住左上角的程序图标也能移动窗口。", "care-drag-icon.gif"],
+  ["块的上下，都能插入空行", "代码块、表格、引用的上方和下方点一下“+”，就能插入空行继续写。", "care-insert-line.gif"],
+  ["表格列宽，拖一下就好", "按住列之间的边线左右拖动，直接调整列宽。", "care-column-drag.gif"],
+  ["大纲自动跟随展开", "滚动或移动光标时，大纲自动展开到当前标题并高亮。", "care-outline-follow.gif"],
 ];
 
 const details = [
@@ -831,11 +831,20 @@ function Gallery() {
         <span>{t("那些用久了才会发现的小事。")}</span>
       </div>
       <div className="care-grid">
-        {cares.map(([title, desc], index) => (
+        {cares.map(([title, desc, gif], index) => (
           <article key={title}>
-            <small>{String(index + 1).padStart(2, "0")}</small>
-            <h4>{t(title)}</h4>
-            <p>{t(desc)}</p>
+            <div className="care-media">
+              <img
+                src={`${import.meta.env.BASE_URL}screens/${gif}`}
+                alt={t(title)}
+                loading="lazy"
+              />
+            </div>
+            <div className="care-text">
+              <small>{String(index + 1).padStart(2, "0")}</small>
+              <h4>{t(title)}</h4>
+              <p>{t(desc)}</p>
+            </div>
           </article>
         ))}
       </div>

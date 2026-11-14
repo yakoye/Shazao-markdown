@@ -1405,33 +1405,61 @@ header nav a.active {
 }
 .care-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
   margin-top: 40px;
+}
+.care-grid article {
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--line);
   background: var(--paper);
 }
-.care-grid article {
-  padding: 26px 22px 30px;
+.care-grid article:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
 }
-.care-grid article + article {
-  border-left: 1px solid var(--line);
+.care-grid article:last-child:nth-child(odd) .care-media {
+  flex: 0 0 55%;
+  border-bottom: 0;
+  border-right: 1px solid var(--line);
 }
-.care-grid small {
+.care-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 10;
+  padding: 14px;
+  border-bottom: 1px solid var(--line);
+  background: #fbfaf7;
+}
+.care-media img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  box-shadow: 0 1px 3px rgba(31, 28, 25, 0.12);
+}
+.care-text {
+  padding: 22px 24px 26px;
+}
+.care-text small {
   color: var(--green);
   font:
     10px "JetBrains Mono",
     monospace;
 }
-.care-grid h4 {
-  margin: 12px 0 10px;
+.care-text h4 {
+  margin: 10px 0 8px;
   font:
-    600 17px/1.45 "Noto Serif SC",
+    600 19px/1.45 "Noto Serif SC",
     serif;
 }
-.care-grid p {
+.care-text p {
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.75;
 }
 .detail-grid {
@@ -1934,21 +1962,6 @@ footer small {
   .voice-grid {
     grid-template-columns: 1fr 1fr;
   }
-  .care-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .care-grid article {
-    border-top: 1px solid var(--line);
-  }
-  .care-grid article:nth-child(-n + 2) {
-    border-top: 0;
-  }
-  .care-grid article:nth-child(odd) {
-    border-left: 0;
-  }
-  .care-grid article:last-child:nth-child(odd) {
-    grid-column: span 2;
-  }
   header nav {
     justify-content: flex-end;
     gap: 18px;
@@ -2246,11 +2259,12 @@ footer small {
     grid-template-columns: 1fr;
   }
   .care-grid article:last-child:nth-child(odd) {
-    grid-column: auto;
+    flex-direction: column;
   }
-  .care-grid article + article {
-    border-left: 0;
-    border-top: 1px solid var(--line);
+  .care-grid article:last-child:nth-child(odd) .care-media {
+    flex: none;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
   }
   .detail-grid figure,
   .detail-grid figure:nth-child(n + 4) {
