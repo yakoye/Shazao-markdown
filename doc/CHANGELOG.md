@@ -4,6 +4,41 @@
 
 各版本的更新、已知问题与当时的验证说明集中保存在这里，最新的在前。以下内容从原公开 README 迁移，不代表本次文档更新重新执行了历史测试。v0.5.12–v0.5.15 未单独发布，已包含在 v0.6.0 中。
 
+## v0.6.21 — 公式：论坛反馈、\( \) 与 \[ \]、KaTeX 全量与 MathJax 测例、physics 与 mhchem、深层嵌套不再闪退
+
+Windows x64 便携版。这一版集中在数学公式：来源是小众软件论坛 93080 第 180、184、185 楼的反馈，以及以 KaTeX 与 MathJax 官方测例为基准的全面补齐。
+
+### 公式
+
+- **论坛反馈的公式全部正确显示**（论坛 180、184、185）：带下方标注的长箭头 `\xrightarrow[r \rightarrow \infty]{}`；公式编号 `\tag{6.2.6}` 在公式块行末右对齐（导出 HTML、Word 时接在公式后）；方括号 `\lbrack … \rbrack`；`{\int}_a^b`；`\overset{\overleftrightarrow{}}{\partial}`；`\begin{gathered}`。
+- **`\( … \)` 与 `\[ … \]` 写法**（论坛 185）：行内用 `\( … \)`，显示公式用 `\[ … \]`；单独成行的 `\[` 与 `\]` 之间是公式块，与 `$$` 块相同。括号里是中文正文或纯数字时仍是转义括号：`1\. \(参数\)`、`\[1\]` 照常显示为文字。
+- **公式命令全面补齐**：KaTeX 支持表的全部 997 个示例都能正确读出（原来有三分之一报错）；MathJax 官方 TeX 测例的通过率 94.8%。新增与补全的包括：
+  - 29 种可伸缩箭头（`\xleftarrow`、`\xRightarrow`、`\xlongequal`、`\xrightleftharpoons` 等），箭头随上下标注变长；
+  - `\tag`、`\tag*`、`\label` 与 `\ref`、`\eqref`；
+  - 宏：`\def`（含带分隔符的参数）、`\newcommand`（含可选参数默认值）、`\renewcommand`、`\let`、`\newenvironment`、`\DeclareMathOperator`、`\DeclarePairedDelimiter`、`\begingroup … \endgroup`；
+  - **physics**：`\qty`、`\abs`、`\norm`、`\dv`、`\pdv`、`\fdv`、`\ev`、`\mel`、`\bra`、`\ket`、`\mqty`、`\imat`、`\dmat`、`\paulimatrix`、`\vb`、`\grad`、`\curl` 等；
+  - **mhchem 化学式**：`\ce{2H2 + O2 -> 2H2O}`、电荷 `\ce{Fe^{3+}}`、`\ce{OH-}`、水合物 `\ce{CuSO4.5H2O}`、带条件的反应箭头 `\ce{A <=>[催化剂][\Delta] B}`、沉淀与气体、化学键 `\bond`；物理量 `\pu{1.2e3 kJ/mol}`；
+  - 环境：交换图 `CD`、`flalign`、`xalignat`、`numcases`、`multlined`、带星号与 `[r]` 对齐的矩阵、`psmallmatrix` 等；
+  - `\substack`、`\sideset`、`\genfrac`、`\overunderset`、`\stackrel`、`\buildrel`、`\cancelto`、`\boxed`、`\fbox`、`\phantom` 与 `\smash` 一族、`\raisebox`、`\hspace` 与 TeX 全部长度单位；
+  - 字母表 `\mathbfsfit`、`\symbb` 等 unicode-math 写法，`\upalpha` 直立希腊字母，textcomp 的 `\text…` 符号，gensymb 单位符号，`\nicefrac`、`\unitfrac`；
+  - 旧式写法 `\over`、`\atop`、`\matrix{…}`、`\cases{…}`、`\root 3 \of x`、`\bf`、`\rm`、`\bgroup … \egroup`。
+- **公式嵌套过深不再闪退**：上千层嵌套的公式（括号、分式、根号、矩阵，或自己调用自己的宏和环境）原来会使程序崩溃；现在停在安全深度并提示“公式嵌套过深”，宏无限展开时提示“宏展开次数过多”，公式其余部分照常显示。
+- **大量公式的性能实测**：一份含 100 万个公式（45 MB）的文档 0.67 秒打开，滚动每帧 3 毫秒以内，跳到文中任意位置约 15 毫秒，内存约 420 MB；1 万、10 万个公式的文档同样流畅。
+
+### 已知问题
+
+- 列表项第一行就开始的公式块或代码块（`* $$`、`` * ``` ``）还不识别，需要另起一行写；计划在后续版本处理。
+- `\color`、`\textcolor` 能读出内容，但公式保持自己的颜色。
+- 个别写法与其他 Markdown 编辑器的处理不同：`$$…$$` 写在一句话中间时显示为独立一行的公式；未闭合的 `$$` 按普通文字显示。
+
+### 使用说明
+
+官网与功能介绍：[yakoye.github.io/Shazao-markdown](https://yakoye.github.io/Shazao-markdown/)。也可以从 [Microsoft Store](https://apps.microsoft.com/detail/9ntw7mf81l2x) 安装沙枣，商店版自动更新（新版本在商店审核通过后上架）。
+
+下载本页附件时，解压后运行 `Shazao-markdown.exe`。压缩包里另有 `Shazao-markdown-UPX.exe`：同一版本用 UPX 压缩的副本，功能相同，体积约为原版的四成，启动时先在内存中解压（本机七次启动到可响应的中位数为 0.55 秒，原版为 0.46 秒；新文件第一次启动约 1.9 秒）；个别杀毒软件可能误报 UPX 压缩的程序，推荐使用原版。两者使用同一份设置。
+
+验证：正式构建通过 62 项核心测试（含 KaTeX 支持表全部 997 例、百万公式压力测试与深层嵌套测试）；KaTeX 截图测例 127/127，MathJax 官方 TeX 测例 2498/2635。整版回归中，v0.6.20 与 v0.6.21 的全部界面测试通过，公式相关的真实程序测试 5 项与编辑器压力测试（1 万、10 万、100 万个公式）全部通过；简体中文、繁体中文和英文界面校验通过。
+
 ## v0.6.20 — 段落抓手与拖放、插入线、颜色色块、Chrome 式标签、新的查找窗口、批量打开提速
 
 Windows x64 便携版。来源：小众软件论坛 93080 第 154～176 楼、GitHub issue #22～#32 与用户直接反馈。
