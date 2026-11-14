@@ -369,9 +369,9 @@
        "en": "Shift+Space selects a row, Ctrl+Space a column, Ctrl+Shift+Space the whole table; Alt+Shift+M merges and Alt+Shift+U splits cells."
       },
       {
-       "zh": "按住列之间的边线即可拖动调整列宽；放得下时单元格不换行，放不下时只让最长的列换行。超出页面滚动的表格单列上限可设 40% / 60% / 80% / 不限，横向滚动条固定在窗口底部，Shift+滚轮横移。",
-       "tw": "按住列之間的邊線即可拖動調整列寬；放得下時單元格不換行，放不下時只讓最長的列換行。超出頁面滾動的表格單列上限可設 40% / 60% / 80% / 不限，橫向捲軸固定在視窗底部，Shift+滾輪橫移。",
-       "en": "Drag the border between columns to resize them. Cells stay on one line when they fit; otherwise only the longest column wraps. For scrolling tables, cap a column at 40 / 60 / 80% or unlimited; the horizontal scrollbar sticks to the window bottom and Shift+wheel scrolls sideways."
+       "zh": "按住列之间的边线即可拖动调整列宽，双击边线按内容自动适配；放得下时单元格不换行，放不下时只让最长的列换行。超出页面滚动的表格单列上限可设 40% / 60% / 80% / 不限，横向滚动条固定在窗口底部，Shift+滚轮横移。",
+       "tw": "按住列之間的邊線即可拖動調整列寬，雙擊邊線按內容自動適配；放得下時單元格不換行，放不下時只讓最長的列換行。超出頁面滾動的表格單列上限可設 40% / 60% / 80% / 不限，橫向捲軸固定在視窗底部，Shift+滾輪橫移。",
+       "en": "Drag the border between columns to resize them; double-click it to fit the content. Cells stay on one line when they fit; otherwise only the longest column wraps. For scrolling tables, cap a column at 40 / 60 / 80% or unlimited; the horizontal scrollbar sticks to the window bottom and Shift+wheel scrolls sideways."
       },
       {
        "zh": "从 Excel 粘贴单元格超出表格时自动补足行列；表格字号、默认横向与竖向对齐可单独设置，导出与复制都跟随。",
@@ -796,6 +796,185 @@
       "en": "Settings › Data & storage: history, local data and updates"
      },
      "narrow": true
+    }
+   ]
+  },
+  {
+   "id": "tips",
+   "title": {
+    "zh": "隐藏设计与贴心操作",
+    "tw": "隱藏設計與貼心操作",
+    "en": "Hidden touches & handy moves"
+   },
+   "blocks": [
+    {
+     "p": {
+      "zh": "这些操作没有单独的按钮，用过一次就离不开。",
+      "tw": "這些操作沒有單獨的按鈕，用過一次就離不開。",
+      "en": "None of these has its own button, but once you know them you’ll use them every day."
+     }
+    },
+    {
+     "groups": [
+      [
+       {
+        "zh": "窗口与标签",
+        "tw": "視窗與標籤",
+        "en": "Windows and tabs"
+       },
+       [
+        {
+         "zh": "单击左上角的程序图标（或右键标题栏任意位置、按 Alt+空格）打开窗口菜单，「置于顶层」让窗口一直浮在其他窗口上面，再选一次取消。",
+         "tw": "單擊左上角的程式圖示（或右鍵標題欄任意位置、按 Alt+空格）開啟視窗選單，「置於頂層」讓視窗一直浮在其他視窗上面，再選一次取消。",
+         "en": "Click the app icon at the top-left (or right-click anywhere on the title bar, or press Alt+Space) for the window menu; Always on top keeps the window above others until you choose it again."
+        },
+        {
+         "zh": "标签开满、标题栏没有空白时，按住程序图标就能拖动窗口。",
+         "tw": "標籤開滿、標題欄沒有空白時，按住程式圖示就能拖動視窗。",
+         "en": "When tabs fill the title bar, hold the app icon to drag the window."
+        },
+        {
+         "zh": "首页：双击空白处或按 Enter 新建文件；↑ ↓ 选择最近打开的文件，按数字键直接打开。",
+         "tw": "首頁：雙擊空白處或按 Enter 新建檔案；↑ ↓ 選擇最近開啟的檔案，按數字鍵直接開啟。",
+         "en": "Home page: double-click an empty area or press Enter for a new file; ↑ ↓ pick a recent file, and number keys open one directly."
+        },
+        {
+         "zh": "一次拖入几十个文件时显示进度，按 Esc 可以停止。",
+         "tw": "一次拖入幾十個檔案時顯示進度，按 Esc 可以停止。",
+         "en": "Dropping dozens of files shows progress; press Esc to stop."
+        }
+       ]
+      ],
+      [
+       {
+        "zh": "阅读",
+        "tw": "閱讀",
+        "en": "Reading"
+       },
+       [
+        {
+         "zh": "Ctrl+滚轮放大或缩小正文字号。",
+         "tw": "Ctrl+滾輪放大或縮小正文字號。",
+         "en": "Ctrl+wheel makes the text larger or smaller."
+        },
+        {
+         "zh": "双击 Mermaid 图表或图片进入查看：滚轮缩放、拖动查看，双击在适应窗口与 100% 之间切换，Esc 返回。",
+         "tw": "雙擊 Mermaid 圖表或圖片進入檢視：滾輪縮放、拖動檢視，雙擊在適應視窗與 100% 之間切換，Esc 返回。",
+         "en": "Double-click a Mermaid diagram or image to inspect it: wheel to zoom, drag to pan, double-click to switch between fit and 100%, Esc to return."
+        },
+        {
+         "zh": "滚动时大纲展开当前章节、收起其他章节，并高亮当前标题。",
+         "tw": "滾動時大綱展開當前章節、收起其他章節，並高亮當前標題。",
+         "en": "As you scroll, the outline opens the current chapter, folds the others and highlights the current heading."
+        },
+        {
+         "zh": "在编辑与源码之间切换时，光标处会短暂高亮，马上找到刚才写到哪里。",
+         "tw": "在編輯與原始碼之間切換時，游標處會短暫高亮，馬上找到剛才寫到哪裡。",
+         "en": "Switching between edit and source views briefly highlights the caret so you see where you were."
+        },
+        {
+         "zh": "细滚动条上 Shift+单击空白处，直接跳到那个位置。",
+         "tw": "細捲軸上 Shift+單擊空白處，直接跳到那個位置。",
+         "en": "Shift+click an empty part of a thin scrollbar to jump straight there."
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "shot": "care-pin-top.gif",
+     "caption": {
+      "zh": "单击程序图标 ▸ 置于顶层",
+      "tw": "單擊程式圖示 ▸ 置於頂層",
+      "en": "Click the app icon › Always on top"
+     }
+    },
+    {
+     "shot": "care-diagram-zoom.gif",
+     "caption": {
+      "zh": "双击图表：滚轮缩放、拖动查看、双击适应，Esc 返回",
+      "tw": "雙擊圖表：滾輪縮放、拖動檢視、雙擊適應，Esc 返回",
+      "en": "Double-click a diagram: wheel to zoom, drag to pan, double-click to fit, Esc to return"
+     },
+     "narrow": true
+    },
+    {
+     "groups": [
+      [
+       {
+        "zh": "编辑",
+        "tw": "編輯",
+        "en": "Editing"
+       },
+       [
+        {
+         "zh": "双击选词（中文按词语分），接着输入即替换；三击选中整段；源码视图里三击选中一行。",
+         "tw": "雙擊選詞（中文按詞語分），接著輸入即替換；三擊選中整段；原始碼檢視裡三擊選中一行。",
+         "en": "Double-click selects a word (Chinese is split into words) and typing replaces it; triple-click selects the paragraph; in source view it selects the line."
+        },
+        {
+         "zh": "自动配对括号与引号，全角的（【「『《“‘ 也一样；选中文字后输入括号会把它包起来；在空括号里退格，两边一起删除。",
+         "tw": "自動配對括號與引號，全形的（【「『《“‘ 也一樣；選中文字後輸入括號會把它包起來；在空括號裡退格，兩邊一起刪除。",
+         "en": "Brackets and quotes pair automatically, full-width （【「『《“‘ included; typing a bracket with text selected wraps it; Backspace in an empty pair deletes both."
+        },
+        {
+         "zh": "按住段落左侧的 ⋮⋮ 拖动整块；选中文字直接拖动，按住 Ctrl 拖动为复制。",
+         "tw": "按住段落左側的 ⋮⋮ 拖動整塊；選中文字直接拖動，按住 Ctrl 拖動為複製。",
+         "en": "Drag the ⋮⋮ handle to move a block; drag selected text to move it, or hold Ctrl to copy."
+        },
+        {
+         "zh": "方向键停在块之间的插入线上时，直接输入就是一个新段落。",
+         "tw": "方向鍵停在塊之間的插入線上時，直接輸入就是一個新段落。",
+         "en": "When the arrow keys stop on the insertion line between blocks, just type to start a new paragraph."
+        },
+        {
+         "zh": "在大纲里拖动标题，整节——连同子标题和正文——一起移到新位置，标题级别不变。",
+         "tw": "在大綱裡拖動標題，整節——連同子標題和正文——一起移到新位置，標題級別不變。",
+         "en": "Drag a heading in the outline to move the whole section, subheadings and text included; its level stays the same."
+        }
+       ]
+      ],
+      [
+       {
+        "zh": "表格与图片",
+        "tw": "表格與圖片",
+        "en": "Tables and images"
+       },
+       [
+        {
+         "zh": "拖动列之间的边线调整列宽；双击边线，按内容自动适配；表格右边缘也能拖。",
+         "tw": "拖動列之間的邊線調整列寬；雙擊邊線，按內容自動適配；表格右邊緣也能拖。",
+         "en": "Drag a column border to resize; double-click it to fit the content; the table’s right edge can be dragged too."
+        },
+        {
+         "zh": "粘贴的截图自动保存为 image-日期-时间.png；可以在 设置 ▸ 图片 里填一个图床上传命令（例如 picgo upload），粘贴后在后台上传并改用网址。",
+         "tw": "貼上的截圖自動儲存為 image-日期-時間.png；可以在 設定 ▸ 圖片 裡填一個圖床上傳命令（例如 picgo upload），貼上後在後臺上傳並改用網址。",
+         "en": "Pasted screenshots are saved as image-date-time.png; in Settings › Images you can set an upload command (e.g. picgo upload) and pasted images are uploaded in the background and switched to their URLs."
+        },
+        {
+         "zh": "删除图片时按引用计数，最后一处引用删掉才移到回收站。",
+         "tw": "刪除圖片時按引用計數，最後一處引用刪掉才移到回收站。",
+         "en": "Deleted images go to the Recycle Bin only after the last reference is removed."
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "shot": "care-outline-move.gif",
+     "caption": {
+      "zh": "在大纲里拖动「第6章」，整节移到最前面",
+      "tw": "在大綱裡拖動「第6章」，整節移到最前面",
+      "en": "Dragging “Chapter 6” in the outline moves the whole section to the top"
+     }
+    },
+    {
+     "shot": "care-word-select.gif",
+     "caption": {
+      "zh": "双击选词、三击选段",
+      "tw": "雙擊選詞、三擊選段",
+      "en": "Double-click a word, triple-click a paragraph"
+     }
     }
    ]
   },

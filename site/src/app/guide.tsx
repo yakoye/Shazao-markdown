@@ -13,6 +13,7 @@ type Block = {
   defs?: [Text, Text][];
   cards?: [Text, Text][];
   keygroups?: [Text, [string, Text][]][];
+  groups?: [Text, Text[]][];
   actions?: "start" | "feedback";
 };
 type Section = { id: string; title: Text; blocks: Block[] };
@@ -98,6 +99,21 @@ export function GuidePage() {
               <b>{L(title)}</b>
               <p>{L(desc)}</p>
             </div>
+          ))}
+        </div>
+      );
+    if (block.groups)
+      return (
+        <div key={index} className="tip-groups">
+          {block.groups.map(([title, items], i) => (
+            <section key={i}>
+              <h3>{L(title)}</h3>
+              <ul>
+                {items.map((entry, j) => (
+                  <li key={j}>{item(entry)}</li>
+                ))}
+              </ul>
+            </section>
           ))}
         </div>
       );

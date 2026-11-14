@@ -1292,6 +1292,20 @@ header nav a.active {
 .docs-nav a {
   padding-block: 11px;
 }
+.tip-groups section {
+  margin-top: 30px;
+}
+.tip-groups h3 {
+  margin: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  font:
+    600 18px "Noto Serif SC",
+    serif;
+}
+.tip-groups ul {
+  margin-top: 14px;
+}
 .shortcut-groups section + section {
   margin-top: 36px;
 }
