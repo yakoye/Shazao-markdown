@@ -1,8 +1,8 @@
 {
  "hero": {
-  "zh": "从下载到导出，一页看完 Shazao 的全部功能。内容与截图均对应最新版 v0.6.20；标有「0.6.20」的是本版新增功能。",
-  "tw": "從下載到匯出，一頁看完 Shazao 的全部功能。內容與截圖均對應最新版 v0.6.20；標有「0.6.20」的是本版新增功能。",
-  "en": "Everything Shazao can do, from download to export, on one page. Text and screenshots match the latest release, v0.6.20; items marked “0.6.20” are new in this version."
+  "zh": "从下载到导出，一页看完 Shazao 的全部功能。内容对应最新版 v0.6.21，截图来自实际界面；标有「0.6.20」「0.6.21」的是这两版新增的功能。",
+  "tw": "從下載到匯出，一頁看完 Shazao 的全部功能。內容對應最新版 v0.6.21，截圖來自實際介面；標有「0.6.20」「0.6.21」的是這兩版新增的功能。",
+  "en": "Everything Shazao can do, from download to export, on one page. Written for the latest release, v0.6.21, with screenshots of the real app; items marked “0.6.20” or “0.6.21” are new in those versions."
  },
  "sections": [
   {
@@ -248,9 +248,9 @@
        "en": "0.6.20 Block handle ⋮⋮: hover a block (or put the caret in it) and drag the handle to move the whole block — list items bring their children. One undo restores it; clicking the handle jumps to the block start."
       },
       {
-       "zh": "0.6.20 选中内容拖放：在选区上按住拖动，松开即移动过去，格式标记自动补全。",
-       "tw": "0.6.20 選中內容拖放：在選區上按住拖動，鬆開即移動過去，格式標記自動補全。",
-       "en": "0.6.20 Drag selected text to move it; formatting marks are repaired automatically."
+       "zh": "0.6.20 选中内容拖放：在选区上按住拖动，松开即移动过去，格式标记自动补全；按住 Ctrl 拖动为复制。",
+       "tw": "0.6.20 選中內容拖放：在選區上按住拖動，鬆開即移動過去，格式標記自動補全；按住 Ctrl 拖動為複製。",
+       "en": "0.6.20 Drag selected text to move it — hold Ctrl to copy instead; formatting marks are repaired automatically."
       },
       {
        "zh": "上移 / 下移块 Alt+↑ / Alt+↓；0.6.20 向上 / 向下复制块 Alt+Shift+↑ / Alt+Shift+↓（代码块中仍为列选择）。",
@@ -271,6 +271,11 @@
        "zh": "编辑 ▸ 复制 / 粘贴为… 提供更多格式；Ctrl+A 全选，Ctrl+Z / Ctrl+Y 撤销重做，可开启持久撤销（关闭后再打开仍能撤销）。",
        "tw": "編輯 ▸ 複製 / 貼上為… 提供更多格式；Ctrl+A 全選，Ctrl+Z / Ctrl+Y 撤銷重做，可開啟持久撤銷（關閉後再開啟仍能撤銷）。",
        "en": "Edit › Copy / Paste as… offers more formats; Ctrl+A selects all, Ctrl+Z / Ctrl+Y undo and redo, and persistent undo survives closing the file."
+      },
+      {
+       "zh": "0.6.20 颜色色块：正文、表格里的 #DDB46A 这类颜色值后面显示一个该颜色的小方块（代码块和链接里不显示，可在设置 ▸ 阅读关闭）。",
+       "tw": "0.6.20 顏色色塊：正文、表格裡的 #DDB46A 這類顏色值後面顯示一個該顏色的小方塊（程式碼塊和連結裡不顯示，可在設定 ▸ 閱讀關閉）。",
+       "en": "0.6.20 Color swatches: color values like #DDB46A in text and tables get a small swatch of that color (not in code blocks or links; can be turned off in Settings › Reading)."
       },
       {
        "zh": "HTML 颜色：<font color> 与 <span style=\"color\"> 显示颜色，深色主题里会自动提亮。",
@@ -406,9 +411,24 @@
        "en": "Code blocks: syntax highlighting, language tag and copy; optional wrapping, line numbers, Tab-as-spaces and tab width. Alt+drag or Alt+Shift+arrows for column selection."
       },
       {
-       "zh": "数学公式：行内与独立公式，支持常用 LaTeX 与 amssymb 符号（如 \\because、\\therefore）。",
-       "tw": "數學公式：行內與獨立公式，支援常用 LaTeX 與 amssymb 符號（如 \\because、\\therefore）。",
-       "en": "Math: inline and display formulas with common LaTeX and amssymb symbols (\\because, \\therefore…)."
+       "zh": "数学公式：$…$ 行内、$$…$$ 独立公式；0.6.21 起也支持 \\( … \\) 与 \\[ … \\] 写法。",
+       "tw": "數學公式：$…$ 行內、$$…$$ 獨立公式；0.6.21 起也支援 \\( … \\) 與 \\[ … \\] 寫法。",
+       "en": "Math: $…$ inline and $$…$$ display; from 0.6.21 also \\( … \\) and \\[ … \\]."
+      },
+      {
+       "zh": "0.6.21 公式命令全面补齐：KaTeX 支持表 997 个示例全部能读，MathJax 官方 TeX 测例通过 2498/2635；\\tag 编号与 \\eqref 引用，\\newcommand、\\def 等宏，29 种可伸缩箭头，CD 交换图。",
+       "tw": "0.6.21 公式命令全面補齊：KaTeX 支援表 997 個示例全部能讀，MathJax 官方 TeX 測例透過 2498/2635；\\tag 編號與 \\eqref 引用，\\newcommand、\\def 等宏，29 種可伸縮箭頭，CD 交換圖。",
+       "en": "0.6.21 Complete math coverage: all 997 KaTeX examples render and 2,498 of MathJax’s 2,635 TeX tests pass; \\tag numbering and \\eqref, \\newcommand and \\def macros, 29 stretchy arrows, CD diagrams."
+      },
+      {
+       "zh": "0.6.21 physics 宏包（\\dv、\\pdv、\\ket、\\abs…）与 mhchem 化学式（\\ce{2H2 + O2 -> 2H2O}、\\pu{1.2e3 kJ/mol}）。",
+       "tw": "0.6.21 physics 宏包（\\dv、\\pdv、\\ket、\\abs…）與 mhchem 化學式（\\ce{2H2 + O2 -> 2H2O}、\\pu{1.2e3 kJ/mol}）。",
+       "en": "0.6.21 The physics package (\\dv, \\pdv, \\ket, \\abs…) and mhchem chemistry (\\ce{2H2 + O2 -> 2H2O}, \\pu{1.2e3 kJ/mol})."
+      },
+      {
+       "zh": "0.6.21 上千层嵌套的公式不会闪退，停在安全深度并提示；100 万个公式（45 MB）的文档 0.67 秒打开，滚动每帧 3 毫秒以内。",
+       "tw": "0.6.21 上千層巢狀的公式不會閃退，停在安全深度並提示；100 萬個公式（45 MB）的文件 0.67 秒開啟，滾動每幀 3 毫秒以內。",
+       "en": "0.6.21 Formulas nested thousands deep no longer crash — they stop at a safe depth with a message; a document with 1,000,000 formulas (45 MB) opens in 0.67 s and scrolls at under 3 ms per frame."
       },
       {
        "zh": "Mermaid：流程图、时序图、状态图、类图、ER 图、甘特图、饼图、思维导图、Git 图、C4、时间线、象限图、XY 图等直接显示；双击图表查看细节。",
@@ -590,9 +610,9 @@
        "en": "Wiki links, View › Wiki notes referencing this document…, and File › Check links… for broken links; custom protocols like es: open through Windows."
       },
       {
-       "zh": "查找 Ctrl+F、替换 Ctrl+H：区分大小写、全字匹配、正则表达式；选中较长内容时自动只在选区内查找。在文件夹中搜索 Ctrl+Shift+F。",
-       "tw": "查詢 Ctrl+F、替換 Ctrl+H：區分大小寫、全字匹配、正規表示式；選中較長內容時自動只在選區內查詢。在資料夾中搜尋 Ctrl+Shift+F。",
-       "en": "Find (Ctrl+F) and replace (Ctrl+H) with match case, whole word and regex; a long selection limits the search to it. Search the folder with Ctrl+Shift+F."
+       "zh": "0.6.20 新的查找窗口：查找 Ctrl+F、替换 Ctrl+H，区分大小写 / 全字匹配 / 正则 / 仅在选区为方形图标（Alt+C / W / R / L），拖动空白处移动；选中较长内容时自动只在选区内查找。在文件夹中搜索 Ctrl+Shift+F。",
+       "tw": "0.6.20 新的查詢視窗：查詢 Ctrl+F、替換 Ctrl+H，區分大小寫 / 全字匹配 / 正則 / 僅在選區為方形圖示（Alt+C / W / R / L），拖動空白處移動；選中較長內容時自動只在選區內查詢。在資料夾中搜尋 Ctrl+Shift+F。",
+       "en": "0.6.20 New find window: find (Ctrl+F) and replace (Ctrl+H) with square toggles for match case, whole word, regex and in-selection (Alt+C / W / R / L); drag its empty area to move it; a long selection limits the search to it. Search the folder with Ctrl+Shift+F."
       },
       {
        "zh": "大文件：1 GB 约 2 秒显示正文，编辑、撤销、保存都只处理改动部分，64 MB 以上在后台保存。",

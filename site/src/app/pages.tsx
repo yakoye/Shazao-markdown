@@ -221,6 +221,75 @@ const translations: Record<string, { tw: string; en: string }> = {
   "滚动或移动光标时，大纲自动展开到当前标题并高亮。": { tw: "捲動或移動游標時，大綱自動展開到目前標題並高亮。", en: "As you scroll or move the caret, the outline expands to the current heading and highlights it." },
   贴心细节: { tw: "貼心細節", en: "Thoughtful touches" },
   "那些用久了才会发现的小事。": { tw: "那些用久了才會發現的小事。", en: "Small things you notice the longer you use it." },
+  "约 9 MB": { tw: "約 9 MB", en: "≈ 9 MB" },
+  "单个 EXE，UPX 版约 3.7 MB": { tw: "單個 EXE，UPX 版約 3.7 MB", en: "single EXE; UPX build ≈ 3.7 MB" },
+  "0.46 秒": { tw: "0.46 秒", en: "0.46 s" },
+  "启动到可以操作（中位数）": { tw: "啟動到可以操作（中位數）", en: "launch to responsive (median)" },
+  "1 GB → 1.8 秒": { tw: "1 GB → 1.8 秒", en: "1 GB → 1.8 s" },
+  "显示正文；4 GB 约 8.8 秒": { tw: "顯示正文；4 GB 約 8.8 秒", en: "to first text; 4 GB ≈ 8.8 s" },
+  "12 万个标题": { tw: "12 萬個標題", en: "120,000 headings" },
+  "大纲 0.6 秒可用，F8 开合 0.1 秒": { tw: "大綱 0.6 秒可用，F8 開合 0.1 秒", en: "outline ready in 0.6 s, F8 in 0.1 s" },
+  "100 万个公式": { tw: "100 萬個公式", en: "1,000,000 formulas" },
+  "45 MB 文档 0.67 秒打开，滚动每帧 3 毫秒": { tw: "45 MB 文件 0.67 秒開啟，滾動每幀 3 毫秒", en: "45 MB file opens in 0.67 s, 3 ms per frame" },
+  "50 个文件": { tw: "50 個檔案", en: "50 files" },
+  "一次拖入 0.4～0.9 秒全部打开": { tw: "一次拖入 0.4～0.9 秒全部開啟", en: "dropped at once, open in 0.4–0.9 s" },
+  "只处理改动的部分": { tw: "只處理改動的部分", en: "Only touch what changed" },
+  "改一个字只重新解析附近的块；64 MB 以上的文档分段多线程解析；超过 8 MB 的文件保存时只写改动的那一段；64 MB 以上在后台保存，失败可重试。": { tw: "改一個字只重新解析附近的塊；64 MB 以上的文件分段多執行緒解析；超過 8 MB 的檔案儲存時只寫改動的那一段；64 MB 以上在後臺儲存，失敗可重試。", en: "Typing re-parses only the nearby blocks; documents over 64 MB parse in parallel segments; files over 8 MB save only the changed range, and files over 64 MB save in the background with retry on failure." },
+  "文字不会丢": { tw: "文字不會丟", en: "Your text stays safe" },
+  "自动历史快照（默认每 10 分钟、每文档 50 份），可比较、恢复；停顿时写恢复副本；持久撤销在关闭后仍可用；删除图片按引用计数，最后一处引用删掉才进回收站。": { tw: "自動歷史快照（預設每 10 分鐘、每文件 50 份），可比較、恢復；停頓時寫恢復副本；持久撤銷在關閉後仍可用；刪除圖片按引用計數，最後一處引用刪掉才進回收站。", en: "Automatic history snapshots (every 10 minutes, 50 per document) you can compare and restore; recovery copies while you pause; undo that survives closing; deleted images go to the Recycle Bin only when the last reference is gone." },
+  "只在加载网络图片和检查更新时联网，检查更新默认关闭；下载的新版本按 SHA256SUMS 校验。没有账号，没有统计。": { tw: "只在載入網路圖片和檢查更新時聯網，檢查更新預設關閉；下載的新版本按 SHA256SUMS 校驗。沒有賬號，沒有統計。", en: "Shazao goes online only to load web images and to check for updates (off by default); downloads are verified against SHA256SUMS. No account, no analytics." },
+  "界面自己画": { tw: "介面自己畫", en: "A UI drawn by hand" },
+  "C++20、Win32、DirectWrite、Direct2D、WIC，不用 Electron，也不需要 WebView2。标题栏、标签、细滚动条、图标都自己绘制，直线落在整像素上，高缩放下不发虚。": { tw: "C++20、Win32、DirectWrite、Direct2D、WIC，不用 Electron，也不需要 WebView2。標題欄、標籤、細捲軸、圖示都自己繪製，直線落在整畫素上，高縮放下不發虛。", en: "C++20, Win32, DirectWrite, Direct2D and WIC — no Electron, no WebView2. Title bar, tabs, thin scrollbars and icons are drawn directly, snapped to whole pixels so they stay crisp at high DPI." },
+  "每版都整版回归": { tw: "每版都整版迴歸", en: "Full regression every release" },
+  "62 项核心测试，近 400 步界面自动化回归，三种语言的界面文字逐条校验；公式按 KaTeX 支持表 997 例与 MathJax 2635 个官方测例对照。发布说明如实写出没通过的项和已知问题。": { tw: "62 項核心測試，近 400 步介面自動化迴歸，三種語言的介面文字逐條校驗；公式按 KaTeX 支援表 997 例與 MathJax 2635 個官方測例對照。釋出說明如實寫出沒透過的項和已知問題。", en: "62 core tests, a UI regression of nearly 400 steps, and every interface string checked in three languages; math is checked against KaTeX’s 997 examples and MathJax’s 2,635 official tests. Release notes list what failed and what is still known to be broken." },
+  "跟着反馈改": { tw: "跟著反饋改", en: "Built from feedback" },
+  "v0.6.20 一版处理了小众软件论坛 154～176 楼和 GitHub #22～#32；v0.6.21 起因是论坛 180、184、185 楼的公式问题。提问题，下一版就能看到结果。": { tw: "v0.6.20 一版處理了小眾軟體論壇 154～176 樓和 GitHub #22～#32；v0.6.21 起因是論壇 180、184、185 樓的公式問題。提問題，下一版就能看到結果。", en: "v0.6.20 answered Appinn forum posts 154–176 and GitHub issues #22–#32; v0.6.21 started from formula reports in posts 180, 184 and 185. Report a problem and you’ll usually see it in the next release." },
+  "图表和公式，直接显示": { tw: "圖表和公式，直接顯示", en: "Diagrams and math, rendered inline" },
+  "流程图、时序图、甘特图、思维导图、ER 图等 Mermaid 图表；KaTeX 支持表 997 个示例全部能读，physics、mhchem 化学式也行；图里的文字能选中复制。": { tw: "流程圖、時序圖、甘特圖、思維導圖、ER 圖等 Mermaid 圖表；KaTeX 支援表 997 個示例全部能讀，physics、mhchem 化學式也行；圖裡的文字能選中複製。", en: "Mermaid flowcharts, sequence, Gantt, mindmap, ER and more; all 997 KaTeX examples render, plus physics and mhchem chemistry; text inside diagrams can be selected and copied." },
+  "几百页也不迷路": { tw: "幾百頁也不迷路", en: "Hundreds of pages, still oriented" },
+  "文件树、大纲（左侧 / 右侧 / 切换）、标题折叠，大纲随位置自动展开；每份文件记住读到哪里。": { tw: "檔案樹、大綱（左側 / 右側 / 切換）、標題摺疊，大綱隨位置自動展開；每份檔案記住讀到哪裡。", en: "File tree, outline (left, right or toggled) and folding headings; the outline follows your position, and each file remembers where you stopped." },
+  "链接悬停就能看": { tw: "連結懸停就能看", en: "Hover a link to look inside" },
+  "网页、图片、文件夹、标题，以及文本和 Markdown 文件开头 14 行；front matter 标签和 Wiki 链接把文档连起来。": { tw: "網頁、圖片、資料夾、標題，以及文字和 Markdown 檔案開頭 14 行；front matter 標籤和 Wiki 連結把文件連起來。", en: "Web pages, images, folders, headings, and the first 14 lines of text or Markdown files; front matter tags and Wiki links tie documents together." },
+  "从 Word、Excel、网页粘贴": { tw: "從 Word、Excel、網頁貼上", en: "Paste from Word, Excel and the web" },
+  "标题、列表、链接、表格和图片尽量转成 Markdown；Excel 单元格超出表格时自动补行补列。": { tw: "標題、列表、連結、表格和圖片儘量轉成 Markdown；Excel 單元格超出表格時自動補行補列。", en: "Headings, lists, links, tables and images become Markdown; pasting more Excel cells than fit extends the table." },
+  "17 套配色，浅深各选": { tw: "17 套配色，淺深各選", en: "17 schemes, light and dark" },
+  "Shazao、Dracula、One Dark、Tokyo Night、Nord、Solarized、GitHub、Catppuccin 等；字体、行距、正文宽度、专注与打字机模式；界面有简体、繁體和 English。": { tw: "Shazao、Dracula、One Dark、Tokyo Night、Nord、Solarized、GitHub、Catppuccin 等；字型、行距、正文寬度、專注與打字機模式；介面有簡體、繁體和 English。", en: "Shazao, Dracula, One Dark, Tokyo Night, Nord, Solarized, GitHub, Catppuccin and more; fonts, spacing, text width, focus and typewriter modes; UI in Simplified, Traditional Chinese and English." },
+  "写完带走": { tw: "寫完帶走", en: "Take it anywhere" },
+  "HTML、单文件 HTML、PDF（带书签，长表格跨页接排）、Word、EPUB，图片内嵌的单个 .md；CSS 模板批量导出。": { tw: "HTML、單檔案 HTML、PDF（帶書籤，長表格跨頁接排）、Word、EPUB，圖片內嵌的單個 .md；CSS 模板批次匯出。", en: "HTML, single-file HTML, PDF (with bookmarks; long tables flow across pages), Word, EPUB, and a single .md with images embedded; batch export with a CSS template." },
+  "这么小的体积真的无敌了": { tw: "這麼小的體積真的無敵了", en: "Tiny and unbeatable." },
+  "卧槽，好久没见到过这么精品的了。打开速度极快，而且非常轻量": { tw: "臥槽，好久沒見到過這麼精品的了。開啟速度極快，而且非常輕量", en: "Haven’t seen something this polished in ages. Opens incredibly fast and is very light." },
+  "很快，更新快、启动快，替换掉tinta、typora及其它md阅读、编辑器了": { tw: "很快，更新快、啟動快，替換掉tinta、typora及其它md閱讀、編輯器了", en: "Fast updates, fast start — it replaced Tinta, Typora and my other Markdown tools." },
+  "真的很棒，在此之前我一直用 sublime text 编辑 md 文档……我看中的是资源消耗和响应速度": { tw: "真的很棒，在此之前我一直用 sublime text 編輯 md 文件……我看中的是資源消耗和響應速度", en: "Really great. I used Sublime Text for Markdown before… what I care about is resource use and responsiveness." },
+  "好用！！使用轻快，功能全面，目前在我的使用场景已经替代Typora了": { tw: "好用！！使用輕快，功能全面，目前在我的使用場景已經替代Typora了", en: "Light, complete, and it has replaced Typora for what I do." },
+  "沙枣真是越用越顺手": { tw: "沙棗真是越用越順手", en: "The more I use Shazao, the better it feels." },
+  "打开就读，": { tw: "開啟就讀，", en: "Open to read," },
+  "落笔就写": { tw: "落筆就寫", en: "type to write" },
+  "Windows 原生 Markdown 阅读与编辑器。": { tw: "Windows 原生 Markdown 閱讀與編輯器。", en: "A native Markdown reader and editor for Windows." },
+  "一个约 9 MB 的 EXE，0.46 秒启动；直接在排版好的页面里编辑，1 GB 的文件约 2 秒显示正文。": { tw: "一個約 9 MB 的 EXE，0.46 秒啟動；直接在排版好的頁面裡編輯，1 GB 的檔案約 2 秒顯示正文。", en: "One ≈ 9 MB EXE that starts in 0.46 s. Edit right in the rendered page; a 1 GB file shows its text in about 2 seconds." },
+  "v0.6.21 · Windows 10 / 11 64 位 · 免安装 · 免账号 · 默认不联网 · 免费": { tw: "v0.6.21 · Windows 10 / 11 64 位 · 免安裝 · 免賬號 · 預設不聯網 · 免費", en: "v0.6.21 · Windows 10 / 11 64-bit · No install · No account · Offline by default · Free" },
+  "本机实测数据，来自各版本发布说明。": { tw: "本機實測資料，來自各版本釋出說明。", en: "Measured on the developer’s machine; figures come from each release’s notes." },
+  "实测": { tw: "實測", en: "Measured" },
+  "同一份文档，三种视图": { tw: "同一份文件，三種檢視", en: "One document, three views" },
+  "编辑视图里直接改排版后的内容；Ctrl+/ 切到源码，光标处会闪一下；Esc 锁定只读。三种视图共用一套撤销。": { tw: "編輯檢視裡直接改排版後的內容；Ctrl+/ 切到原始碼，游標處會閃一下；Esc 鎖定只讀。三種檢視共用一套撤銷。", en: "Edit the rendered page directly; Ctrl+/ switches to source and flashes the caret; Esc locks it read-only. All three views share one undo history." },
+  "功能": { tw: "功能", en: "Features" },
+  "日常要用的，都在一个窗口里": { tw: "日常要用的，都在一個視窗裡", en: "What you use every day, in one window" },
+  "阅读、编辑、图表、导出，不用装插件。": { tw: "閱讀、編輯、圖表、匯出，不用裝外掛。", en: "Reading, editing, diagrams and export — no plugins to install." },
+  "怎么做的": { tw: "怎麼做的", en: "How it’s built" },
+  "专门为快和稳做的设计": { tw: "專門為快和穩做的設計", en: "Designed to be fast and dependable" },
+  "不基于 Electron，不需要 WebView2，不套网页壳。": { tw: "不基於 Electron，不需要 WebView2，不套網頁殼。", en: "No Electron, no WebView2, no web wrapper." },
+  "用户怎么说": { tw: "使用者怎麼說", en: "What users say" },
+  "来自小众软件论坛的真实反馈": { tw: "來自小眾軟體論壇的真實反饋", en: "Real feedback from the Appinn forum" },
+  "查看全部讨论": { tw: "檢視全部討論", en: "Read the whole thread" },
+  "免费下载 v0.6.21": { tw: "免費下載 v0.6.21", en: "Free download v0.6.21" },
+  "v0.6.21 · Windows 10 / 11 · 64 位": { tw: "v0.6.21 · Windows 10 / 11 · 64 位", en: "v0.6.21 · Windows 10 / 11 · 64-bit" },
+  "还在开发，暂无预计时间": { tw: "還在開發，暫無預計時間", en: "In development, no date yet" },
+  "Shazao-markdown.exe 约 9.5 MB，下载后双击运行，不需要安装向导。": { tw: "Shazao-markdown.exe 約 9.5 MB，下載後雙擊執行，不需要安裝嚮導。", en: "Shazao-markdown.exe is about 9.5 MB: download, double-click, done — no installer." },
+  "商店版自动更新；新版本在商店审核通过后上架。": { tw: "商店版自動更新；新版本在商店稽核透過後上架。", en: "The Store version updates itself; new releases appear after Store review." },
+  "在 EXE 旁边新建 Shazao-data 文件夹，设置、历史版本和缓存都存在里面，整个文件夹放进 U 盘就能带走。": { tw: "在 EXE 旁邊新建 Shazao-data 資料夾，設定、歷史版本和快取都存在裡面，整個資料夾放進 U 盤就能帶走。", en: "Create a Shazao-data folder next to the EXE and settings, history and caches live there — copy the folder to a USB stick and go." },
+  "每个版本附 SHA256SUMS；ZIP 约 8 MB，含版本说明、第三方声明和约 3.7 MB 的 UPX 压缩版。": { tw: "每個版本附 SHA256SUMS；ZIP 約 8 MB，含版本說明、第三方宣告和約 3.7 MB 的 UPX 壓縮版。", en: "Every release ships SHA256SUMS. The ≈ 8 MB ZIP adds release notes, third-party notices and a ≈ 3.7 MB UPX build." },
+  "只在加载网络图片和检查更新时联网；检查更新默认关闭。": { tw: "只在載入網路圖片和檢查更新時聯網；檢查更新預設關閉。", en: "Online only for web images and update checks; update checks are off by default." },
+  "最新版 v0.6.21 · Windows 10 / 11 64 位 · 免安装 · 免账号 · 免费": { tw: "最新版 v0.6.21 · Windows 10 / 11 64 位 · 免安裝 · 免賬號 · 免費", en: "Latest v0.6.21 · Windows 10 / 11 64-bit · No install · No account · Free" },
+  "便携模式": { tw: "便攜模式", en: "Portable mode" },
   沙米: { tw: "沙米", en: "Sand" },
   枝绿: { tw: "枝綠", en: "Branch green" },
   枣红: { tw: "棗紅", en: "Shazao red" },
@@ -315,7 +384,7 @@ function Header({
         <span>
           Shazao <b>沙枣</b>
         </span>
-        <small>v0.6.20</small>
+        <small>v0.6.21</small>
       </Link>
       <nav className="nav-primary">
         <NavLink to="/" end>
@@ -408,10 +477,10 @@ function EditorDemo() {
       <SectionLabel index="01">{t("试一试")}</SectionLabel>
       <div className="try-heading">
         <h2>
-          {t("读与写，不必来回切换")}
+          {t("同一份文档，三种视图")}
           <Berry />
         </h2>
-        <p>{t("在排版后的内容中直接编辑，需要精确控制时切到源码。")}</p>
+        <p>{t("编辑视图里直接改排版后的内容；Ctrl+/ 切到源码，光标处会闪一下；Esc 锁定只读。三种视图共用一套撤销。")}</p>
       </div>
       <div className="demo-window">
         <div className="demo-toolbar">
@@ -480,34 +549,54 @@ function EditorDemo() {
   );
 }
 
+const facts = [
+  ["约 9 MB", "单个 EXE，UPX 版约 3.7 MB"],
+  ["0.46 秒", "启动到可以操作（中位数）"],
+  ["1 GB → 1.8 秒", "显示正文；4 GB 约 8.8 秒"],
+  ["12 万个标题", "大纲 0.6 秒可用，F8 开合 0.1 秒"],
+  ["100 万个公式", "45 MB 文档 0.67 秒打开，滚动每帧 3 毫秒"],
+  ["50 个文件", "一次拖入 0.4～0.9 秒全部打开"],
+];
+
+const designPoints = [
+  ["只处理改动的部分", "改一个字只重新解析附近的块；64 MB 以上的文档分段多线程解析；超过 8 MB 的文件保存时只写改动的那一段；64 MB 以上在后台保存，失败可重试。"],
+  ["文字不会丢", "自动历史快照（默认每 10 分钟、每文档 50 份），可比较、恢复；停顿时写恢复副本；持久撤销在关闭后仍可用；删除图片按引用计数，最后一处引用删掉才进回收站。"],
+  ["默认不联网", "只在加载网络图片和检查更新时联网，检查更新默认关闭；下载的新版本按 SHA256SUMS 校验。没有账号，没有统计。"],
+  ["界面自己画", "C++20、Win32、DirectWrite、Direct2D、WIC，不用 Electron，也不需要 WebView2。标题栏、标签、细滚动条、图标都自己绘制，直线落在整像素上，高缩放下不发虚。"],
+  ["每版都整版回归", "62 项核心测试，近 400 步界面自动化回归，三种语言的界面文字逐条校验；公式按 KaTeX 支持表 997 例与 MathJax 2635 个官方测例对照。发布说明如实写出没通过的项和已知问题。"],
+  ["跟着反馈改", "v0.6.20 一版处理了小众软件论坛 154～176 楼和 GitHub #22～#32；v0.6.21 起因是论坛 180、184、185 楼的公式问题。提问题，下一版就能看到结果。"],
+];
+
+const voices = [
+  ["这么小的体积真的无敌了", "flintt", "92"],
+  ["卧槽，好久没见到过这么精品的了。打开速度极快，而且非常轻量", "xmmdg", "31"],
+  ["很快，更新快、启动快，替换掉tinta、typora及其它md阅读、编辑器了", "foolsic", "32"],
+  ["真的很棒，在此之前我一直用 sublime text 编辑 md 文档……我看中的是资源消耗和响应速度", "jxcangel", "53"],
+  ["好用！！使用轻快，功能全面，目前在我的使用场景已经替代Typora了", "YUIoTer", "37"],
+  ["沙枣真是越用越顺手", "kat", "64"],
+];
+
 function FeatureGrid() {
   const { t } = useLocale();
   return (
     <section id="features" className="features section-wrap">
-      <SectionLabel index="02">{t("打开就读，落笔就写")}</SectionLabel>
+      <SectionLabel index="02">{t("功能")}</SectionLabel>
       <div className="section-heading">
         <h2>
-          {t("复杂的能力，")}
-          <br />
-          {t("简单地出现")}
+          {t("日常要用的，都在一个窗口里")}
           <Berry />
         </h2>
-        <p>{t("从阅读、编辑到导出，每一步都留在同一份文档里。")}</p>
+        <p>{t("阅读、编辑、图表、导出，不用装插件。")}</p>
       </div>
       <div className="bento">
         <article className="feature-card feature-wide">
           <div>
-            <small>DIAGRAMS & CODE</small>
-            <h3>
-              {t("给想法一张图，")}
-              <br />
-              {t("给实现一段代码")}
-              <Berry />
-            </h3>
-            <p>{t("Mermaid、数学公式、语法高亮，无需离开文档。")}</p>
+            <small>DIAGRAMS & MATH</small>
+            <h3>{t("图表和公式，直接显示")}</h3>
+            <p>{t("流程图、时序图、甘特图、思维导图、ER 图等 Mermaid 图表；KaTeX 支持表 997 个示例全部能读，physics、mhchem 化学式也行；图里的文字能选中复制。")}</p>
           </div>
           <div className="diagram-visual">
-            <pre>{`flowchart LR\n  想法 --> 结构\n  结构 --> 作品`}</pre>
+            <pre>{`flowchart LR\n  想法 --> 结构\n  结构 --> 作品\n\n$$\\ce{2H2 + O2 -> 2H2O}$$`}</pre>
             <div className="flowchart">
               <span>想法</span>
               <i>→</i>
@@ -520,8 +609,8 @@ function FeatureGrid() {
         <article className="feature-card">
           <div>
             <small>NAVIGATION</small>
-            <h3>{t("长文也有清楚的方向")}</h3>
-            <p>{t("文件树、大纲、标题折叠、多标签，并记住每份文档的阅读位置。")}</p>
+            <h3>{t("几百页也不迷路")}</h3>
+            <p>{t("文件树、大纲（左侧 / 右侧 / 切换）、标题折叠，大纲随位置自动展开；每份文件记住读到哪里。")}</p>
           </div>
           <div className="tree-visual">
             <b>▾ 项目</b>
@@ -532,9 +621,9 @@ function FeatureGrid() {
         </article>
         <article className="feature-card">
           <div>
-            <small>CONNECTED DOCS</small>
-            <h3>{t("文档之间彼此相连")}</h3>
-            <p>{t("链接悬停预览、front matter 标签与 Wiki 链接。")}</p>
+            <small>LINK PREVIEW</small>
+            <h3>{t("链接悬停就能看")}</h3>
+            <p>{t("网页、图片、文件夹、标题，以及文本和 Markdown 文件开头 14 行；front matter 标签和 Wiki 链接把文档连起来。")}</p>
           </div>
           <div className="link-visual">
             <span>[[ 西北的植物 ]]</span>
@@ -546,9 +635,9 @@ function FeatureGrid() {
         </article>
         <article className="feature-card">
           <div>
-            <small>RICH CONTENT</small>
-            <h3>{t("粘贴进来结构还在")}</h3>
-            <p>{t("表格、任务清单、脚注、提示块；从 Word、网页和 Excel 粘贴也能保留结构。")}</p>
+            <small>PASTE</small>
+            <h3>{t("从 Word、Excel、网页粘贴")}</h3>
+            <p>{t("标题、列表、链接、表格和图片尽量转成 Markdown；Excel 单元格超出表格时自动补行补列。")}</p>
           </div>
           <div className="table-visual">
             <span>项目</span>
@@ -562,18 +651,13 @@ function FeatureGrid() {
         <article className="feature-card appearance">
           <div>
             <small>APPEARANCE</small>
-            <h3>
-              {t("为喜欢的文字，")}
-              <br />
-              {t("选一种颜色")}
-              <Berry />
-            </h3>
-            <p>{t("字体、行距、阅读宽度、专注模式与打字机模式。")}</p>
+            <h3>{t("17 套配色，浅深各选")}</h3>
+            <p>{t("Shazao、Dracula、One Dark、Tokyo Night、Nord、Solarized、GitHub、Catppuccin 等；字体、行距、正文宽度、专注与打字机模式；界面有简体、繁體和 English。")}</p>
           </div>
           <div className="theme-visual palette-screenshot">
             <img
-              src={`${import.meta.env.BASE_URL}screens/shazao-color-schemes.png`}
-              alt="Shazao 浅色、One Light、Tokyo Night Day、Solarized Light、GitHub Light、Catppuccin Latte 与 Gruvbox Light 配色方案"
+              src={`${import.meta.env.BASE_URL}screens/v0620-settings-light.png`}
+              alt="Shazao 设置中的浅色配色方案"
               loading="lazy"
             />
           </div>
@@ -581,8 +665,8 @@ function FeatureGrid() {
         <article className="feature-card">
           <div>
             <small>EXPORT & HISTORY</small>
-            <h3>{t("写完带去任何地方")}</h3>
-            <p>{t("HTML、PDF、Word、EPUB 批量导出；本地历史随时比较与恢复。")}</p>
+            <h3>{t("写完带走")}</h3>
+            <p>{t("HTML、单文件 HTML、PDF（带书签，长表格跨页接排）、Word、EPUB，图片内嵌的单个 .md；CSS 模板批量导出。")}</p>
           </div>
           <div className="format-visual">
             <span>HTML</span>
@@ -591,6 +675,81 @@ function FeatureGrid() {
             <span>EPUB</span>
           </div>
         </article>
+      </div>
+    </section>
+  );
+}
+
+function FactStrip() {
+  const { t } = useLocale();
+  return (
+    <section className="fact-strip section-wrap" aria-label={t("实测")}>
+      <div className="fact-grid">
+        {facts.map(([value, label]) => (
+          <div key={value}>
+            <b>{t(value)}</b>
+            <span>{t(label)}</span>
+          </div>
+        ))}
+      </div>
+      <p>{t("本机实测数据，来自各版本发布说明。")}</p>
+    </section>
+  );
+}
+
+function DesignSection() {
+  const { t } = useLocale();
+  return (
+    <section id="performance" className="performance">
+      <div className="performance-inner">
+        <SectionLabel index="03">{t("怎么做的")}</SectionLabel>
+        <h3>
+          {t("专门为快和稳做的设计")}
+          <Berry />
+        </h3>
+        <p className="design-sub">{t("不基于 Electron，不需要 WebView2，不套网页壳。")}</p>
+        <div className="tech-pills">
+          <span>C++20</span>
+          <span>Win32</span>
+          <span>DirectWrite</span>
+          <span>Direct2D</span>
+          <span>WIC</span>
+        </div>
+        <div className="design-grid">
+          {designPoints.map(([title, desc], index) => (
+            <article key={title}>
+              <b>{String(index + 1).padStart(2, "0")}</b>
+              <h4>{t(title)}</h4>
+              <p>{t(desc)}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Voices() {
+  const { t } = useLocale();
+  return (
+    <section className="voices section-wrap">
+      <SectionLabel index="06">{t("用户怎么说")}</SectionLabel>
+      <div className="detail-heading voices-heading">
+        <h3>
+          {t("来自小众软件论坛的真实反馈")}
+          <Berry />
+        </h3>
+        <a href={appinnUrl}>
+          {t("查看全部讨论")} <ArrowIcon />
+        </a>
+      </div>
+      <div className="voice-grid">
+        {voices.map(([quote, user, post]) => (
+          <a key={post} className="voice" href={`${appinnUrl}${post}`}>
+            <p>“{t(quote)}”</p>
+            <span>— {user} · #{post}</span>
+          </a>
+        ))}
       </div>
     </section>
   );
@@ -623,7 +782,7 @@ function Gallery() {
   const { t } = useLocale();
   return (
     <section id="screenshots" className="gallery section-wrap">
-      <SectionLabel index="04">{t("截图")}</SectionLabel>
+      <SectionLabel index="05">{t("截图")}</SectionLabel>
       <div className="gallery-grid">
         {gallery.map(([image, title, theme]) => (
           <figure key={image}>
@@ -840,30 +999,30 @@ export function HomePage() {
     <main>
       <section id="top" className="hero section-wrap">
         <div className="hero-copy">
-          <div className="eyebrow">NATIVE MARKDOWN EDITOR</div>
+          <div className="eyebrow">NATIVE MARKDOWN EDITOR · WINDOWS</div>
           <h1>
-            {t("生于风沙，")}
+            {t("打开就读，")}
             <br />
             <em>
-              {t("落笔成章")}
+              {t("落笔就写")}
               <Berry />
             </em>
           </h1>
           <p>
-            {t("从一行文字，到一份作品。")}
+            {t("Windows 原生 Markdown 阅读与编辑器。")}
             <br />
-            <span>{t("阅读极速秒开 · 所见即所得 · 丰富的图表编辑")}</span>
+            <span>{t("一个约 9 MB 的 EXE，0.46 秒启动；直接在排版好的页面里编辑，1 GB 的文件约 2 秒显示正文。")}</span>
           </p>
           <div className="hero-buttons">
             <Link className="button" to="/download">
-              {t("免费下载")} <ArrowIcon />
+              {t("免费下载 v0.6.21")} <ArrowIcon />
             </Link>
             <a className="button ghost" href="#features">
               {t("查看功能")}
             </a>
           </div>
           <small className="platform-line">
-            {t("Windows 现已推出 · macOS 开发中 · 单文件 · 免安装 · 免账号 · 免费")}
+            {t("v0.6.21 · Windows 10 / 11 64 位 · 免安装 · 免账号 · 默认不联网 · 免费")}
           </small>
         </div>
         <div className="hero-product">
@@ -883,51 +1042,16 @@ export function HomePage() {
           </svg>
         </div>
       </section>
+      <FactStrip />
       <EditorDemo />
       <FeatureGrid />
-      <section id="performance" className="performance">
-        <div className="performance-inner">
-          <SectionLabel index="03">{t("性能")}</SectionLabel>
-          <div className="perf-main">
-            <h2>
-              <span>1 GB</span>
-              <i>→</i>
-              <span>{t("约 2 秒")}</span>
-            </h2>
-            <p>{t("打开即显示正文，编辑与保存只处理改动部分。")}</p>
-          </div>
-          <div className="tech-pills">
-            <span>C++20</span>
-            <span>{t("原生渲染")}</span>
-            <span>{t("单文件")}</span>
-            <span>{t("默认不联网")}</span>
-          </div>
-          <h3>
-            {t("不基于 Electron，")}
-            <br />
-            {t("不套网页壳")}
-            <Berry />
-          </h3>
-          <div className="perf-metrics">
-            {[
-              ["01", "单文件"],
-              ["02", "免安装"],
-              ["03", "免账号"],
-              ["04", "默认不联网"],
-            ].map(([n, label]) => (
-              <div key={n}>
-                <b>{n}</b>
-                <span>{t(label)}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <DesignSection />
       <Gallery />
+      <Voices />
       <section className="home-end section-wrap">
         <h2>{t("从一行文字，到一份作品。")}</h2>
         <Link className="button" to="/download">
-          {t("免费下载")} <ArrowIcon />
+          {t("免费下载 v0.6.21")} <ArrowIcon />
         </Link>
       </section>
     </main>
@@ -1015,14 +1139,14 @@ export function DownloadPage() {
       <PageHero
         eyebrow="DOWNLOAD"
         title={t("下载")}
-        description={t("Windows 现已推出 · macOS 开发中 · 单文件 · 免安装 · 免账号 · 免费")}
+        description={t("最新版 v0.6.21 · Windows 10 / 11 64 位 · 免安装 · 免账号 · 免费")}
       />
       <section className="download download-page section-wrap">
         <div className="download-grid">
           <article className="available">
             <small>WINDOWS</small>
             <h3>{t("现已推出")}</h3>
-            <p>{t("Windows 10 / 11 · 64 位")}</p>
+            <p>{t("v0.6.21 · Windows 10 / 11 · 64 位")}</p>
             <div className="store-buttons">
               <a className="button" href={storeUrl}>
                 {t("微软应用商店")} <ArrowIcon />
@@ -1035,7 +1159,7 @@ export function DownloadPage() {
           <article>
             <small>macOS</small>
             <h3>{t("开发中")}</h3>
-            <p>{t("即将到来")}</p>
+            <p>{t("还在开发，暂无预计时间")}</p>
             <a className="button ghost" href={repoUrl}>
               {t("关注进展")}
             </a>
@@ -1045,29 +1169,29 @@ export function DownloadPage() {
           <article>
             <b>01</b>
             <h3>{t("单文件")}</h3>
-            <p>下载后即可运行，不需要安装向导。</p>
+            <p>{t("Shazao-markdown.exe 约 9.5 MB，下载后双击运行，不需要安装向导。")}</p>
           </article>
           <article>
             <b>02</b>
             <h3>Microsoft Store</h3>
-            <p>通过应用商店安装，并自动获取后续版本。</p>
+            <p>{t("商店版自动更新；新版本在商店审核通过后上架。")}</p>
           </article>
           <article>
             <b>03</b>
-            <h3>Portable</h3>
-            <p>在程序旁创建 Shazao-data 文件夹，即可使用便携模式。</p>
+            <h3>{t("便携模式")}</h3>
+            <p>{t("在 EXE 旁边新建 Shazao-data 文件夹，设置、历史版本和缓存都存在里面，整个文件夹放进 U 盘就能带走。")}</p>
           </article>
           <article>
             <b>04</b>
             <h3>SHA256</h3>
-            <p>GitHub 发布页提供校验文件，便于验证下载完整性。</p>
+            <p>{t("每个版本附 SHA256SUMS；ZIP 约 8 MB，含版本说明、第三方声明和约 3.7 MB 的 UPX 压缩版。")}</p>
           </article>
         </div>
         <div className="download-foot">
           <a href={`${repoUrl}/issues`}>
             {t("反馈问题")} · GitHub Issues <ArrowIcon />
           </a>
-          <span>{t("单文件，免安装；支持便携模式。")}</span>
+          <span>{t("只在加载网络图片和检查更新时联网；检查更新默认关闭。")}</span>
         </div>
       </section>
     </main>

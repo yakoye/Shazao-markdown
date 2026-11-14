@@ -18,7 +18,7 @@ type Block = {
 type Section = { id: string; title: Text; blocks: Block[] };
 
 const guide = content as unknown as { hero: Text; sections: Section[] };
-const NEW_TAG = "0.6.20 ";
+const NEW_TAG = /^(0\.6\.2\d) /;
 
 function Keys({ combo }: { combo: string }) {
   const parts = combo === "Ctrl+=" ? ["Ctrl", "="] : combo.split("+").filter(Boolean);
@@ -37,10 +37,11 @@ export function GuidePage() {
   const L = (text: Text) => text[locale];
   const item = (text: Text) => {
     const value = L(text);
-    return value.startsWith(NEW_TAG) ? (
+    const match = value.match(NEW_TAG);
+    return match ? (
       <>
-        <span className="new-badge">0.6.20</span>
-        {value.slice(NEW_TAG.length)}
+        <span className="new-badge">{match[1]}</span>
+        {value.slice(match[0].length)}
       </>
     ) : (
       value
