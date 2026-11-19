@@ -2,15 +2,17 @@
 
 [简体中文](README.md) | [**English**](README.en.md)
 
-**From a line of text to something worth sharing.**
-
 A Markdown reader and editor.
 
-**Opens in an instant · WYSIWYG · Rich diagram editing**.
+**From a line of text to something worth sharing.**
 
-Highlights: **a single file, no installation, no account, no internet required, free**
+Shazao（沙枣） is a lightweight, native Markdown reader and editor for 64-bit Windows 10 and 11. It is built with C++20, Win32, DirectWrite, Direct2D, and WIC, and runs independently of Electron and WebView2.
 
-Windows only for now: a single EXE, no installation, and no browser shell.
+**Highlights**
+
+**Fast opening · WYSIWYG editing · Rich diagram editing**
+
+**Single EXE · No installation or account required · Works offline · Free**
 
 
 Notes:
