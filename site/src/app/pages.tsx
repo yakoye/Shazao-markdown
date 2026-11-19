@@ -4,9 +4,12 @@ import { Link, NavLink, Outlet, useLocation } from "react-router";
 export const releaseUrl = "https://github.com/yakoye/Shazao-markdown/releases/latest";
 export const repoUrl = "https://github.com/yakoye/Shazao-markdown";
 const appinnUrl = "https://meta.appinn.net/t/topic/93080/";
-export const storeUrl = "https://apps.microsoft.com/detail/9ntw7mf81l2x?hl=en-US&gl=AU";
+const storeProductId = "9NTW7MF81L2X";
+export const storeUrl = `https://apps.microsoft.com/detail/${storeProductId}`;
 
 type Locale = "zh" | "tw" | "en";
+
+const storeBadgeLocale: Record<Locale, string> = { zh: "zh-cn", tw: "zh-tw", en: "en-us" };
 
 const translations: Record<string, { tw: string; en: string }> = {
   特性: { tw: "特性", en: "Features" },
@@ -20,6 +23,8 @@ const translations: Record<string, { tw: string; en: string }> = {
   查看更新: { tw: "查看更新", en: "View updates" },
   更多: { tw: "更多", en: "More" },
   免费下载: { tw: "免費下載", en: "Free download" },
+  "在 Microsoft Store 获取 Shazao": { tw: "在 Microsoft Store 取得 Shazao", en: "Get Shazao from the Microsoft Store" },
+  "用 WinGet 安装": { tw: "用 WinGet 安裝", en: "Install with WinGet" },
   "生于风沙，": { tw: "生於風沙，", en: "Born of the desert," },
   落笔成章: { tw: "落筆成章", en: "crafted into words" },
   "从一行文字，到一份作品。": {
@@ -1011,6 +1016,25 @@ export function RootLayout() {
   );
 }
 
+function StoreInstall() {
+  const { locale, t } = useLocale();
+  return (
+    <div className="store-install">
+      <a className="store-badge" href={storeUrl}>
+        <img
+          src={`https://get.microsoft.com/images/${storeBadgeLocale[locale]}%20dark.svg`}
+          width={200}
+          alt={t("在 Microsoft Store 获取 Shazao")}
+        />
+      </a>
+      <div className="store-command">
+        <span>{t("用 WinGet 安装")}</span>
+        <code>winget install {storeProductId}</code>
+      </div>
+    </div>
+  );
+}
+
 export function HomePage() {
   const { t } = useLocale();
   return (
@@ -1031,6 +1055,7 @@ export function HomePage() {
             <br />
             <span>{t("一个约 9 MB 的 EXE，0.46 秒启动；直接在排版好的页面里编辑，1 GB 的文件约 2 秒显示正文。")}</span>
           </p>
+          <StoreInstall />
           <div className="hero-buttons">
             <Link className="button" to="/download">
               {t("免费下载")} <ArrowIcon />
@@ -1165,10 +1190,8 @@ export function DownloadPage() {
             <small>WINDOWS</small>
             <h3>{t("现已推出")}</h3>
             <p>{t("Windows 10 / 11 · 64 位")}</p>
+            <StoreInstall />
             <div className="store-buttons">
-              <a className="button" href={storeUrl}>
-                {t("微软应用商店")} <ArrowIcon />
-              </a>
               <a className="button ghost" href={releaseUrl}>
                 {t("下载Windows版")}
               </a>

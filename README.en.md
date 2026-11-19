@@ -22,6 +22,14 @@ Notes:
 
 ## Download and run
 
+<a href="https://apps.microsoft.com/detail/9ntw7mf81l2x"><img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200" alt="Get Shazao from the Microsoft Store"></a>
+
+To install the Store version with WinGet, run this command in Windows Terminal.
+
+```powershell
+winget install 9NTW7MF81L2X
+```
+
 - [Download the latest stable release](https://github.com/yakoye/Shazao-markdown/releases/latest): run the EXE directly, or download and extract the win64 ZIP, which includes release notes and third-party notices (and a UPX-compressed copy about 40% of the size, with the same features). Requires 64-bit Windows 10 or 11.
 - History, drafts, recovery copies, image cache, persistent undo, and reading state are stored in `%LOCALAPPDATA%\Shazao` by default and can be managed under Data and Storage in Settings. INI files, shortcuts, and the user dictionary remain editable. Legacy folders such as `Shazao-history` remain readable and are not automatically deleted during upgrades.
 - To carry the app and its data together, for example on a USB drive, create a `Shazao-data` folder next to the EXE; all data is then kept there (portable mode).

@@ -22,6 +22,14 @@ Markdown 阅读与编辑器。
 
 ## 下载与运行
 
+<a href="https://apps.microsoft.com/detail/9ntw7mf81l2x"><img src="https://get.microsoft.com/images/zh-cn%20dark.svg" width="200" alt="在 Microsoft Store 获取 Shazao"></a>
+
+也可以在 Windows 终端运行以下命令，用 WinGet 安装商店版。
+
+```powershell
+winget install 9NTW7MF81L2X
+```
+
 - [下载最新稳定版](https://github.com/yakoye/Shazao-markdown/releases/latest)：下载 EXE 直接运行，或下载包含版本说明与第三方声明的 win64 ZIP，解压后运行（ZIP 中另有体积约为四成的 UPX 压缩版，功能相同）。支持 Windows 10/11 64 位。
 - 历史、草稿、恢复副本、图片缓存、持久撤销和阅读状态默认保存在 `%LOCALAPPDATA%\Shazao`，可在设置的“数据与存储”中管理。INI、快捷键与用户词典保留可编辑入口；旧 `Shazao-history` 等目录兼容读取，升级不直接删除旧数据。
 - 想把程序和数据一起放进 U 盘：在 EXE 旁边建一个 `Shazao-data` 文件夹，所有数据就都保存在里面（便携模式）。

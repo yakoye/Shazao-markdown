@@ -447,6 +447,41 @@ header nav a.active {
   gap: 10px;
   margin-top: 32px;
 }
+.store-install {
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+  max-width: 100%;
+}
+.store-badge img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.store-command {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 9px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.store-command code {
+  padding: 4px 7px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+}
+.hero-copy .store-install {
+  justify-items: center;
+  margin-top: 24px;
+}
+.hero-copy .store-command {
+  justify-content: center;
+}
+.store-install + .hero-buttons {
+  margin-top: 16px;
+}
 .platform-line {
   display: block;
   margin-top: 19px;
@@ -1886,6 +1921,9 @@ header nav a.active {
 .download-grid p {
   margin: 0 0 auto;
   color: var(--muted);
+}
+.download-grid .store-install {
+  margin: 18px 0 16px;
 }
 .store-buttons {
   margin-top: auto;
