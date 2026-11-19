@@ -447,31 +447,6 @@ header nav a.active {
   gap: 10px;
   margin-top: 32px;
 }
-.store-install {
-  display: grid;
-  justify-items: start;
-  gap: 8px;
-  max-width: 100%;
-}
-.store-badge img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-.store-command {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 5px 9px;
-  color: var(--muted);
-  font-size: 12px;
-}
-.store-command code {
-  padding: 4px 7px;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  background: var(--paper);
-}
 .platform-line {
   display: block;
   margin-top: 19px;
@@ -1912,14 +1887,42 @@ header nav a.active {
   margin: 0 0 auto;
   color: var(--muted);
 }
-.download-grid .store-install {
-  margin: 18px 0 16px;
+.download-methods {
+  align-self: stretch;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
 }
-.store-buttons {
-  margin-top: auto;
-  display: flex;
-  gap: 9px;
-  flex-wrap: wrap;
+.download-methods li {
+  display: grid;
+  grid-template-columns: 108px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+.download-methods li > span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+.download-methods li > :not(span) {
+  justify-self: start;
+  min-width: 0;
+  max-width: 100%;
+}
+.download-methods .store-badge img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.download-methods code {
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+  font-size: 12px;
+  overflow-wrap: anywhere;
 }
 .download-foot {
   display: flex;
@@ -2417,11 +2420,8 @@ footer small {
     border-left: 0;
     border-top: 1px solid var(--line);
   }
-  .store-buttons {
-    width: 100%;
-  }
-  .store-buttons .button {
-    width: 100%;
+  .download-methods li {
+    grid-template-columns: minmax(0, 1fr);
   }
   .download-foot {
     align-items: flex-start;

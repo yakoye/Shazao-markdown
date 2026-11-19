@@ -24,7 +24,9 @@ const translations: Record<string, { tw: string; en: string }> = {
   更多: { tw: "更多", en: "More" },
   免费下载: { tw: "免費下載", en: "Free download" },
   "在 Microsoft Store 获取 Shazao": { tw: "在 Microsoft Store 取得 Shazao", en: "Get Shazao from the Microsoft Store" },
-  "用 WinGet 安装": { tw: "用 WinGet 安裝", en: "Install with WinGet" },
+  商店安装: { tw: "商店安裝", en: "Store install" },
+  命令行安装: { tw: "命令列安裝", en: "Command line" },
+  便携版: { tw: "免安裝版", en: "Portable edition" },
   "生于风沙，": { tw: "生於風沙，", en: "Born of the desert," },
   落笔成章: { tw: "落筆成章", en: "crafted into words" },
   "从一行文字，到一份作品。": {
@@ -116,7 +118,7 @@ const translations: Record<string, { tw: string; en: string }> = {
   现已推出: { tw: "現已推出", en: "Available now" },
   开发中: { tw: "開發中", en: "In development" },
   即将到来: { tw: "即將到來", en: "Coming soon" },
-  下载Windows版: { tw: "下載 Windows 版", en: "Download for Windows" },
+  "去 GitHub 下载": { tw: "前往 GitHub 下載", en: "Download from GitHub" },
   微软应用商店: { tw: "Microsoft Store", en: "Microsoft Store" },
   关注进展: { tw: "關注進展", en: "Follow progress" },
   "单文件，免安装；支持便携模式。": {
@@ -1016,22 +1018,31 @@ export function RootLayout() {
   );
 }
 
-function StoreInstall() {
+function WindowsDownloadMethods() {
   const { locale, t } = useLocale();
   return (
-    <div className="store-install">
-      <a className="store-badge" href={storeUrl}>
-        <img
-          src={`https://get.microsoft.com/images/${storeBadgeLocale[locale]}%20dark.svg`}
-          width={200}
-          alt={t("在 Microsoft Store 获取 Shazao")}
-        />
-      </a>
-      <div className="store-command">
-        <span>{t("用 WinGet 安装")}</span>
+    <ul className="download-methods">
+      <li>
+        <span>{t("商店安装")}</span>
+        <a className="store-badge" href={storeUrl}>
+          <img
+            src={`https://get.microsoft.com/images/${storeBadgeLocale[locale]}%20dark.svg`}
+            width={200}
+            alt={t("在 Microsoft Store 获取 Shazao")}
+          />
+        </a>
+      </li>
+      <li>
+        <span>{t("命令行安装")}</span>
         <code>winget install {storeProductId}</code>
-      </div>
-    </div>
+      </li>
+      <li>
+        <span>{t("便携版")}</span>
+        <a className="button ghost" href={releaseUrl}>
+          {t("去 GitHub 下载")} <ArrowIcon />
+        </a>
+      </li>
+    </ul>
   );
 }
 
@@ -1189,12 +1200,7 @@ export function DownloadPage() {
             <small>WINDOWS</small>
             <h3>{t("现已推出")}</h3>
             <p>{t("Windows 10 / 11 · 64 位")}</p>
-            <StoreInstall />
-            <div className="store-buttons">
-              <a className="button ghost" href={releaseUrl}>
-                {t("下载Windows版")}
-              </a>
-            </div>
+            <WindowsDownloadMethods />
           </article>
           <article>
             <small>macOS</small>
