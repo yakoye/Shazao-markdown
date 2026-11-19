@@ -132,7 +132,7 @@ For a closer look at its compact design and everyday workflow, see [Small, fast,
 
 Stability and data safety come first. Feedback is addressed and verified one item at a time. The following items are planned; see the [roadmap](doc/PUBLIC_ROADMAP.md) for progress and priorities:
 
-- Split windows: one group of tabs per pane, with tabs that can be moved or copied between panes (planned for v0.7.0).
+- Split windows with one group of tabs per pane and the ability to move or copy tabs between panes.
 - Add cumulative selection and simultaneous editing with Ctrl+D, and improve autosave controls.
 - Continue refining movement between tabs and windows, table editing, and diagram text layout.
 - Improve Wiki link usability.

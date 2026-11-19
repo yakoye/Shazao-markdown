@@ -7,7 +7,7 @@
 | [中文介绍](../README.md) | 软件简介、主要功能、背景、截图、计划、用户评价与支持者 |
 | [English introduction](../README.en.md) | 与中文介绍对应的英文版本 |
 | [版本历史](CHANGELOG.md) | 各版本更新内容、已知问题与当时的验证说明，最新版本在前 |
-| [后续开发计划](PUBLIC_ROADMAP.md) | 已公开的版本安排与后续方向 |
+| [后续开发计划](PUBLIC_ROADMAP.md) | 计划中的功能与持续改进方向 |
 | [演示文档](../demo/README.md) | 从「你好，沙枣」开始的八篇示例与演示文案 |
 | [文档维护规则](README_MAINTENANCE.md) | README、中英文同步、图片与版本历史的发布约定 |
 | [历史 README 原文](archive/README-public-before-20261028.md) | 本次整理前已公开的完整 README，保留早期历史 |
