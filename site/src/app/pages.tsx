@@ -1055,7 +1055,6 @@ export function HomePage() {
             <br />
             <span>{t("一个约 9 MB 的 EXE，0.46 秒启动；直接在排版好的页面里编辑，1 GB 的文件约 2 秒显示正文。")}</span>
           </p>
-          <StoreInstall />
           <div className="hero-buttons">
             <Link className="button" to="/download">
               {t("免费下载")} <ArrowIcon />

@@ -472,16 +472,6 @@ header nav a.active {
   border-radius: 4px;
   background: var(--paper);
 }
-.hero-copy .store-install {
-  justify-items: center;
-  margin-top: 24px;
-}
-.hero-copy .store-command {
-  justify-content: center;
-}
-.store-install + .hero-buttons {
-  margin-top: 16px;
-}
 .platform-line {
   display: block;
   margin-top: 19px;
