@@ -2,13 +2,17 @@
 
 [**简体中文**](README.md) | [English](README.en.md)
 
+Markdown 阅读与编辑器。
+
 **从一行文字，到一份作品。**
 
-Markdown 阅读与编辑器。
+Shazao（沙枣） 是一款面向 Windows 10/11（64 位）的原生轻量级 Markdown 阅读与编辑器，采用 C++20、Win32、DirectWrite、Direct2D 和 WIC 开发，无需 Electron 或 WebView2。
+
+特点：
 
 **阅读极速秒开 · 所见即所得 · 丰富的图表编辑**。
 
-特点：**单文件、免安装、免账号、免联网、免费**
+**单文件、免安装、免账号、免联网、免费**
 
 目前仅支持 Windows ，单个 EXE，无需安装，无浏览器套壳。
 
