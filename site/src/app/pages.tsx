@@ -81,6 +81,17 @@ const translations: Record<string, { tw: string; en: string }> = {
   "不基于 Electron，": { tw: "不基於 Electron，", en: "No Electron," },
   不套网页壳: { tw: "不套網頁殼", en: "no web wrapper" },
   截图: { tw: "截圖", en: "Screenshots" },
+  实际界面: { tw: "實際介面", en: "Shazao in use" },
+  截图配色: { tw: "截圖配色", en: "Screenshot appearance" },
+  浅色: { tw: "淺色", en: "Light" },
+  深色: { tw: "深色", en: "Dark" },
+  查看大图: { tw: "檢視大圖", en: "View full size" },
+  手绘插图与笔记: { tw: "手繪插圖與筆記", en: "Illustrated notes" },
+  "彩色 Mermaid 图表": { tw: "彩色 Mermaid 圖表", en: "Colorful Mermaid diagrams" },
+  公式与矩阵: { tw: "公式與矩陣", en: "Formulas and matrices" },
+  代码高亮与行号: { tw: "程式碼高亮與行號", en: "Highlighted code with line numbers" },
+  流程图与表格: { tw: "流程圖與表格", en: "Flowcharts and tables" },
+  技术文档与大纲: { tw: "技術文件與大綱", en: "Technical documents and outlines" },
   "还有更多配色，可以慢慢挑。": {
     tw: "還有更多配色，可以慢慢挑。",
     en: "More themes are ready when you want them.",
@@ -768,11 +779,21 @@ function Voices() {
 }
 
 const gallery = [
-  ["v0620-main.png", "打开就读，落笔就写", "SHAZAO LIGHT"],
-  ["v0620-dark-diagram.png", "把想法画出来", "SHAZAO DARK"],
-  ["v0620-code.png", "给想法一张表，给实现一段代码", "SHAZAO LIGHT"],
-  ["v0620-dark-gallery.png", "用不同的图，讲不同的事", "SHAZAO DARK"],
-];
+  ["field-notes", "手绘插图与笔记"],
+  ["diagrams", "彩色 Mermaid 图表"],
+  ["math", "公式与矩阵"],
+  ["code", "代码高亮与行号"],
+  ["report", "流程图与表格"],
+  ["technical-specification", "技术文档与大纲"],
+] as const;
+
+type ShowcaseTheme = "light" | "dark";
+type ShowcaseScene = (typeof gallery)[number][0];
+
+function showcaseImage(locale: Locale, theme: ShowcaseTheme, scene: ShowcaseScene) {
+  const imageLocale = locale === "en" ? "en" : "zh";
+  return `${import.meta.env.BASE_URL}screens/v0624/${imageLocale}/${theme}/${scene}.webp`;
+}
 
 const cares = [
   ["切换视图，光标闪一下", "在编辑与源码之间切换时，光标处短暂高亮，马上找到刚才写到哪里。", "care-caret-flash.gif"],
@@ -795,28 +816,63 @@ const details = [
 ];
 
 function Gallery() {
-  const { t } = useLocale();
+  const { locale, t } = useLocale();
+  const [theme, setTheme] = useState<ShowcaseTheme>("light");
   return (
-    <section id="screenshots" className="gallery section-wrap">
-      <SectionLabel index="05">{t("截图")}</SectionLabel>
-      <div className="gallery-grid">
-        {gallery.map(([image, title, theme]) => (
-          <figure key={image}>
-            <div className="screenshot">
-              <img
-                src={`${import.meta.env.BASE_URL}screens/${image}`}
-                alt={`${t(title)}，${theme}`}
-                loading="lazy"
-              />
-            </div>
-            <figcaption>
-              <b>{t(title)}</b>
-              <span>{theme}</span>
-            </figcaption>
-          </figure>
-        ))}
+    <section id="screenshots" className="gallery section-wrap" aria-labelledby="showcase-title">
+      <div className="showcase-heading">
+        <h2 id="showcase-title">{t("实际界面")}</h2>
+        <div className="showcase-themes" role="group" aria-label={t("截图配色")}>
+          <button
+            type="button"
+            aria-pressed={theme === "light"}
+            aria-controls="showcase-grid"
+            onClick={() => setTheme("light")}
+          >
+            {t("浅色")}
+          </button>
+          <button
+            type="button"
+            aria-pressed={theme === "dark"}
+            aria-controls="showcase-grid"
+            onClick={() => setTheme("dark")}
+          >
+            {t("深色")}
+          </button>
+        </div>
       </div>
-      <p className="gallery-note">{t("还有更多配色，可以慢慢挑。")}</p>
+      <div id="showcase-grid" className="gallery-grid">
+        {gallery.map(([scene, title]) => {
+          const image = showcaseImage(locale, theme, scene);
+          return (
+            <a
+              key={scene}
+              className="showcase-link"
+              href={image}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`${t("查看大图")} · ${t(title)}`}
+            >
+              <figure>
+                <div className="showcase-image">
+                  <img
+                    src={image}
+                    alt={t(title)}
+                    width={1920}
+                    height={1080}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <figcaption>
+                  <b>{t(title)}</b>
+                  <span aria-hidden="true">{t("查看大图")} ↗</span>
+                </figcaption>
+              </figure>
+            </a>
+          );
+        })}
+      </div>
       <div className="detail-heading">
         <h3>
           {t("更多细节")}
@@ -1047,7 +1103,7 @@ function WindowsDownloadMethods() {
 }
 
 export function HomePage() {
-  const { t } = useLocale();
+  const { locale, t } = useLocale();
   return (
     <main>
       <section id="top" className="hero section-wrap">
@@ -1079,20 +1135,15 @@ export function HomePage() {
           </small>
         </div>
         <div className="hero-product">
-          <div className="product-window">
+          <a className="product-window" href="#screenshots" aria-label={t("截图")}>
             <img
-              src={`${import.meta.env.BASE_URL}screens/v0620-main.png`}
-              alt="Shazao 浅色主题产品界面"
+              src={showcaseImage(locale, "light", "field-notes")}
+              alt={t("手绘插图与笔记")}
+              width={1920}
+              height={1080}
+              fetchPriority="high"
             />
-          </div>
-          <svg
-            className="dune-line"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-            aria-hidden="true"
-          >
-            <path d="M0 96C190 28 362 38 528 92C696 24 910 8 1200 82" />
-          </svg>
+          </a>
         </div>
       </section>
       <FactStrip />

@@ -454,15 +454,16 @@ header nav a.active {
   font-size: 10px;
 }
 .hero-product {
-  position: relative;
   margin-top: 72px;
-  padding-bottom: 70px;
+  padding-bottom: 48px;
 }
 .product-window {
+  display: block;
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 7px 7px 2px 2px;
+  border-radius: 20px;
   background: var(--paper);
+  box-shadow: 0 20px 52px rgb(31 39 32 / 12%);
 }
 .product-bar {
   height: 42px;
@@ -486,20 +487,8 @@ header nav a.active {
 }
 .product-window > img {
   width: 100%;
+  height: auto;
   display: block;
-}
-.dune-line {
-  position: absolute;
-  inset: auto -2% 8px;
-  width: 104%;
-  height: 112px;
-  overflow: visible;
-}
-.dune-line path {
-  fill: none;
-  stroke: var(--sand);
-  stroke-width: 1.5;
-  vector-effect: non-scaling-stroke;
 }
 
 .section-label {
@@ -1069,14 +1058,75 @@ header nav a.active {
     11px "JetBrains Mono",
     monospace;
 }
+.showcase-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.showcase-heading h2 {
+  margin: 0;
+  font: 750 clamp(30px, 4.2vw, 52px) / 1.18 "Noto Serif SC", serif;
+  letter-spacing: -0.04em;
+}
+.showcase-themes {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+}
+.showcase-themes button {
+  padding: 8px 17px;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.showcase-themes button[aria-pressed="true"] {
+  background: color-mix(in srgb, var(--green) 14%, var(--paper));
+  color: var(--ink);
+  font-weight: 600;
+}
 .gallery-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 70px 22px;
-  margin-top: 50px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px 24px;
+  margin-top: 32px;
 }
 .gallery figure {
   margin: 0;
+}
+.showcase-link {
+  color: inherit;
+  text-decoration: none;
+}
+.showcase-image {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: var(--paper);
+  box-shadow: 0 10px 28px rgb(31 39 32 / 9%);
+}
+.showcase-link:hover .showcase-image {
+  border-color: var(--green);
+}
+.showcase-themes button:focus-visible,
+.showcase-link:focus-visible,
+.product-window:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+.showcase-image img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .screenshot {
   padding: 9px;
@@ -1107,11 +1157,13 @@ header nav a.active {
   color: var(--muted);
   font-size: 9px;
 }
-.gallery-note {
-  margin: 50px 0 0;
-  color: var(--muted);
-  font-size: 13px;
-  text-align: center;
+.gallery-grid figcaption {
+  padding-top: 12px;
+}
+.gallery-grid figcaption span {
+  flex-shrink: 0;
+  letter-spacing: normal;
+  font: 12px "Noto Sans SC", sans-serif;
 }
 
 .home-end {
@@ -1489,10 +1541,19 @@ header nav a.active {
 .detail-grid figure:nth-child(n + 4) {
   grid-column: span 3;
 }
+.detail-grid .screenshot {
+  padding: clamp(12px, 2vw, 22px);
+  overflow: hidden;
+  border-radius: 15px;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--green) 9%, var(--paper)),
+    color-mix(in srgb, var(--sand) 18%, var(--paper))
+  );
+}
 .detail-grid .screenshot img {
   aspect-ratio: 1251 / 869;
-  object-fit: cover;
-  object-position: top left;
+  object-fit: contain;
 }
 
 .blog-page {
@@ -2163,15 +2224,6 @@ footer small {
   .product-bar {
     height: 32px;
   }
-  .product-window > img {
-    min-height: 300px;
-    object-fit: cover;
-    object-position: 45% top;
-  }
-  .dune-line {
-    height: 50px;
-    bottom: 0;
-  }
   .try-section,
   .features,
   .gallery,
@@ -2264,7 +2316,7 @@ footer small {
   }
   .gallery-grid {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 30px;
   }
   .detail-grid {
     grid-template-columns: 1fr;
