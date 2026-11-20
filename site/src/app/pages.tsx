@@ -335,12 +335,12 @@ function Logo({ className = "" }: { className?: string }) {
     <span className={`logo ${className}`} role="img" aria-label="Shazao 沙枣">
       <img
         className="logo-light"
-        src={`${import.meta.env.BASE_URL}brand/shazao-icon-light.svg`}
+        src={`${import.meta.env.BASE_URL}brand/shazao-v0624-light.png`}
         alt=""
       />
       <img
         className="logo-dark"
-        src={`${import.meta.env.BASE_URL}brand/shazao-icon-dark.svg`}
+        src={`${import.meta.env.BASE_URL}brand/shazao-v0624-dark.png`}
         alt=""
       />
     </span>
