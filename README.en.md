@@ -42,6 +42,7 @@ winget install 9NTW7MF81L2X
 
 Shazao combines a lightweight Windows app with tools for reading, writing, and organizing Markdown.
 
+- **Quick notes and command palette** · Enable quick notes in Settings to capture and organize ideas as cards. Press Ctrl+Shift+P to find and run menu commands.
 - **Portable and offline** · Run a single EXE without an installer or account. Turn on offline mode or create `Shazao-data` next to the EXE to keep the app and its data together.
 - **Editing and reading** · Switch between WYSIWYG, source, and locked reading. Use focus or typewriter mode, drag or copy paragraphs, reveal nearby Markdown syntax, and find and replace with regular expressions in the document or a selection.
 - **Large files** · In testing, a 1 GB file showed its text in about 2 seconds. Edits, undo, and saves work incrementally. Files over 64 MB save in the background.
