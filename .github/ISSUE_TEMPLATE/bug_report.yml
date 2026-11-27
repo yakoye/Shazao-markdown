@@ -4,7 +4,7 @@ body:
   - type: dropdown
     id: version
     attributes:
-      label: 当前使用的版本号（必须选择）
+      label: 当前使用的版本号
       description: 请在「帮助 → 关于 Shazao」中查看并选择当前使用的版本号。
       options:
         # BEGIN RELEASE OPTIONS
@@ -17,7 +17,7 @@ body:
   - type: dropdown
     id: os
     attributes:
-      label: 操作系统（必须选择）
+      label: 操作系统
       options:
         - Windows 11
         - Windows 10
