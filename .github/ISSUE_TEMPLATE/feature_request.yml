@@ -2,6 +2,36 @@ name: 需求建议
 description: 建议新增功能，或告诉我们哪些地方可以改得更好。
 labels: [enhancement]
 body:
+  - type: dropdown
+    id: version
+    attributes:
+      label: 当前使用的版本号（必须选择）
+      description: 请在「帮助 → 关于 Shazao」中查看并选择当前使用的版本号。
+      options:
+        # BEGIN RELEASE OPTIONS
+        - v0.7.2
+        - v0.6.26
+        - v0.6.24
+        # END RELEASE OPTIONS
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: 操作系统（必须选择）
+      options:
+        - Windows 11
+        - Windows 10
+        - macOS Golden Gate 27
+        - macOS Tahoe 26
+        - macOS Sequoia 15
+        - macOS Sonoma 14
+        - macOS Ventura 13
+        - Ubuntu 26
+        - Ubuntu 24
+        - Ubuntu 22
+    validations:
+      required: true
   - type: textarea
     id: suggestion
     attributes:

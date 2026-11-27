@@ -1,4 +1,4 @@
-"""从标准输入读取分页的 GitHub Releases JSON，更新问题反馈的版本选项。"""
+"""从标准输入读取分页的 GitHub Releases JSON，更新问题反馈和需求建议的版本选项。"""
 
 import json
 from pathlib import Path
@@ -9,7 +9,8 @@ import sys
 TAG = re.compile(r"v?(\d+)\.(\d+)\.(\d+)(-[0-9A-Za-z.-]+)?", re.ASCII)
 START = "        # BEGIN RELEASE OPTIONS\n"
 END = "        # END RELEASE OPTIONS\n"
-FORM = Path(__file__).resolve().parents[1] / "ISSUE_TEMPLATE" / "bug_report.yml"
+FORMS = [Path(__file__).resolve().parents[1] / "ISSUE_TEMPLATE" / name
+         for name in ("bug_report.yml", "feature_request.yml")]
 
 
 def release_options(pages):
@@ -38,14 +39,15 @@ def release_options(pages):
 
 def main():
     options = release_options(json.load(sys.stdin))
-    text = FORM.read_text(encoding="utf-8")
-    if text.count(START) != 1 or text.count(END) != 1:
-        raise ValueError("问题反馈模板缺少唯一的版本选项标记")
-    before, block = text.split(START)
-    _, after = block.split(END)
-    updated = before + START + "".join(f"        - {tag}\n" for tag in options) + END + after
-    if updated != text:
-        FORM.write_text(updated, encoding="utf-8", newline="\n")
+    for form in FORMS:
+        text = form.read_text(encoding="utf-8")
+        if text.count(START) != 1 or text.count(END) != 1:
+            raise ValueError("模板缺少唯一的版本选项标记")
+        before, block = text.split(START)
+        _, after = block.split(END)
+        updated = before + START + "".join(f"        - {tag}\n" for tag in options) + END + after
+        if updated != text:
+            form.write_text(updated, encoding="utf-8", newline="\n")
     print("版本选项：" + ("、".join(options) or "仅显示手动选项"))
 
 

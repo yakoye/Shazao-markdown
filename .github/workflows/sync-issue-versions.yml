@@ -1,4 +1,4 @@
-name: 同步问题反馈版本
+name: 同步 Issue 模板版本
 
 on:
   release:
@@ -31,13 +31,13 @@ jobs:
           gh api --paginate --slurp "repos/$GITHUB_REPOSITORY/releases?per_page=100" |
             python3 .github/scripts/sync_issue_versions.py
 
-          form=.github/ISSUE_TEMPLATE/bug_report.yml
-          if git diff --quiet -- "$form"; then
+          forms=(.github/ISSUE_TEMPLATE/bug_report.yml .github/ISSUE_TEMPLATE/feature_request.yml)
+          if git diff --quiet -- "${forms[@]}"; then
             exit 0
           fi
 
           git config user.name 'Shazao version sync'
           git config user.email 'shazao-version-sync@automation.invalid'
-          git add -- "$form"
-          git commit -m '同步问题反馈的发布版本选项'
+          git add -- "${forms[@]}"
+          git commit -m '同步 Issue 模板的发布版本选项'
           git push origin "HEAD:refs/heads/$DEFAULT_BRANCH"

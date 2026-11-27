@@ -4,36 +4,38 @@ body:
   - type: dropdown
     id: version
     attributes:
-      label: 当前版本号
-      description: 在「帮助 → 关于 Shazao」中查看。知道版本时请选对应项，查不到时保留「不确定」。
+      label: 当前使用的版本号（必须选择）
+      description: 请在「帮助 → 关于 Shazao」中查看并选择当前使用的版本号。
       options:
-        - 不确定
         # BEGIN RELEASE OPTIONS
         - v0.7.2
         - v0.6.26
         - v0.6.24
         # END RELEASE OPTIONS
-        - 旧版或其他版本
     validations:
       required: true
   - type: dropdown
     id: os
     attributes:
-      label: 操作系统
+      label: 操作系统（必须选择）
       options:
         - Windows 11
         - Windows 10
-        - macOS
-        - Ubuntu
-        - 其他 Linux
-        - 其他
+        - macOS Golden Gate 27
+        - macOS Tahoe 26
+        - macOS Sequoia 15
+        - macOS Sonoma 14
+        - macOS Ventura 13
+        - Ubuntu 26
+        - Ubuntu 24
+        - Ubuntu 22
     validations:
-      required: false
+      required: true
   - type: textarea
     id: description
     attributes:
       label: 问题描述
-      description: 可以附截图。知道具体旧版版本号、系统版本或下载渠道的话，也可以写在这里。
+      description: 可以附截图，也可以补充系统详细版本或下载渠道。
       placeholder: 你做了什么？发生了什么？你希望怎样？
     validations:
       required: true
